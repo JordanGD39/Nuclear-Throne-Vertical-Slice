@@ -1,7 +1,781 @@
 fileFormatVersion: 2
 guid: c121677f89832f54ea41f61a184077d2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9014749705715007222
+    second: Game Boy Advance - Sonic Battle - Shadow_0
+  - first:
+      213: -2966128537723462685
+    second: Game Boy Advance - Sonic Battle - Shadow_1
+  - first:
+      213: 4927005082282220209
+    second: Game Boy Advance - Sonic Battle - Shadow_2
+  - first:
+      213: -376641200536737952
+    second: Game Boy Advance - Sonic Battle - Shadow_3
+  - first:
+      213: -7626429372602414609
+    second: Game Boy Advance - Sonic Battle - Shadow_4
+  - first:
+      213: 8548108899508487577
+    second: Game Boy Advance - Sonic Battle - Shadow_5
+  - first:
+      213: 8071049049079124586
+    second: Game Boy Advance - Sonic Battle - Shadow_6
+  - first:
+      213: -4552631989971886171
+    second: Game Boy Advance - Sonic Battle - Shadow_7
+  - first:
+      213: 1313710782540204259
+    second: Game Boy Advance - Sonic Battle - Shadow_8
+  - first:
+      213: -4410907003875428814
+    second: Game Boy Advance - Sonic Battle - Shadow_9
+  - first:
+      213: -8635939978898092795
+    second: Game Boy Advance - Sonic Battle - Shadow_10
+  - first:
+      213: -5156356112074211095
+    second: Game Boy Advance - Sonic Battle - Shadow_11
+  - first:
+      213: -841018916945061724
+    second: Game Boy Advance - Sonic Battle - Shadow_12
+  - first:
+      213: -2133906689160345370
+    second: Game Boy Advance - Sonic Battle - Shadow_13
+  - first:
+      213: 872844753778419293
+    second: Game Boy Advance - Sonic Battle - Shadow_14
+  - first:
+      213: -6847176736746624768
+    second: Game Boy Advance - Sonic Battle - Shadow_15
+  - first:
+      213: -7663194962646596406
+    second: Game Boy Advance - Sonic Battle - Shadow_16
+  - first:
+      213: 4637457384550861966
+    second: Game Boy Advance - Sonic Battle - Shadow_17
+  - first:
+      213: 1453273368499409230
+    second: Game Boy Advance - Sonic Battle - Shadow_18
+  - first:
+      213: 2019831541601640741
+    second: Game Boy Advance - Sonic Battle - Shadow_19
+  - first:
+      213: -1933352543308211289
+    second: Game Boy Advance - Sonic Battle - Shadow_20
+  - first:
+      213: -8790368855258901081
+    second: Game Boy Advance - Sonic Battle - Shadow_21
+  - first:
+      213: 2098497184590705930
+    second: Game Boy Advance - Sonic Battle - Shadow_22
+  - first:
+      213: 580523783891683448
+    second: Game Boy Advance - Sonic Battle - Shadow_23
+  - first:
+      213: -6945393544768001227
+    second: Game Boy Advance - Sonic Battle - Shadow_24
+  - first:
+      213: 5366439491036094530
+    second: Game Boy Advance - Sonic Battle - Shadow_25
+  - first:
+      213: 6542415424412582415
+    second: Game Boy Advance - Sonic Battle - Shadow_26
+  - first:
+      213: 96725589902183421
+    second: Game Boy Advance - Sonic Battle - Shadow_27
+  - first:
+      213: 9160476699257885299
+    second: Game Boy Advance - Sonic Battle - Shadow_28
+  - first:
+      213: -1560407156878087655
+    second: Game Boy Advance - Sonic Battle - Shadow_29
+  - first:
+      213: 7475134324308671402
+    second: Game Boy Advance - Sonic Battle - Shadow_30
+  - first:
+      213: -3656155585767860411
+    second: Game Boy Advance - Sonic Battle - Shadow_31
+  - first:
+      213: 8741666579846795406
+    second: Game Boy Advance - Sonic Battle - Shadow_32
+  - first:
+      213: 3653800171065533648
+    second: Game Boy Advance - Sonic Battle - Shadow_33
+  - first:
+      213: -6030377721743541875
+    second: Game Boy Advance - Sonic Battle - Shadow_34
+  - first:
+      213: 1246123962550224169
+    second: Game Boy Advance - Sonic Battle - Shadow_35
+  - first:
+      213: -127096360046203275
+    second: Game Boy Advance - Sonic Battle - Shadow_36
+  - first:
+      213: 4037969956915952309
+    second: Game Boy Advance - Sonic Battle - Shadow_37
+  - first:
+      213: 7118255745286274700
+    second: Game Boy Advance - Sonic Battle - Shadow_38
+  - first:
+      213: 3723445055243503880
+    second: Game Boy Advance - Sonic Battle - Shadow_39
+  - first:
+      213: 8947183038126767913
+    second: Game Boy Advance - Sonic Battle - Shadow_40
+  - first:
+      213: -7263624608260501728
+    second: Game Boy Advance - Sonic Battle - Shadow_41
+  - first:
+      213: 7120519689409227064
+    second: Game Boy Advance - Sonic Battle - Shadow_42
+  - first:
+      213: -1791153561659674167
+    second: Game Boy Advance - Sonic Battle - Shadow_43
+  - first:
+      213: -2795097429476499685
+    second: Game Boy Advance - Sonic Battle - Shadow_44
+  - first:
+      213: -6229463398665317145
+    second: Game Boy Advance - Sonic Battle - Shadow_45
+  - first:
+      213: 2117974628513092102
+    second: Game Boy Advance - Sonic Battle - Shadow_46
+  - first:
+      213: 1804634792976682056
+    second: Game Boy Advance - Sonic Battle - Shadow_47
+  - first:
+      213: 6213762287013409762
+    second: Game Boy Advance - Sonic Battle - Shadow_48
+  - first:
+      213: -9123322044923441164
+    second: Game Boy Advance - Sonic Battle - Shadow_49
+  - first:
+      213: 8529876043294139255
+    second: Game Boy Advance - Sonic Battle - Shadow_50
+  - first:
+      213: 6935607339829423961
+    second: Game Boy Advance - Sonic Battle - Shadow_51
+  - first:
+      213: -5457084045167324601
+    second: Game Boy Advance - Sonic Battle - Shadow_52
+  - first:
+      213: 8673676263246599094
+    second: Game Boy Advance - Sonic Battle - Shadow_53
+  - first:
+      213: -1318005102644552156
+    second: Game Boy Advance - Sonic Battle - Shadow_54
+  - first:
+      213: -292659727967034506
+    second: Game Boy Advance - Sonic Battle - Shadow_55
+  - first:
+      213: 3786715340265956719
+    second: Game Boy Advance - Sonic Battle - Shadow_56
+  - first:
+      213: -2264385365069416147
+    second: Game Boy Advance - Sonic Battle - Shadow_57
+  - first:
+      213: -2259849736868543884
+    second: Game Boy Advance - Sonic Battle - Shadow_58
+  - first:
+      213: -5555345557871230774
+    second: Game Boy Advance - Sonic Battle - Shadow_59
+  - first:
+      213: -5931503262064326244
+    second: Game Boy Advance - Sonic Battle - Shadow_60
+  - first:
+      213: -3772366417041911563
+    second: Game Boy Advance - Sonic Battle - Shadow_61
+  - first:
+      213: 3498012293583325404
+    second: Game Boy Advance - Sonic Battle - Shadow_62
+  - first:
+      213: 5550503855852236014
+    second: Game Boy Advance - Sonic Battle - Shadow_63
+  - first:
+      213: -1755004953851931029
+    second: Game Boy Advance - Sonic Battle - Shadow_64
+  - first:
+      213: -5644186407696725153
+    second: Game Boy Advance - Sonic Battle - Shadow_65
+  - first:
+      213: -4098071082660151021
+    second: Game Boy Advance - Sonic Battle - Shadow_66
+  - first:
+      213: -4730790794611696270
+    second: Game Boy Advance - Sonic Battle - Shadow_67
+  - first:
+      213: 2265581037775353742
+    second: Game Boy Advance - Sonic Battle - Shadow_68
+  - first:
+      213: -2092137177267691388
+    second: Game Boy Advance - Sonic Battle - Shadow_69
+  - first:
+      213: -3234235170121720198
+    second: Game Boy Advance - Sonic Battle - Shadow_70
+  - first:
+      213: -8114004734919204721
+    second: Game Boy Advance - Sonic Battle - Shadow_71
+  - first:
+      213: -3072889834249743224
+    second: Game Boy Advance - Sonic Battle - Shadow_72
+  - first:
+      213: 627150508321090122
+    second: Game Boy Advance - Sonic Battle - Shadow_73
+  - first:
+      213: 3257994352984558470
+    second: Game Boy Advance - Sonic Battle - Shadow_74
+  - first:
+      213: -6875387796618123225
+    second: Game Boy Advance - Sonic Battle - Shadow_75
+  - first:
+      213: 2404933410726755957
+    second: Game Boy Advance - Sonic Battle - Shadow_76
+  - first:
+      213: -425608713011700665
+    second: Game Boy Advance - Sonic Battle - Shadow_77
+  - first:
+      213: 2366583144722555094
+    second: Game Boy Advance - Sonic Battle - Shadow_78
+  - first:
+      213: -4139711824828026078
+    second: Game Boy Advance - Sonic Battle - Shadow_79
+  - first:
+      213: -4245350597996790267
+    second: Game Boy Advance - Sonic Battle - Shadow_80
+  - first:
+      213: 8535105241369506148
+    second: Game Boy Advance - Sonic Battle - Shadow_81
+  - first:
+      213: -6070445010232581655
+    second: Game Boy Advance - Sonic Battle - Shadow_82
+  - first:
+      213: -5262693318362871763
+    second: Game Boy Advance - Sonic Battle - Shadow_83
+  - first:
+      213: 4505432521386227754
+    second: Game Boy Advance - Sonic Battle - Shadow_84
+  - first:
+      213: 5963735277561998491
+    second: Game Boy Advance - Sonic Battle - Shadow_85
+  - first:
+      213: -3416706470796655182
+    second: Game Boy Advance - Sonic Battle - Shadow_86
+  - first:
+      213: 4995880810216888175
+    second: Game Boy Advance - Sonic Battle - Shadow_87
+  - first:
+      213: 4818583955675568518
+    second: Game Boy Advance - Sonic Battle - Shadow_88
+  - first:
+      213: -4316424730763424247
+    second: Game Boy Advance - Sonic Battle - Shadow_89
+  - first:
+      213: 6289709006767447608
+    second: Game Boy Advance - Sonic Battle - Shadow_90
+  - first:
+      213: -7201306489940564959
+    second: Game Boy Advance - Sonic Battle - Shadow_91
+  - first:
+      213: -312254943607693472
+    second: Game Boy Advance - Sonic Battle - Shadow_92
+  - first:
+      213: 4609863686831011126
+    second: Game Boy Advance - Sonic Battle - Shadow_93
+  - first:
+      213: -3883002353163167014
+    second: Game Boy Advance - Sonic Battle - Shadow_94
+  - first:
+      213: 8564218142147888002
+    second: Game Boy Advance - Sonic Battle - Shadow_95
+  - first:
+      213: 8499654670154754127
+    second: Game Boy Advance - Sonic Battle - Shadow_96
+  - first:
+      213: 6973554206697056866
+    second: Game Boy Advance - Sonic Battle - Shadow_97
+  - first:
+      213: 5893574554251685398
+    second: Game Boy Advance - Sonic Battle - Shadow_98
+  - first:
+      213: 3837825402860310313
+    second: Game Boy Advance - Sonic Battle - Shadow_99
+  - first:
+      213: 3011060787961733424
+    second: Game Boy Advance - Sonic Battle - Shadow_100
+  - first:
+      213: -7893791863184540315
+    second: Game Boy Advance - Sonic Battle - Shadow_101
+  - first:
+      213: 1517721568099873063
+    second: Game Boy Advance - Sonic Battle - Shadow_102
+  - first:
+      213: 1168059343437861803
+    second: Game Boy Advance - Sonic Battle - Shadow_103
+  - first:
+      213: -2685175172527201365
+    second: Game Boy Advance - Sonic Battle - Shadow_104
+  - first:
+      213: 2913393779095618139
+    second: Game Boy Advance - Sonic Battle - Shadow_105
+  - first:
+      213: -746229776359361242
+    second: Game Boy Advance - Sonic Battle - Shadow_106
+  - first:
+      213: -9141173515733750866
+    second: Game Boy Advance - Sonic Battle - Shadow_107
+  - first:
+      213: -5258557273779097791
+    second: Game Boy Advance - Sonic Battle - Shadow_108
+  - first:
+      213: -864489414095398870
+    second: Game Boy Advance - Sonic Battle - Shadow_109
+  - first:
+      213: -6449088712973708240
+    second: Game Boy Advance - Sonic Battle - Shadow_110
+  - first:
+      213: 6549536726494881438
+    second: Game Boy Advance - Sonic Battle - Shadow_111
+  - first:
+      213: -512287891738904687
+    second: Game Boy Advance - Sonic Battle - Shadow_112
+  - first:
+      213: -7121265757056512762
+    second: Game Boy Advance - Sonic Battle - Shadow_113
+  - first:
+      213: -6800460995101500787
+    second: Game Boy Advance - Sonic Battle - Shadow_114
+  - first:
+      213: -4254447018062453044
+    second: Game Boy Advance - Sonic Battle - Shadow_115
+  - first:
+      213: 9217204340200201541
+    second: Game Boy Advance - Sonic Battle - Shadow_116
+  - first:
+      213: -1749722834095280970
+    second: Game Boy Advance - Sonic Battle - Shadow_117
+  - first:
+      213: 9090972195704610624
+    second: Game Boy Advance - Sonic Battle - Shadow_118
+  - first:
+      213: 7819897168717370099
+    second: Game Boy Advance - Sonic Battle - Shadow_119
+  - first:
+      213: 5279355715764615774
+    second: Game Boy Advance - Sonic Battle - Shadow_120
+  - first:
+      213: 4131281856430012640
+    second: Game Boy Advance - Sonic Battle - Shadow_121
+  - first:
+      213: 448717065377970767
+    second: Game Boy Advance - Sonic Battle - Shadow_122
+  - first:
+      213: 5697909196873573343
+    second: Game Boy Advance - Sonic Battle - Shadow_123
+  - first:
+      213: -1512831610497074757
+    second: Game Boy Advance - Sonic Battle - Shadow_124
+  - first:
+      213: 7688168076768056020
+    second: Game Boy Advance - Sonic Battle - Shadow_125
+  - first:
+      213: -6042554326742728582
+    second: Game Boy Advance - Sonic Battle - Shadow_126
+  - first:
+      213: 2104277586114583918
+    second: Game Boy Advance - Sonic Battle - Shadow_127
+  - first:
+      213: 7569415561478342926
+    second: Game Boy Advance - Sonic Battle - Shadow_128
+  - first:
+      213: 5394214663816955030
+    second: Game Boy Advance - Sonic Battle - Shadow_129
+  - first:
+      213: -7183998685092807458
+    second: Game Boy Advance - Sonic Battle - Shadow_130
+  - first:
+      213: -3813380913589012192
+    second: Game Boy Advance - Sonic Battle - Shadow_131
+  - first:
+      213: -2410676427537044359
+    second: Game Boy Advance - Sonic Battle - Shadow_132
+  - first:
+      213: -7879786988378518603
+    second: Game Boy Advance - Sonic Battle - Shadow_133
+  - first:
+      213: -5544731705566972783
+    second: Game Boy Advance - Sonic Battle - Shadow_134
+  - first:
+      213: -711925584125990524
+    second: Game Boy Advance - Sonic Battle - Shadow_135
+  - first:
+      213: 7479362652691205393
+    second: Game Boy Advance - Sonic Battle - Shadow_136
+  - first:
+      213: 4244235611908102683
+    second: Game Boy Advance - Sonic Battle - Shadow_137
+  - first:
+      213: -6889695644593736689
+    second: Game Boy Advance - Sonic Battle - Shadow_138
+  - first:
+      213: -3152025568477474022
+    second: Game Boy Advance - Sonic Battle - Shadow_139
+  - first:
+      213: 378085443877167644
+    second: Game Boy Advance - Sonic Battle - Shadow_140
+  - first:
+      213: 3917804953841225912
+    second: Game Boy Advance - Sonic Battle - Shadow_141
+  - first:
+      213: -1100750817583790088
+    second: Game Boy Advance - Sonic Battle - Shadow_142
+  - first:
+      213: 2144489849482904671
+    second: Game Boy Advance - Sonic Battle - Shadow_143
+  - first:
+      213: 8305375372020179590
+    second: Game Boy Advance - Sonic Battle - Shadow_144
+  - first:
+      213: 2003047586782234599
+    second: Game Boy Advance - Sonic Battle - Shadow_145
+  - first:
+      213: 3648096584202270768
+    second: Game Boy Advance - Sonic Battle - Shadow_146
+  - first:
+      213: 2126190872113647361
+    second: Game Boy Advance - Sonic Battle - Shadow_147
+  - first:
+      213: 5086647196937999908
+    second: Game Boy Advance - Sonic Battle - Shadow_148
+  - first:
+      213: -3278003343673140281
+    second: Game Boy Advance - Sonic Battle - Shadow_149
+  - first:
+      213: -6364545894478413010
+    second: Game Boy Advance - Sonic Battle - Shadow_150
+  - first:
+      213: 5564450155734091273
+    second: Game Boy Advance - Sonic Battle - Shadow_151
+  - first:
+      213: 3946214457202547438
+    second: Game Boy Advance - Sonic Battle - Shadow_152
+  - first:
+      213: -8342718314575708143
+    second: Game Boy Advance - Sonic Battle - Shadow_153
+  - first:
+      213: -7632446408107052514
+    second: Game Boy Advance - Sonic Battle - Shadow_154
+  - first:
+      213: 2995226727205592917
+    second: Game Boy Advance - Sonic Battle - Shadow_155
+  - first:
+      213: 2672270479920002594
+    second: Game Boy Advance - Sonic Battle - Shadow_156
+  - first:
+      213: -5086526455933131465
+    second: Game Boy Advance - Sonic Battle - Shadow_157
+  - first:
+      213: -3927118384124322428
+    second: Game Boy Advance - Sonic Battle - Shadow_158
+  - first:
+      213: -7259478527421169388
+    second: Game Boy Advance - Sonic Battle - Shadow_159
+  - first:
+      213: 841069310078920627
+    second: Game Boy Advance - Sonic Battle - Shadow_160
+  - first:
+      213: 2575074830061378658
+    second: Game Boy Advance - Sonic Battle - Shadow_161
+  - first:
+      213: 4897638647351757339
+    second: Game Boy Advance - Sonic Battle - Shadow_162
+  - first:
+      213: 576400596928098378
+    second: Game Boy Advance - Sonic Battle - Shadow_163
+  - first:
+      213: -7395105605465816172
+    second: Game Boy Advance - Sonic Battle - Shadow_164
+  - first:
+      213: 1515956149319315330
+    second: Game Boy Advance - Sonic Battle - Shadow_165
+  - first:
+      213: -8703043526222621383
+    second: Game Boy Advance - Sonic Battle - Shadow_166
+  - first:
+      213: 9027577628052268760
+    second: Game Boy Advance - Sonic Battle - Shadow_167
+  - first:
+      213: 7491718092761021924
+    second: Game Boy Advance - Sonic Battle - Shadow_168
+  - first:
+      213: 1945769125444499780
+    second: Game Boy Advance - Sonic Battle - Shadow_169
+  - first:
+      213: 6037492224313425431
+    second: Game Boy Advance - Sonic Battle - Shadow_170
+  - first:
+      213: -4357920683921392522
+    second: Game Boy Advance - Sonic Battle - Shadow_171
+  - first:
+      213: -6671921574753252505
+    second: Game Boy Advance - Sonic Battle - Shadow_172
+  - first:
+      213: 327243778614181349
+    second: Game Boy Advance - Sonic Battle - Shadow_173
+  - first:
+      213: -4147354873458576664
+    second: Game Boy Advance - Sonic Battle - Shadow_174
+  - first:
+      213: -6794529404868956119
+    second: Game Boy Advance - Sonic Battle - Shadow_175
+  - first:
+      213: 9075057469142655336
+    second: Game Boy Advance - Sonic Battle - Shadow_176
+  - first:
+      213: 4589222761753885412
+    second: Game Boy Advance - Sonic Battle - Shadow_177
+  - first:
+      213: 70092848568363069
+    second: Game Boy Advance - Sonic Battle - Shadow_178
+  - first:
+      213: 2880442943699866504
+    second: Game Boy Advance - Sonic Battle - Shadow_179
+  - first:
+      213: 2305171269544434184
+    second: Game Boy Advance - Sonic Battle - Shadow_180
+  - first:
+      213: 4775007803327015242
+    second: Game Boy Advance - Sonic Battle - Shadow_181
+  - first:
+      213: -5211763099242954393
+    second: Game Boy Advance - Sonic Battle - Shadow_182
+  - first:
+      213: -3492985584089608808
+    second: Game Boy Advance - Sonic Battle - Shadow_183
+  - first:
+      213: 2239752696377111588
+    second: Game Boy Advance - Sonic Battle - Shadow_184
+  - first:
+      213: 6690705946895051177
+    second: Game Boy Advance - Sonic Battle - Shadow_185
+  - first:
+      213: -9119756768287427185
+    second: Game Boy Advance - Sonic Battle - Shadow_186
+  - first:
+      213: 291273286808405560
+    second: Game Boy Advance - Sonic Battle - Shadow_187
+  - first:
+      213: 4935716966277880319
+    second: Game Boy Advance - Sonic Battle - Shadow_188
+  - first:
+      213: 6747819559771857382
+    second: Game Boy Advance - Sonic Battle - Shadow_189
+  - first:
+      213: 8942510547357061756
+    second: Game Boy Advance - Sonic Battle - Shadow_190
+  - first:
+      213: -6271243111006722781
+    second: Game Boy Advance - Sonic Battle - Shadow_191
+  - first:
+      213: -7393462088045972276
+    second: Game Boy Advance - Sonic Battle - Shadow_192
+  - first:
+      213: -2786147898446425709
+    second: Game Boy Advance - Sonic Battle - Shadow_193
+  - first:
+      213: -550869587010332975
+    second: Game Boy Advance - Sonic Battle - Shadow_194
+  - first:
+      213: -6395154901907474023
+    second: Game Boy Advance - Sonic Battle - Shadow_195
+  - first:
+      213: -6393962114131351472
+    second: Game Boy Advance - Sonic Battle - Shadow_196
+  - first:
+      213: -1724206460681926870
+    second: Game Boy Advance - Sonic Battle - Shadow_197
+  - first:
+      213: -1046241898753047530
+    second: Game Boy Advance - Sonic Battle - Shadow_198
+  - first:
+      213: -7268373885972391687
+    second: Game Boy Advance - Sonic Battle - Shadow_199
+  - first:
+      213: 836771199465425745
+    second: Game Boy Advance - Sonic Battle - Shadow_200
+  - first:
+      213: -1363651687930522378
+    second: Game Boy Advance - Sonic Battle - Shadow_201
+  - first:
+      213: 5637931387818130725
+    second: Game Boy Advance - Sonic Battle - Shadow_202
+  - first:
+      213: -8233371489271237386
+    second: Game Boy Advance - Sonic Battle - Shadow_203
+  - first:
+      213: 7147351721268393914
+    second: Game Boy Advance - Sonic Battle - Shadow_204
+  - first:
+      213: -5250689280551138790
+    second: Game Boy Advance - Sonic Battle - Shadow_205
+  - first:
+      213: -5452642896024883490
+    second: Game Boy Advance - Sonic Battle - Shadow_206
+  - first:
+      213: -1141529711677693523
+    second: Game Boy Advance - Sonic Battle - Shadow_207
+  - first:
+      213: -362966915801510935
+    second: Game Boy Advance - Sonic Battle - Shadow_208
+  - first:
+      213: -3561485822031498563
+    second: Game Boy Advance - Sonic Battle - Shadow_209
+  - first:
+      213: -3293025352348796049
+    second: Game Boy Advance - Sonic Battle - Shadow_210
+  - first:
+      213: -6812516659016868768
+    second: Game Boy Advance - Sonic Battle - Shadow_211
+  - first:
+      213: -9091358912108377176
+    second: Game Boy Advance - Sonic Battle - Shadow_212
+  - first:
+      213: 6218197881662752838
+    second: Game Boy Advance - Sonic Battle - Shadow_213
+  - first:
+      213: 4701500202875302504
+    second: Game Boy Advance - Sonic Battle - Shadow_214
+  - first:
+      213: -2805404660062608915
+    second: Game Boy Advance - Sonic Battle - Shadow_215
+  - first:
+      213: 7226198314841909550
+    second: Game Boy Advance - Sonic Battle - Shadow_216
+  - first:
+      213: -2210192149857785728
+    second: Game Boy Advance - Sonic Battle - Shadow_217
+  - first:
+      213: 2000796277732316155
+    second: Game Boy Advance - Sonic Battle - Shadow_218
+  - first:
+      213: -432228316821342615
+    second: Game Boy Advance - Sonic Battle - Shadow_219
+  - first:
+      213: 4967902892531673128
+    second: Game Boy Advance - Sonic Battle - Shadow_220
+  - first:
+      213: -5611573948663253282
+    second: Game Boy Advance - Sonic Battle - Shadow_221
+  - first:
+      213: 1827260683907337443
+    second: Game Boy Advance - Sonic Battle - Shadow_222
+  - first:
+      213: -1198515080573338807
+    second: Game Boy Advance - Sonic Battle - Shadow_223
+  - first:
+      213: 2801396574618897952
+    second: Game Boy Advance - Sonic Battle - Shadow_224
+  - first:
+      213: 4776685603547707196
+    second: Game Boy Advance - Sonic Battle - Shadow_225
+  - first:
+      213: -6162723889744906854
+    second: Game Boy Advance - Sonic Battle - Shadow_226
+  - first:
+      213: -1295855474096852611
+    second: Game Boy Advance - Sonic Battle - Shadow_227
+  - first:
+      213: 2377100698268308680
+    second: Game Boy Advance - Sonic Battle - Shadow_228
+  - first:
+      213: -4215052069895477265
+    second: Game Boy Advance - Sonic Battle - Shadow_229
+  - first:
+      213: 9172853158701759654
+    second: Game Boy Advance - Sonic Battle - Shadow_230
+  - first:
+      213: 2455152922027947748
+    second: Game Boy Advance - Sonic Battle - Shadow_231
+  - first:
+      213: 8403602167661455270
+    second: Game Boy Advance - Sonic Battle - Shadow_232
+  - first:
+      213: 4827618708464338803
+    second: Game Boy Advance - Sonic Battle - Shadow_233
+  - first:
+      213: -4074928082059048499
+    second: Game Boy Advance - Sonic Battle - Shadow_234
+  - first:
+      213: 6777264971760564162
+    second: Game Boy Advance - Sonic Battle - Shadow_235
+  - first:
+      213: 1233148001660794316
+    second: Game Boy Advance - Sonic Battle - Shadow_236
+  - first:
+      213: 3015220784051369202
+    second: Game Boy Advance - Sonic Battle - Shadow_237
+  - first:
+      213: 662488356063808569
+    second: Game Boy Advance - Sonic Battle - Shadow_238
+  - first:
+      213: 4537350038628220715
+    second: Game Boy Advance - Sonic Battle - Shadow_239
+  - first:
+      213: -3741525814564611479
+    second: Game Boy Advance - Sonic Battle - Shadow_240
+  - first:
+      213: 6795476097508976561
+    second: Game Boy Advance - Sonic Battle - Shadow_241
+  - first:
+      213: -3981079714104716688
+    second: Game Boy Advance - Sonic Battle - Shadow_242
+  - first:
+      213: -2030687383975088346
+    second: Game Boy Advance - Sonic Battle - Shadow_243
+  - first:
+      213: 8395675078202174959
+    second: Game Boy Advance - Sonic Battle - Shadow_244
+  - first:
+      213: 1838419602747747314
+    second: Game Boy Advance - Sonic Battle - Shadow_245
+  - first:
+      213: 6378452935849777349
+    second: Game Boy Advance - Sonic Battle - Shadow_246
+  - first:
+      213: -8193595653809875750
+    second: Game Boy Advance - Sonic Battle - Shadow_247
+  - first:
+      213: -8643004043566104905
+    second: Game Boy Advance - Sonic Battle - Shadow_248
+  - first:
+      213: 670473145228354875
+    second: Game Boy Advance - Sonic Battle - Shadow_249
+  - first:
+      213: 4518108025676455436
+    second: Game Boy Advance - Sonic Battle - Shadow_250
+  - first:
+      213: 1789989432135914013
+    second: Game Boy Advance - Sonic Battle - Shadow_251
+  - first:
+      213: 2177781653603688072
+    second: Game Boy Advance - Sonic Battle - Shadow_252
+  - first:
+      213: 7793491978402827966
+    second: Game Boy Advance - Sonic Battle - Shadow_253
+  - first:
+      213: 2526760698654163762
+    second: Game Boy Advance - Sonic Battle - Shadow_254
+  - first:
+      213: 6044012125011683261
+    second: Game Boy Advance - Sonic Battle - Shadow_256
+  - first:
+      213: 8892689541324154619
+    second: Game Boy Advance - Sonic Battle - Shadow_257
+  - first:
+      213: 566736963248419484
+    second: Game Boy Advance - Sonic Battle - Shadow_258
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -84,7 +858,5425 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 821
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9af51fcefb0f9f40b1abc08dce0988a
+      internalID: -9014749705715007222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 821
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c781eaf876c2f214a82abbcbe5dfc925
+      internalID: -2966128537723462685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 821
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d012c732a79233449bd9de37879f432
+      internalID: 4927005082282220209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 821
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f664fc22ab9929749ac0e07a2f7b3ce8
+      internalID: -376641200536737952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 821
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e156fc6e98119f3439375b60f43d914e
+      internalID: -7626429372602414609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_5
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 821
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e52e9e2d3e14346b6783013523d2a1
+      internalID: 8548108899508487577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 821
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f466be53bfc4c9d47904b9452ed75902
+      internalID: 8071049049079124586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_7
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 821
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cea67a1ddb69246a28f2d2dc9d6932
+      internalID: -4552631989971886171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_8
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 821
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a34534d3b9d83488c3f6abbd058f0f
+      internalID: 1313710782540204259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_9
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 821
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd88eb65d97feb746b3a99feb7a97ce2
+      internalID: -4410907003875428814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_10
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 822
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4890d9d4440db6d40957a2137581851a
+      internalID: -8635939978898092795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 822
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88a457c6088994887df11a7aace443
+      internalID: -5156356112074211095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_12
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 822
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a926cbc873d7f574190e092481246445
+      internalID: -841018916945061724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_13
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 824
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7f652e63a5d6f44a7d2e8281c365b2
+      internalID: -2133906689160345370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_14
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 823
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d0043a8f2c09b4e945adfdf35b4b20
+      internalID: 872844753778419293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_15
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 823
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc342c208458a9448d86e380518713e
+      internalID: -6847176736746624768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_16
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 822
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4b397685a7e274b9f818e502c4184f
+      internalID: -7663194962646596406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_17
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 822
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da28d3623e9ba00439c8d6c27edf485d
+      internalID: 4637457384550861966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_18
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 822
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1c492f00866ea438e449e33fa3cc11
+      internalID: 1453273368499409230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 773
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21442d99b340e0c41ae226db5faf6c27
+      internalID: 2019831541601640741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_20
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 774
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513993e7fcfdfde4eb088c2e060d8b7b
+      internalID: -1933352543308211289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_21
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 775
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5348418cea6344487692460ccf8e7c
+      internalID: -8790368855258901081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_22
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 801
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bb22d2676030d4a927592f4be24f5d
+      internalID: 2098497184590705930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_23
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 798
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21145aca5efde294bb826f2e4fdd49f6
+      internalID: 580523783891683448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_24
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 801
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b786a5cbb50bc0949a8057d80a09cf83
+      internalID: -6945393544768001227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_25
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 798
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4208614cc0032fb4ca264e591c37a203
+      internalID: 5366439491036094530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_26
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 775
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdec321ede3a9848bbc998dc8ded6b0
+      internalID: 6542415424412582415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_27
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 772
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017bfb9a06c081f4ea15250a685f20bc
+      internalID: 96725589902183421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_28
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 784
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5797267b1508d274c833f37e005408a0
+      internalID: 9160476699257885299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_29
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 773
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01ccaf7444293e449a29045346af334
+      internalID: -1560407156878087655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_30
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 773
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a69861dc5a7866438d4194fd04f6b75
+      internalID: 7475134324308671402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_31
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 773
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4844c24056e9424a93fbb6d355ac11d
+      internalID: -3656155585767860411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_32
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 773
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a9b87544e22594eabc052b40948507
+      internalID: 8741666579846795406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_33
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 772
+        width: 46
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16158ecc353deb4794c6b201022b484
+      internalID: 3653800171065533648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_34
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 773
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb55edd1325239741ba4e2ffbafe8f58
+      internalID: -6030377721743541875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_35
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 773
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7e21b308f3d244b819cfdc0623977b
+      internalID: 1246123962550224169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_36
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 774
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8fc69cc64f9444ebe26b2a4fe119f4
+      internalID: -127096360046203275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_37
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 774
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c56060b12f616e4c9c1b3d5fc451ab6
+      internalID: 4037969956915952309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_38
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 775
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9bbaf4c77d14642a9dda0508ed5d53
+      internalID: 7118255745286274700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_39
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 790
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c9fd6be576d8f47a932f94177bc9a9
+      internalID: 3723445055243503880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_40
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 793
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffd6649506782348bf1827e745fd3c0
+      internalID: 8947183038126767913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_41
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 775
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96120cc296a87254ca7cc0a65a9e5415
+      internalID: -7263624608260501728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 790
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56150e1f7bd795438bf477962c2705a
+      internalID: 7120519689409227064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_43
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 793
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52b1c7ced937064bb03685de30e29d6
+      internalID: -1791153561659674167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_44
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 773
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc14b0739da923488c55f55fea661fd
+      internalID: -2795097429476499685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 706
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81b141ddde403447888cf5b72a6d872
+      internalID: -6229463398665317145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_46
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 706
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0483975f49475c4bbd02ded192984dc
+      internalID: 2117974628513092102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_47
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 703
+        width: 24
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d106e5b4073df4c930eb180cf6f500
+      internalID: 1804634792976682056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_48
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 726
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8550f9821deada4b9204c79ddc5317a
+      internalID: 6213762287013409762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_49
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 724
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa3389e6d998e64a9790480d6d8fa92
+      internalID: -9123322044923441164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_50
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 721
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff0cfa5d1bcd224f8412d7fc46e0225
+      internalID: 8529876043294139255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_51
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 721
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e686fa6011e952498ad650eeea27484
+      internalID: 6935607339829423961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_52
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 721
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b119ac5e9359294d905cf06672a403d
+      internalID: -5457084045167324601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_53
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 721
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2069924904c41744b0a2d4ebfd7b6ec
+      internalID: 8673676263246599094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_54
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 721
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92888a1fad3dbb459461cb950e902f2
+      internalID: -1318005102644552156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_55
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 721
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0aceb33cb5042e4fb765e0c040337d1
+      internalID: -292659727967034506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_56
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 721
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395609eeabc2e6a4b81e2ff0224ace98
+      internalID: 3786715340265956719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_57
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 721
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303d5b98347f666459cddd3a261f0157
+      internalID: -2264385365069416147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_58
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 718
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75f23698401e5d4f99f3dd587b7e0ee
+      internalID: -2259849736868543884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_59
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 717
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d419bddd6864084d888a9eb0edb63eb
+      internalID: -5555345557871230774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_60
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 718
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac6f0c5aa638114d939a20bd6e33710
+      internalID: -5931503262064326244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_61
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 721
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5498739ef1ad51a4da174972cf5f168c
+      internalID: -3772366417041911563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_62
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 733
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2135f8394332be341a81e81d4b5bd163
+      internalID: 3498012293583325404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_63
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 721
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1965f2535db21141bc0b4f41f729408
+      internalID: 5550503855852236014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_64
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 746
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfd2026a363f174d8d6116d42783ab5
+      internalID: -1755004953851931029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_65
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 743
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b28752701b6f1a41b80f32fbf214f84
+      internalID: -5644186407696725153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_66
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 738
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db9b72da29b39f4db87722aaba644ec
+      internalID: -4098071082660151021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_67
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 721
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8e2e58b471c24469e6f38c463edc17
+      internalID: -4730790794611696270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_68
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 721
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b93c1458332d1429b0322cf00ce5b1
+      internalID: 2265581037775353742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_69
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 700
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f265f104a61ea01439ad9dee278531ae
+      internalID: -2092137177267691388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_70
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 698
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d987aac504f88c745a46c99f47ee8bcf
+      internalID: -3234235170121720198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_71
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 670
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ce9414d4306444493b1e249cdaede7
+      internalID: -8114004734919204721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_72
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 667
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7f86b2eb0175a449ad673aa3619818
+      internalID: -3072889834249743224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_73
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 664
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64813c85fc2e6cd429555979bc0137d2
+      internalID: 627150508321090122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_74
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 664
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac703cf22d76f6e449025b9cae4219ad
+      internalID: 3257994352984558470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_75
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 679
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e74a16bc349474e90e8e0830c14684
+      internalID: -6875387796618123225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_76
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 676
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883a747b7aa370e4ca19a73af3522a32
+      internalID: 2404933410726755957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_77
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 657
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7097c6332201b654fbeb27726eacdabe
+      internalID: -425608713011700665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_78
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 706
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac49b7be71f12649b787f2c6c26190c
+      internalID: 2366583144722555094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_79
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 674
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2436062d3822f704aaeea853c13006d0
+      internalID: -4139711824828026078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_80
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 674
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707328595b629d74aa925aa2f6f669c5
+      internalID: -4245350597996790267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_81
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 674
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b579caa834900f44add931a7bd93f44
+      internalID: 8535105241369506148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_82
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 674
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05597a57b41322e4fa30e41628e1abae
+      internalID: -6070445010232581655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_83
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 657
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab37a25012edb2b439ae2c24e58aa817
+      internalID: -5262693318362871763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_84
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 655
+        width: 40
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dd12fee0e64fa43838161233a8d3ff
+      internalID: 4505432521386227754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_85
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 673
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7462022a0025df1418e9f479e98e0dea
+      internalID: 5963735277561998491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_86
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 673
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd2b8ea468c8b04583f626d8dcc70f6
+      internalID: -3416706470796655182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_87
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 673
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f727a6c9f77df4787d3aca052d4826
+      internalID: 4995880810216888175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_88
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 657
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf626f58bc9cb0b408db698b45b38ef0
+      internalID: 4818583955675568518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_89
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 612
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28e14c6992fc144db9e58a7c0df3964
+      internalID: -4316424730763424247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_90
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 612
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619746f8340e7aa44b420373fa6e87dd
+      internalID: 6289709006767447608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_91
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 612
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b099300e36edaf4d9740ff98568be6d
+      internalID: -7201306489940564959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_92
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 612
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef8f13401b46fc42b33a1fed9623b3e
+      internalID: -312254943607693472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_93
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 629
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2c203bb2ff5ce4a8458dbab5ae2f1f
+      internalID: 4609863686831011126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_94
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 612
+        width: 61
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4e532c60cf50a41a1d0f5dc4039c1c
+      internalID: -3883002353163167014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_95
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 612
+        width: 67
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fa144946ea58a44ae2fe9ea0cf3c24
+      internalID: 8564218142147888002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_96
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 612
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a1bf97319f67e48b45f03740374e21
+      internalID: 8499654670154754127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_97
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 610
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75626ffeeec80774c940a7e28bdf2550
+      internalID: 6973554206697056866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_98
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 607
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52329034aff54ec4ab1a8f4aab15e5f9
+      internalID: 5893574554251685398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_99
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 606
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc3223064345f7419e51c4f0de823b3
+      internalID: 3837825402860310313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_100
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 607
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae906f6a5036dfc489cb2200bf2806f6
+      internalID: 3011060787961733424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_101
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 554
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17725cea5e572654d9ed94cce6e9a361
+      internalID: -7893791863184540315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_102
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 549
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45a5cab8c734904dbae9b15dcb15aa2
+      internalID: 1517721568099873063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_103
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 552
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847f674cae541bd4e97b7070afeb0aac
+      internalID: 1168059343437861803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_104
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 580
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce1c95239e97c9448900ae7f0414a54
+      internalID: -2685175172527201365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_105
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 565
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1aef88c01b1324282caa9fe02472de
+      internalID: 2913393779095618139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_106
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 565
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43457d6f03be8a941a225b4820786a41
+      internalID: -746229776359361242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_107
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 565
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa36dbe67ad1a24eb233cc94130bd55
+      internalID: -9141173515733750866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_108
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 565
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215649d901bba7e49abbd22dc99c7205
+      internalID: -5258557273779097791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_109
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 565
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783a9938ccd11fe4f98f1195df064f39
+      internalID: -864489414095398870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_110
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 564
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff82557b70936c44ab5559a9e9479bf3
+      internalID: -6449088712973708240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_111
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 564
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d2e2cd2d062854bb1a9e94efe68d3b
+      internalID: 6549536726494881438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_112
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 563
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fa6a2043efbdc4b99b964ad0c00328
+      internalID: -512287891738904687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_113
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 562
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d68aafe46269724687e65ffe31f9193
+      internalID: -7121265757056512762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_114
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 562
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16f7e834ee1afd44b448471d040d85b
+      internalID: -6800460995101500787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_115
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 562
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfcc7c2d71d1854cbd5193883b0af81
+      internalID: -4254447018062453044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_116
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 554
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a2dabce2c82a64b82d361b2cf44576
+      internalID: 9217204340200201541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_117
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 547
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227f0999f8f3b8f45be45b9d278567f3
+      internalID: -1749722834095280970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_118
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 510
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c0229bee08acd4690a32ac839a9e52
+      internalID: 9090972195704610624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_119
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 510
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762a404437c495446a34bc71795c927b
+      internalID: 7819897168717370099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_120
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 509
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba8c294e0f69c84cb3f026271184863
+      internalID: 5279355715764615774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_121
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 509
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3367d5f47c0d7d04e971368c90d7f3bd
+      internalID: 4131281856430012640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_122
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 509
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaa787c9279d53478e3ce6e090d7726
+      internalID: 448717065377970767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_123
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 509
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e488b0f56e2054d8b38b3ac0da5115
+      internalID: 5697909196873573343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_124
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 520
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a566c174d61fa4b4294d4209c67881ad
+      internalID: -1512831610497074757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_125
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 509
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea10e1f49384a5649bf6a70b39c0c8c2
+      internalID: 7688168076768056020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_126
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 509
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3247549c51bad6d41a59f23fce59d91a
+      internalID: -6042554326742728582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_127
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4309b0e697a52c542bcd4f9bc614240c
+      internalID: 2104277586114583918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_128
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 510
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc81341c6d1a09945ac8986993f32ba9
+      internalID: 7569415561478342926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_129
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 511
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b914a303668355a4590cf60a150584c2
+      internalID: 5394214663816955030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_130
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 513
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cde73b426ceaea4088b14124f868091
+      internalID: -7183998685092807458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_131
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 511
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b81a77182ac094797a67fbb49ca2cc
+      internalID: -3813380913589012192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_132
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 510
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5621d32fe07f144389cf65a4b6d217e
+      internalID: -2410676427537044359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_133
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 511
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe0a3a41b880aa489b402bce6d88e3c
+      internalID: -7879786988378518603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_134
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 511
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b121826f73d160479661ec905e6fece
+      internalID: -5544731705566972783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_135
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 511
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556384b5241aaa6418e3c77e8c8a1cf5
+      internalID: -711925584125990524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_136
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 511
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9def6ce0adac3d498affd32f01cce39
+      internalID: 7479362652691205393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_137
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 511
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fd933ac8b63f1409e9da0fd1fe1616
+      internalID: 4244235611908102683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_138
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 463
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d628a4a6b0d955843ac144d0b234dd1b
+      internalID: -6889695644593736689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_139
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 463
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e75c2e8cca7fa24dbd08ed798c197c9
+      internalID: -3152025568477474022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_140
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 481
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafbb87d3f33c5842a1af203d0ee79de
+      internalID: 378085443877167644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_141
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 485
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40753e86f03ea9b428684c6b2ccd23cf
+      internalID: 3917804953841225912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_142
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 491
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1beddfc10bc0d9c40a886ac2e4143fa0
+      internalID: -1100750817583790088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_143
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 462
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a315c27b283be4db4146ab985f8cff
+      internalID: 2144489849482904671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_144
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 462
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5031bd89d03ddd4193ef23f0e036a57
+      internalID: 8305375372020179590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_145
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 456
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e958ac04bfaa7f48ab3d260cdbd463f
+      internalID: 2003047586782234599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_146
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 456
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8990a4176fab6ec47a8ba3562dcda6d7
+      internalID: 3648096584202270768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_147
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 454
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1df7d97e7698b46a9bbd9d8e05d201
+      internalID: 2126190872113647361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_148
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 454
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e0969a6f27e914dbcfbdff1a715565
+      internalID: 5086647196937999908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_149
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 452
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b38695feab9634baf1ebdce7a93018
+      internalID: -3278003343673140281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_150
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 453
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61328e732bd62b94f8b7c24d71bf7e78
+      internalID: -6364545894478413010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_151
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 456
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e5f7627027e2a4794433c176bb329e
+      internalID: 5564450155734091273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_152
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 456
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e2088ab13cf0c41a69d19588eec303
+      internalID: 3946214457202547438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_153
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 490
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befb0f7df5f5bde41acdbe9d0aee1857
+      internalID: -8342718314575708143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_154
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 475
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e33e2d22a477ee4bbdae66cf9fb68be
+      internalID: -7632446408107052514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_155
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 484
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b15182a61e6ed4f88e8ecb38baa247
+      internalID: 2995226727205592917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_156
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 462
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6dbd7d31b96921439cb8a4894dd354f
+      internalID: 2672270479920002594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_157
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 458
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d49559a30dfd845af16252bc40acbd
+      internalID: -5086526455933131465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_158
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 456
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd209ccca3c4834c972920eab925d50
+      internalID: -3927118384124322428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_159
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 455
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1c995befef3134c94fa568109db2b4
+      internalID: -7259478527421169388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_160
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 400
+        width: 59
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af41e10060ef67418c24eb2cf005536
+      internalID: 841069310078920627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_161
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 396
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690db09f4ddd7be4e83220d665123900
+      internalID: 2575074830061378658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_162
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 399
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5357243cf504664aa2308a05f7809ac
+      internalID: 4897638647351757339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_163
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 393
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406ae9250528c2d448f6cfdf6d033ac0
+      internalID: 576400596928098378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_164
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 435
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6d628cc8a5684419fee3b797e68936
+      internalID: -7395105605465816172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_165
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 438
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c16f5f77367e2f4c95539a336d38fd7
+      internalID: 1515956149319315330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_166
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 404
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce8169992033df48b77fc52bbbd7efc
+      internalID: -8703043526222621383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_167
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 404
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc10c57930ebe940bb1142f9d2b84f5
+      internalID: 9027577628052268760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_168
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 404
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f3a7e3af259734ea4e4fb738513e2d
+      internalID: 7491718092761021924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_169
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 405
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830b497a08f2d17438f31a25aaae8cb5
+      internalID: 1945769125444499780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_170
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 428
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb174aa1fbd2c44f9aa894a7b87613d
+      internalID: 6037492224313425431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_171
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 395
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3327082def9be4aa9f86f6ebc1ea2c
+      internalID: -4357920683921392522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_172
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 402
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2d68a53710c9344970e1e57d74a0f3
+      internalID: -6671921574753252505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_173
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 402
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e037b760016d6e24ca74eea5491cbc62
+      internalID: 327243778614181349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_174
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 402
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad848c576297dab44b3d66cf9e1f36d2
+      internalID: -4147354873458576664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_175
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 404
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71ba4a3ada2f1e479ce81802ea621f9
+      internalID: -6794529404868956119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_176
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 404
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c6631ac85b08b4cab63df97ff48fc4
+      internalID: 9075057469142655336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_177
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 408
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ca3719a9dc7094598b810aba19f19b
+      internalID: 4589222761753885412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_178
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 393
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588c95e2f96f7c6469bc09c031f570e2
+      internalID: 70092848568363069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_179
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 350
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a2001912a908042b9744640693cef2
+      internalID: 2880442943699866504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_180
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 350
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b882a472e2aded9468614b1a3312f65b
+      internalID: 2305171269544434184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_181
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 342
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc40550a191dae48a17e03b2b54522f
+      internalID: 4775007803327015242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_182
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 341
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc78cb346bb8824e9005c63c9c4a7da
+      internalID: -5211763099242954393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_183
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 349
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ae032ab39a5c749955d70433ea3f53
+      internalID: -3492985584089608808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_184
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 343
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857b924b3ecea6548895bd2316065b51
+      internalID: 2239752696377111588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_185
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 346
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5dd54c369b0224fa43760c10112b84
+      internalID: 6690705946895051177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_186
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 346
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baca5c9be30dfd247862a1ba4154c176
+      internalID: -9119756768287427185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_187
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 350
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29433b2fed1323744b9c9a165f32e020
+      internalID: 291273286808405560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_188
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 368
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a525d4f643924c34482e537db38eecee
+      internalID: 4935716966277880319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_189
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 374
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62d3c575b217e74fb7810c9994d2c65
+      internalID: 6747819559771857382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_190
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 348
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d651d9d81c9d44bad88f136c6da0a0
+      internalID: 8942510547357061756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_191
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 348
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98081033357fa384ea661dcec7487d16
+      internalID: -6271243111006722781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_192
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 348
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19df91e5c307e2b4188d179dc665a79d
+      internalID: -7393462088045972276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_193
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 349
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4246e8ee1a554d4ca50d652ce5e1f66
+      internalID: -2786147898446425709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_194
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 349
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d006d58641e46054888b69a147ac04a1
+      internalID: -550869587010332975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_195
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 345
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b2e9210f787ea42977260879941b83
+      internalID: -6395154901907474023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_196
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 346
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb27bc04ce1065419acec182f7437ec
+      internalID: -6393962114131351472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_197
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 346
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e39810ca8b470c4d90852d3ac2f4360
+      internalID: -1724206460681926870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_198
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 346
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fce6fb97ca1174a9639c8c6fc17a18
+      internalID: -1046241898753047530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_199
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 367
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a918514d8fc06fe4abe7737b643ef7d0
+      internalID: -7268373885972391687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_200
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 346
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e9e6edcbb227141b321663624437bd
+      internalID: 836771199465425745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_201
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 298
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83249be5978a0f641b380d6677e66a7c
+      internalID: -1363651687930522378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_202
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 304
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755b352d2f31ff54ca9d0abfde8e0e0f
+      internalID: 5637931387818130725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_203
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 298
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1e96b546a07084a8f3dce57ef4ebe0
+      internalID: -8233371489271237386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_204
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 299
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1b847ef7fd49849be50a5bedf57677
+      internalID: 7147351721268393914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_205
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 298
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8469f40b43964f74ebc43f2e88680ca0
+      internalID: -5250689280551138790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_206
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 299
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab93b6c3b71da64a9f52e1ca7db1200
+      internalID: -5452642896024883490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_207
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 299
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46eab22ec6d7eab4299bed7be878e365
+      internalID: -1141529711677693523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_208
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 299
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c83f9c95a4b03b42bd888c1c8ba4839
+      internalID: -362966915801510935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_209
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 299
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f30213a2bdf00842800630f3f6a073b
+      internalID: -3561485822031498563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_210
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 299
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799dad5f7ee4af44c946301dc73e35fc
+      internalID: -3293025352348796049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_211
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 299
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4607e92321e2ebb4fbb04bc6fa74e3e4
+      internalID: -6812516659016868768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_212
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 300
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383a480441606b04099768727b9f0f8a
+      internalID: -9091358912108377176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_213
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 303
+        width: 37
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8ade705191b8e49ae32cf159d4e5f9
+      internalID: 6218197881662752838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_214
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 303
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e70ccc54208204b98b59c7f2658e3d
+      internalID: 4701500202875302504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_215
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 303
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379a3ccd48c24144bb600e689521ad61
+      internalID: -2805404660062608915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_216
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 298
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a944cf846021340996bc209f7ffd6c
+      internalID: 7226198314841909550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_217
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 298
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f873ada397ba2204e8c96e4e343e1e77
+      internalID: -2210192149857785728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_218
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 298
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6dbb2ba31da4904c9a607a294d23a85
+      internalID: 2000796277732316155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_219
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 252
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16742ca38252d374399b3a4e31ae2374
+      internalID: -432228316821342615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_220
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 247
+        width: 56
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce3e5c72480aa84ca783177510f0f26
+      internalID: 4967902892531673128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_221
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 252
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966698f807dafcd4ba5ece78a7830755
+      internalID: -5611573948663253282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_222
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 252
+        width: 52
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91503a9684c25c441993b13d27085fe1
+      internalID: 1827260683907337443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_223
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 252
+        width: 54
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b021e13716a17274288fe833312d6eb4
+      internalID: -1198515080573338807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_224
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 252
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a0ea84b7d286043908425e80946827
+      internalID: 2801396574618897952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_225
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 252
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b174eb932de5949ba4112871d041f1
+      internalID: 4776685603547707196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_226
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 252
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727be72d3f01f3146bd73e9ea28bc80c
+      internalID: -6162723889744906854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_227
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 252
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8a4c0033ddf1149b5e624c3f18a496
+      internalID: -1295855474096852611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_228
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 252
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1997b41a808323448958ddefd1e41f72
+      internalID: 2377100698268308680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_229
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 252
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402687c6da1e9c44293c34fe7b291e88
+      internalID: -4215052069895477265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_230
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 252
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5949f08d9a04a0b49babed66c850a251
+      internalID: 9172853158701759654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_231
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 252
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea46f0cefc936d940bee605f864a4504
+      internalID: 2455152922027947748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_232
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 250
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdf08f93ddb61a41969c24461590e69
+      internalID: 8403602167661455270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_233
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 250
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075a1c24c611c47478487d0583f4f996
+      internalID: 4827618708464338803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_234
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 253
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb402a0adccf6545baadd46a498c369
+      internalID: -4074928082059048499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_235
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 209
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e44b400d1731de49a43eed8c77ac62f
+      internalID: 6777264971760564162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_236
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 209
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e675f8f463d3064182549a427cf981c
+      internalID: 1233148001660794316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_237
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 209
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5991e5abdffd0fc4e8d6f57dd121c863
+      internalID: 3015220784051369202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_238
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 209
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77753ab7c37b3e4cb9908589fa2aefb
+      internalID: 662488356063808569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_239
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 209
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becf5b18577b0f84595827718036a36a
+      internalID: 4537350038628220715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_240
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 209
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0d3bc46bef3554b86ec80c694e27fd
+      internalID: -3741525814564611479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_241
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 209
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae67a8245339204084691ed10c0594f
+      internalID: 6795476097508976561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_242
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 210
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca08d6e62ac0784982f74fa095c28c8
+      internalID: -3981079714104716688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_243
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 210
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b57c98f3b68f44d8eefcccfdb95085
+      internalID: -2030687383975088346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_244
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 210
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a96678bd921ad24a81e545958f78259
+      internalID: 8395675078202174959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_245
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 210
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a498ff73e1cfc144e8e5eb9061388efc
+      internalID: 1838419602747747314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_246
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 207
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0aa03a412a221468cde508f260d3f3
+      internalID: 6378452935849777349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_247
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 207
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645010926d53f2c42a7a3e7834f43402
+      internalID: -8193595653809875750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_248
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 207
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd7268ad97f2994fb479edc8485d31c
+      internalID: -8643004043566104905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_249
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 207
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f028534c59883bc4f959cf7db04b8794
+      internalID: 670473145228354875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_250
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 171
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f62a1793284b34080858f98106f8be
+      internalID: 4518108025676455436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_251
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 171
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746c9212bb9c75c4f9b73d7d4e36a3d5
+      internalID: 1789989432135914013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_252
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 171
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce84af34ef98f5458132f32e2279fdb
+      internalID: 2177781653603688072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_253
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 170
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a92920522c30ce4992da45f91a96a23
+      internalID: 7793491978402827966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_254
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 171
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9f66f493dc5314c99793a92e064e2f
+      internalID: 2526760698654163762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_256
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 82
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed845b734423c7f40a72db7ede67377c
+      internalID: 6044012125011683261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_257
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 0
+        width: 70
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce70f2f6830547e448946998b2d30051
+      internalID: 8892689541324154619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Sonic Battle - Shadow_258
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 142
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1623c8155c462f4cbfaa24c468c6cb0
+      internalID: 566736963248419484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
