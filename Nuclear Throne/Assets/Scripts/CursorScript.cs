@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class CursorScript : MonoBehaviour
 {
-    [SerializeField] private Texture texture;
-
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    void OnGUI()
+    private void Update()
     {
-        GUI.DrawTexture(new Rect(Event.current.mousePosition.x - 64 / 2, Event.current.mousePosition.y - 64 / 2, 64, 64), texture, ScaleMode.ScaleToFit);
+        Vector3 mov = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mov.z = 0;
+
+        transform.position = mov;
     }
 }
