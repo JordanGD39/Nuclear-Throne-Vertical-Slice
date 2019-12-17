@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponRotation : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     void Start()
     {
