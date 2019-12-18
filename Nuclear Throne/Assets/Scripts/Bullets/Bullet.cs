@@ -16,4 +16,7 @@ public class Bullet : ScriptableObject
 
     [SerializeField] private bool explode = false;
     public bool Explode { get { return explode; } }
+
+    [SerializeField] private bool playerDamage = false;
+    public bool PlayerDamage { get { return playerDamage; } }
 }

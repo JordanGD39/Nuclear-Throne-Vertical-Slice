@@ -31,4 +31,7 @@ public class Weapon : ScriptableObject
 
     [SerializeField] private int spreadAngle = 0;
     public int SpreadAngle { get { return spreadAngle; } }
+
+    [SerializeField] private bool melee = false;
+    public bool Melee { get { return melee; } }
 }
