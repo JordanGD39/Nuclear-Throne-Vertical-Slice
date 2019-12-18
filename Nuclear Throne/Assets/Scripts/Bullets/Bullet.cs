@@ -13,4 +13,7 @@ public class Bullet : ScriptableObject
 
     [SerializeField] private bool dissapear = false;
     public bool Dissapear { get { return dissapear; } }
+
+    [SerializeField] private bool explode = false;
+    public bool Explode { get { return explode; } }
 }
