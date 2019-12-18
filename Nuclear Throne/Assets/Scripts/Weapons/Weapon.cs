@@ -6,7 +6,7 @@ using UnityEngine;
 [SerializeField]
 public class Weapon : ScriptableObject
 {
-    private string weaponName = "";
+    [SerializeField] private string weaponName = "";
     public string Name { get { return weaponName; } }
 
     private Sprite sprite;
@@ -14,21 +14,21 @@ public class Weapon : ScriptableObject
     public enum type { SINGLE, BURST, AUTO, AUTOBURST}
     public type weaponType;
 
-    private Bullet bullet;
+    [SerializeField] private Bullet bullet;
     public Bullet WeaponBullet { get { return bullet; } }
 
-    private int damage;
+    [SerializeField] private int damage;
     public int Damage { get { return damage; } }
 
-    private float reloadTime = 0.5f;
+    [SerializeField] private float reloadTime = 0.5f;
     public float ReloadTime { get { return reloadTime; } }
 
-    private int startAmmo = 20;
+    [SerializeField] private int startAmmo = 20;
     public int StartAmmo { get { return startAmmo; } }
 
-    private int ammoWaste = 1;
+    [SerializeField] private int ammoWaste = 1;
     public int AmmoWaste { get { return ammoWaste; } }
 
-    private int spreadAngle = 0;
+    [SerializeField] private int spreadAngle = 0;
     public int SpreadAngle { get { return spreadAngle; } }
 }
