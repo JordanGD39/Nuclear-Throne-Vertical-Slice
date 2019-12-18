@@ -9,7 +9,7 @@ public class Bullet : ScriptableObject
     public type fireType;
 
     [SerializeField] private int hits = 1;
-    public int Hits { get { return hits; } }
+    public int Hits { get { return hits; } set { hits = value; } }
 
     [SerializeField] private bool dissapear = false;
     public bool Dissapear { get { return dissapear; } }
