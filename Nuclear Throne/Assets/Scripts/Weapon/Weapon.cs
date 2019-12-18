@@ -24,6 +24,9 @@ public class Weapon : ScriptableObject
     [SerializeField] private float reloadTime = 0.5f;
     public float ReloadTime { get { return reloadTime; } }
 
+    [SerializeField] private float shootCoords = 0;
+    public float ShootCoords { get { return shootCoords; } }
+
     [SerializeField] private int startAmmo = 20;
     public int StartAmmo { get { return startAmmo; } }
 

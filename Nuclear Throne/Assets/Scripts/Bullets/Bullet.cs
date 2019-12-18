@@ -8,6 +8,9 @@ public class Bullet : ScriptableObject
     public enum type { NORMAL, FIRE, LASER, PLASMA, LIGHTNING, EXPLOSION, MISSILE, SEEKER, DISC, SLUG, SHELL, BOLT }
     public type fireType;
 
+    [SerializeField] private Sprite sprite;
+    public Sprite SpriteOfBullet { get { return sprite; } }
+
     [SerializeField] private int hits = 1;
     public int Hits { get { return hits; } set { hits = value; } }
 

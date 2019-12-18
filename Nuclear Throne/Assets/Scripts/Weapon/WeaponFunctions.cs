@@ -7,11 +7,17 @@ public class WeaponFunctions : MonoBehaviour
     private bool automatic;
 
     private PlayerClass player;
+    private ShootGun gun;
+    private MeleeAttack meleeAttack;
+
+    [SerializeField] private GameObject bulletPref;
 
     void Start()
     {
         automatic = false;
         player = transform.parent.parent.GetChild(0).GetComponent<PlayerClass>();
+        gun = GetComponent<ShootGun>();
+        meleeAttack = GetComponent<MeleeAttack>();
     }
 
     void Update()
@@ -29,14 +35,14 @@ public class WeaponFunctions : MonoBehaviour
             {
                 if (Input.GetButton("Fire1"))
                 {
-                    Debug.Log("PARARSKDMKD");
+                    gun.Shoot(bulletPref, player.Primary.WeaponBullet, player.Primary);
                 }
             }
             else
             {
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    Debug.Log("PARARSKDMKD");
+                    gun.Shoot(bulletPref, player.Primary.WeaponBullet, player.Primary);
                 }
             }
         }
@@ -52,6 +58,7 @@ public class WeaponFunctions : MonoBehaviour
             player.Primary = player.Secondary;
             player.Secondary = holder;
             GetComponent<SpriteRenderer>().sprite = player.Primary.SpriteOfWeapon;
+            transform.GetChild(0).localPosition = new Vector3(0, player.Primary.ShootCoords, 0);
         }
     }
 }

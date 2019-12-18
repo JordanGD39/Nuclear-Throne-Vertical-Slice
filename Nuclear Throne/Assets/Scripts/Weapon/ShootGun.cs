@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ShootGun : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Shoot(GameObject bulletPrefab, Bullet bullet, Weapon weapon)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject bulletObj = Instantiate(bulletPrefab, transform.GetChild(0).position, transform.parent.rotation);    
+        BulletBehaviour bulletScript = bulletObj.GetComponent<BulletBehaviour>();
+        bulletScript.WeaponThatShot = weapon;
+        bulletScript.Loaded = true;
+        bulletObj.GetComponent<SpriteRenderer>().enabled = true;
+        bulletObj.GetComponent<SpriteRenderer>().sprite = bullet.SpriteOfBullet;
     }
 }
