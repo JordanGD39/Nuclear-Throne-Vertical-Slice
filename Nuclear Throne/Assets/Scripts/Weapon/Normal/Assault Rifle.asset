@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Assault Rifle
   m_EditorClassIdentifier: 
   weaponName: Assault Rifle
-  sprite: {fileID: 1804634792976682056, guid: c121677f89832f54ea41f61a184077d2, type: 3}
-  weaponType: 2
+  sprite: {fileID: -2092137177267691388, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  weaponType: 1
   bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
   damage: 3
   reloadTime: 0.37
-  shootCoords: 0.25
+  shootCoords: 0.1
   startAmmo: 96
   ammoWaste: 3
   shootBullets: 3

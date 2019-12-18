@@ -7,6 +7,7 @@ public class BulletBehaviour : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField] private float speed;
+    public float Speed { get { return speed; } set { speed = value; } }
 
     [SerializeField] private Bullet bullet;
 
@@ -18,6 +19,8 @@ public class BulletBehaviour : MonoBehaviour
     void Start()
     {        
         rb = GetComponent<Rigidbody2D>();
+        Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        GetComponent<BoxCollider2D>().size = S;
     }
 
     // Update is called once per frame
@@ -33,11 +36,14 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-
+            Debug.Log("Hit enemy");
         }
         else
         {
-            Destroy(gameObject);
+            if (!collision.CompareTag("Bullet"))
+            {
+                Destroy(gameObject);
+            }            
         }
     }
 }

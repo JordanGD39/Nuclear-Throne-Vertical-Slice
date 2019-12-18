@@ -27,7 +27,7 @@ public class Weapon : ScriptableObject
     [SerializeField] private float shootCoords = 0;
     public float ShootCoords { get { return shootCoords; } }
 
-    [SerializeField] private int startAmmo = 20;
+    [SerializeField] private int startAmmo = 96;
     public int StartAmmo { get { return startAmmo; } }
 
     [SerializeField] private int ammoWaste = 1;

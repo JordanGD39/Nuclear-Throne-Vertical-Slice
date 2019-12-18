@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   fireType: 1
+  sprite: {fileID: -5262693318362871763, guid: c121677f89832f54ea41f61a184077d2, type: 3}
   hits: 3
+  speed: 15
   dissapear: 1
+  explode: 0
+  playerDamage: 0
