@@ -3148,7 +3148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 8
   primary: {fileID: 11400000, guid: 9f6a42ba2cde84a4e8cd43d35dcc9e83, type: 2}
-  secondary: {fileID: 0}
+  secondary: {fileID: 11400000, guid: a239d1b1aab8a17429b81520f4864cf0, type: 2}
 --- !u!1001 &1528235897
 PrefabInstance:
   m_ObjectHideFlags: 0

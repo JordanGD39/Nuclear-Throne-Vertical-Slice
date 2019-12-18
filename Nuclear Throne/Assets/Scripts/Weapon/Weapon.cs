@@ -9,7 +9,8 @@ public class Weapon : ScriptableObject
     [SerializeField] private string weaponName = "";
     public string Name { get { return weaponName; } }
 
-    private Sprite sprite;
+    [SerializeField] private Sprite sprite;
+    public Sprite SpriteOfWeapon { get { return sprite; } }
 
     public enum type { SINGLE, BURST, AUTO, AUTOBURST}
     public type weaponType;
@@ -28,6 +29,9 @@ public class Weapon : ScriptableObject
 
     [SerializeField] private int ammoWaste = 1;
     public int AmmoWaste { get { return ammoWaste; } }
+
+    [SerializeField] private int shootBullets = 1;
+    public int ShootBullets { get { return shootBullets; } }
 
     [SerializeField] private int spreadAngle = 0;
     public int SpreadAngle { get { return spreadAngle; } }
