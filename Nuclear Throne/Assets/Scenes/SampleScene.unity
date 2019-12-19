@@ -3084,9 +3084,10 @@ GameObject:
   - component: {fileID: 1468658647}
   - component: {fileID: 1468658646}
   - component: {fileID: 1468658648}
+  - component: {fileID: 1468658651}
+  - component: {fileID: 1468658652}
   - component: {fileID: 1468658649}
   - component: {fileID: 1468658650}
-  - component: {fileID: 1468658651}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -3233,6 +3234,20 @@ MonoBehaviour:
   health: 8
   primary: {fileID: 11400000, guid: 9f6a42ba2cde84a4e8cd43d35dcc9e83, type: 2}
   secondary: {fileID: 11400000, guid: 28cb73454bf2f0d4097f871f53d89ee3, type: 2}
+--- !u!114 &1468658652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468658645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217c1d5d7b805704c81a922612e946a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {x: 0, y: 0}
+  rollSpeed: 60
 --- !u!1001 &1528235897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3977,7 +3992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898930348}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

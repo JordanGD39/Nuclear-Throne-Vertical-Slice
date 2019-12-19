@@ -8,8 +8,10 @@ public class PlayerMovement : MonoBehaviour
     private Transform cursor;
 
     [SerializeField] private float speed;
+    public bool CantMove { get; set; } = false;
 
     private Vector2 movement;
+    public Vector2 Movement { get { return movement; } }
 
     // Start is called before the first frame update
     void Start()
@@ -24,18 +26,24 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movement = movement.normalized;
 
-        if ((transform.position.x - cursor.position.x) < 0)
+        if (!CantMove)
         {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
-        }
-        else if((transform.position.x - cursor.position.x) > 0)
-        {
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            if ((transform.position.x - cursor.position.x) < 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            }
+            else if ((transform.position.x - cursor.position.x) > 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        if (!CantMove)
+        {
+            rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        }        
     }
 }
