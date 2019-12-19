@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
-  m_Name: Revolver
+  m_Name: Assault Rifle
   m_EditorClassIdentifier: 
-  weaponName: Revolver
-  sprite: {fileID: 8305375372020179590, guid: c121677f89832f54ea41f61a184077d2, type: 3}
-  weaponType: 0
+  weaponName: Machine Gun
+  sprite: {fileID: 1804634792976682056, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  weaponType: 2
   bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
   damage: 3
-  reloadTime: 0.2
-  shootCoords: 0
+  reloadTime: 0.17
+  shootCoords: 0.25
   startAmmo: 96
   ammoWaste: 1
   shootBullets: 1
-  spreadAngle: 4
+  spreadAngle: 6
   melee: 0
