@@ -11,6 +11,9 @@ public class Roll : MonoBehaviour
     [SerializeField] private float rollSpeed;
     private bool rolling = false;
     private bool addForce = false;
+    private bool bounce = false;
+    public bool WallHori { get; set; }
+    public bool WallVert { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -41,39 +44,55 @@ public class Roll : MonoBehaviour
 
         if (mov.CantMove && rolling)
         {
-            GetComponent<BoxCollider2D>().sharedMaterial.bounciness = 1;
-
             if (transform.localScale.x > 0)
             {
-                transform.Rotate(0, 0, -30);
+                transform.GetChild(0).Rotate(0, 0, -30);
             }
             else
             {
-                transform.Rotate(0, 0, 30);
+                transform.GetChild(0).Rotate(0, 0, 30);
             }            
         }
         else
         {
-            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-            GetComponent<BoxCollider2D>().sharedMaterial.bounciness = 0;
+            transform.GetChild(0).rotation = new Quaternion(0, 0, 0, transform.rotation.w);
         }
     }
 
     private void FixedUpdate()
     {
+
         if (mov.CantMove)
         {
             rolling = true;
-            if (!addForce)
+            if (!addForce && !bounce)
             {
                 rb.AddForce(movement * rollSpeed, ForceMode2D.Impulse);
                 addForce = true;
-            }            
+            }
+            else if (bounce)
+            {
+                if (WallHori)
+                {
+                    rb.velocity *= 0;
+                    rb.AddForce(new Vector2(-movement.x, movement.y) * rollSpeed, ForceMode2D.Impulse);
+                }
+
+                if (WallVert)
+                {
+                    rb.velocity *= 0;
+                    rb.AddForce(new Vector2(movement.x, -movement.y) * rollSpeed, ForceMode2D.Impulse);
+                }
+
+                bounce = false;
+            }
+
+            StartCoroutine(RollTime());            
+
             if (rb.velocity.magnitude > 10)
             {
                 rb.velocity = Vector2.ClampMagnitude(rb.velocity, 10);
             }
-            StartCoroutine(RollTime());
         }
     }
 
@@ -87,13 +106,13 @@ public class Roll : MonoBehaviour
         addForce = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (mov.CantMove)
         {
             StopCoroutine("RollTime");
             StartCoroutine("RollTime");
-            rb.AddForce(new Vector2(-movement.x , movement.y) * rollSpeed, ForceMode2D.Impulse);
+            bounce = true;
         }
     }
 }
