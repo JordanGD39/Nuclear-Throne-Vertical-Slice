@@ -116,7 +116,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -347,10 +347,10 @@ TextureImporter:
       name: PC Computer - Nuclear Throne - Desert Tiles_9
       rect:
         serializedVersion: 2
-        x: 11
+        x: 10
         y: 40
-        width: 16
-        height: 16
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,8 +370,8 @@ TextureImporter:
         serializedVersion: 2
         x: 33
         y: 40
-        width: 16
-        height: 16
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,10 +410,10 @@ TextureImporter:
       name: PC Computer - Nuclear Throne - Desert Tiles_13
       rect:
         serializedVersion: 2
-        x: 9
-        y: 18
-        width: 16
-        height: 16
+        x: 8
+        y: 17
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -28,11 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (!CantMove)
         {
-            if ((transform.position.x - cursor.position.x) < 0)
+            if ((transform.position.x - cursor.position.x) < -0.2f)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
             }
-            else if ((transform.position.x - cursor.position.x) > 0)
+            else if ((transform.position.x - cursor.position.x) > 0.2f)
             {
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
             }
