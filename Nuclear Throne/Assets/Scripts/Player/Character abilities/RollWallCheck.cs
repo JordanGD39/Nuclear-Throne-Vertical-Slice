@@ -20,8 +20,6 @@ public class RollWallCheck : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision + gameObject.name);
-
         if (hori)
         {
             roll.WallHori = true;
