@@ -344,48 +344,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Nuclear Throne - Desert Tiles_9
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 40
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d6992fc2329a38429d07a7f6305b79c
-      internalID: -7750106488909518816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PC Computer - Nuclear Throne - Desert Tiles_10
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 40
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0444b4bab86e25c4f97dac49c6dc3f39
-      internalID: 8847448241592049708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PC Computer - Nuclear Throne - Desert Tiles_11
       rect:
         serializedVersion: 2
@@ -407,48 +365,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Nuclear Throne - Desert Tiles_13
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 17
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cd633507eb48c748ae0fb2fe2190105
-      internalID: 6067044815096407112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PC Computer - Nuclear Throne - Desert Tiles_14
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 13
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d3c7676f98f91247b2fa78504e05872
-      internalID: 2622043633134138696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PC Computer - Nuclear Throne - Desert Tiles_15
       rect:
         serializedVersion: 2
@@ -465,6 +381,90 @@ TextureImporter:
       bones: []
       spriteID: e64cd28c784c2704a85f406280c57788
       internalID: -5014773911137049824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Nuclear Throne - Desert Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 53
+        width: 2
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb9704cfebfefc43b12e9cae6fb95d6
+      internalID: -7750106488909518816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Nuclear Throne - Desert Tiles_10
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 70
+        width: 18
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec698e70c21dda4bb6f771ce284d634
+      internalID: 8847448241592049708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Nuclear Throne - Desert Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 53
+        width: 2
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e80adddd42e37c4f91cafa574242e18
+      internalID: -2502402716218940243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Nuclear Throne - Desert Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 51
+        width: 20
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b7267c54da1d542abb10d5461fa634
+      internalID: 6067044815096407112
       vertices: []
       indices: 
       edges: []
