@@ -6,13 +6,18 @@ public class EnableEdgeScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.GetComponent<SpriteEdgeCheck>() != null)
         {
-            if (!collision.GetComponent<SpriteEdgeCheck>().enabled)
-            {
-                collision.GetComponent<SpriteEdgeCheck>().enabled = true;
-                collision.GetComponent<SpriteEdgeCheck>().CheckedEdge = false;
-            }
+            StartCoroutine(DelayCheck(collision));
+        }
+    }
+
+    private IEnumerator DelayCheck(Collider2D collision)
+    {
+        yield return null;
+        if (collision != null)
+        {
+            collision.GetComponent<SpriteEdgeCheck>().CheckEdges();
         }
     }
 }

@@ -126,3 +126,8 @@ MonoBehaviour:
   - {fileID: 6660620642610324848, guid: 833d22980f322c74ca71415b5f9e26fb, type: 3}
   - {fileID: 6273881424712247542, guid: 4ba845593884d3a408d847b5ab1ae29d, type: 3}
   - {fileID: 6311964794715380820, guid: 374bd0971d8ca2f4a8e2e83bcade1d20, type: 3}
+  edges:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
