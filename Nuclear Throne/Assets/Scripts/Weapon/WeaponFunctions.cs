@@ -9,6 +9,7 @@ public class WeaponFunctions : MonoBehaviour
     private float timer;
 
     private StatsClass holder;
+    private EnemyAi ai;
     private ShootGun gun;
     private MeleeAttack meleeAttack;
 
@@ -26,6 +27,7 @@ public class WeaponFunctions : MonoBehaviour
         {
             holder = transform.parent.parent.GetComponent<StatsClass>();
             playerControl = false;
+            ai = transform.parent.parent.GetComponent<EnemyAi>();
         }
         gun = GetComponent<ShootGun>();
         meleeAttack = GetComponent<MeleeAttack>();
@@ -95,15 +97,26 @@ public class WeaponFunctions : MonoBehaviour
     {
         int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck"));
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20, tileLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, ai.Range, tileLayer);
 
-        Debug.DrawRay(transform.position, transform.up, Color.red);
-
-        Debug.Log(hit.collider);
-
-        if (timer >= holder.Primary.ReloadTime && !shooting)
+        if (hit.collider != null)
         {
-            StartCoroutine(Shoot());
+            if (hit.collider.CompareTag("Player"))
+            {
+                ai.PlayerInSight = true;
+                if (timer >= holder.Primary.ReloadTime && !shooting)
+                {
+                    StartCoroutine(Shoot());
+                }
+            }
+            else
+            {
+                ai.PlayerInSight = false;
+            }
+        }   
+        else
+        {
+            ai.PlayerInSight = false;
         }
     }
 
