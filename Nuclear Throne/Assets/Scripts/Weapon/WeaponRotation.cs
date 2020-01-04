@@ -8,25 +8,48 @@ public class WeaponRotation : MonoBehaviour
     [SerializeField]
     private RectTransform _canvas;
 
-    private GameObject player;
+    private GameObject holder;
+    private Transform player;
     private SpriteRenderer childObj;
+    private bool playerControl = true;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        holder = transform.parent.GetChild(0).gameObject;
+        if (holder.CompareTag("Player"))
+        {
+            playerControl = true;
+        }
+        else
+        {
+            holder = transform.parent.gameObject;
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+            playerControl = false;
+        }
+
         childObj = transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         //Weapon Rotation with the Mouse-position
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotationZ = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        Vector2 aimPos;
+
+        if (playerControl)
+        {
+            aimPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        }
+        else
+        {
+            aimPos = player.position - transform.position;
+        }
+        
+        float rotationZ = Mathf.Atan2(aimPos.y, aimPos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90);
 
-        transform.position = player.transform.position;
+        transform.position = holder.transform.position;
 
-        ChangeSortingLayer(player.transform.localScale.x, transform.rotation.eulerAngles.z);
+        ChangeSortingLayer(holder.transform.localScale.x, transform.rotation.eulerAngles.z);
     }
 
     private void ChangeSortingLayer(float xScale, float zAngle)

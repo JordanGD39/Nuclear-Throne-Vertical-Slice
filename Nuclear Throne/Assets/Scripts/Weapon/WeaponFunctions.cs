@@ -5,9 +5,10 @@ using UnityEngine;
 public class WeaponFunctions : MonoBehaviour
 {
     private bool shooting;
+    private bool playerControl;
     private float timer;
 
-    private PlayerClass player;
+    private StatsClass holder;
     private ShootGun gun;
     private MeleeAttack meleeAttack;
 
@@ -15,29 +16,49 @@ public class WeaponFunctions : MonoBehaviour
 
     void Start()
     {
-        player = transform.parent.parent.GetChild(0).GetComponent<PlayerClass>();
+        holder = transform.parent.parent.GetChild(0).GetComponent<StatsClass>();
+
+        if (holder != null)
+        {
+            playerControl = true;
+        }
+        else
+        {
+            holder = transform.parent.parent.GetComponent<StatsClass>();
+            playerControl = false;
+        }
         gun = GetComponent<ShootGun>();
         meleeAttack = GetComponent<MeleeAttack>();
+
+        GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
+        transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        InputButtons();
+        if (playerControl)
+        {
+            InputButtons();
+        }
+        else
+        {
+            AiShooting();
+        }
     }
 
     private void InputButtons()
     {
         //Left Mouse-button Click: Fire        
 
-        if (!player.Primary.Melee)
+        if (!holder.Primary.Melee)
         {
-            if (player.Primary.weaponType == Weapon.type.AUTO || player.Primary.weaponType == Weapon.type.AUTOBURST)
+            if (holder.Primary.weaponType == Weapon.type.AUTO || holder.Primary.weaponType == Weapon.type.AUTOBURST)
             {
                 if (Input.GetButton("Fire1"))
                 {
-                    if (timer >= player.Primary.ReloadTime && !shooting)
+                    if (timer >= holder.Primary.ReloadTime && !shooting)
                     {
                         StartCoroutine(Shoot());
                     }                    
@@ -47,7 +68,7 @@ public class WeaponFunctions : MonoBehaviour
             {
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    if (timer >= player.Primary.ReloadTime && !shooting)
+                    if (timer >= holder.Primary.ReloadTime && !shooting)
                     {
                         StartCoroutine(Shoot());
                     }
@@ -62,11 +83,27 @@ public class WeaponFunctions : MonoBehaviour
         //E-key Press: Weapon Switch
         if (Input.GetButtonDown("Switch"))
         {
-            Weapon holder = player.Primary;
-            player.Primary = player.Secondary;
-            player.Secondary = holder;
-            GetComponent<SpriteRenderer>().sprite = player.Primary.SpriteOfWeapon;
-            transform.GetChild(0).localPosition = new Vector3(0, player.Primary.ShootCoords, 0);
+            Weapon weaponHolder = holder.Primary;
+            holder.Primary = holder.Secondary;
+            holder.Secondary = weaponHolder;
+            GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
+            transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
+        }
+    }
+
+    private void AiShooting()
+    {
+        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck"));
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 20, tileLayer);
+
+        Debug.DrawRay(transform.position, transform.up, Color.red);
+
+        Debug.Log(hit.collider);
+
+        if (timer >= holder.Primary.ReloadTime && !shooting)
+        {
+            StartCoroutine(Shoot());
         }
     }
 
@@ -74,17 +111,17 @@ public class WeaponFunctions : MonoBehaviour
     {
         shooting = true;
 
-        if (player.Primary.ShootBullets > 1)
+        if (holder.Primary.ShootBullets > 1)
         {
-            for (int i = 0; i < player.Primary.ShootBullets; i++)
+            for (int i = 0; i < holder.Primary.ShootBullets; i++)
             {
-                gun.Shoot(bulletPref, player.Primary.WeaponBullet, player.Primary);
+                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary);
                 yield return new WaitForSeconds(0.05f);
             }
         }
         else
         {
-            gun.Shoot(bulletPref, player.Primary.WeaponBullet, player.Primary);
+            gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary);
         }
 
         shooting = false;
