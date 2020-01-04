@@ -36,7 +36,11 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("Hit enemy");
+            collision.GetComponent<StatsClass>().Health -= WeaponThatShot.Damage;
+            if (bullet.Dissapear)
+            {
+                Destroy(gameObject);
+            }
         }
         else
         {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class StatsClass : MonoBehaviour
 {
     [SerializeField] private int health = 8;
-    private int Health { get { return health; } set { health = value; } }
+    public int Health { get { return health; } set { health = value; } }
     [SerializeField] private Weapon primary;
     [SerializeField] private Weapon secondary;
     public Weapon Primary { get { return primary; } set { primary = value; } }
