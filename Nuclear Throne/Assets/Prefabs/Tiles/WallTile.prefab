@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6323155391413156578}
   - component: {fileID: 6323155391413156579}
   - component: {fileID: 6323155391413156581}
-  m_Layer: 0
-  m_Name: Tile
+  - component: {fileID: 4770546506373751196}
+  m_Layer: 8
+  m_Name: WallTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,11 +68,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -997021973
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6febbd135bfede34bad117904e2e7293, type: 3}
-  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  m_Sprite: {fileID: -5014773911137049824, guid: c5eeead97ea402e4c884e13d06262faa,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6323155391413156576}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f7ea52700098bff49be788c23dc14670, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -107,3 +109,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4770546506373751196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323155391413156576}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07d106ce13e890458baab5f60cccda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 2560704367573757821, guid: 9eb62fbdd7f6f2945aa96e22199a0d35, type: 3}
+  - {fileID: 6660620642610324848, guid: 833d22980f322c74ca71415b5f9e26fb, type: 3}
+  - {fileID: 6273881424712247542, guid: 4ba845593884d3a408d847b5ab1ae29d, type: 3}
+  - {fileID: 6311964794715380820, guid: 374bd0971d8ca2f4a8e2e83bcade1d20, type: 3}
+  edges:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
