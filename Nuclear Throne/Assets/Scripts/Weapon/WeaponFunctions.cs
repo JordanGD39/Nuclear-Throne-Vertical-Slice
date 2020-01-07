@@ -56,7 +56,7 @@ public class WeaponFunctions : MonoBehaviour
         }
         else
         {
-            Debug.Log("Melee");
+            //Debug.Log("Melee");
         }
 
         //E-key Press: Weapon Switch

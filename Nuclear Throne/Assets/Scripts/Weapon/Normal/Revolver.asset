@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Revolver
   m_EditorClassIdentifier: 
   weaponName: Revolver
-  sprite: {fileID: 8305375372020179590, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  sprite: {fileID: 21300000, guid: 414b88b9b4d40214aa58e263452e6f56, type: 3}
   weaponType: 0
   bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
   damage: 3
