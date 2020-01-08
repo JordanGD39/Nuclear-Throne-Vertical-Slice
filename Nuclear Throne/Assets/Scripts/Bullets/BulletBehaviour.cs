@@ -12,6 +12,7 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] private Bullet bullet;
 
     public bool Loaded { get; set; }
+    public bool PlayerControl { get; set; }
 
     public Weapon WeaponThatShot { get; set; }
 
@@ -34,9 +35,17 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (PlayerControl && collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<StatsClass>().Health -= WeaponThatShot.Damage;
+            collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+            if (bullet.Dissapear)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (!PlayerControl && collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity);
             if (bullet.Dissapear)
             {
                 Destroy(gameObject);

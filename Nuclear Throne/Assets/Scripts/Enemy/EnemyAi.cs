@@ -16,11 +16,15 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float stoppingDistance;
     [SerializeField] private float retreatingDistance;
     [SerializeField] private float speed;
+    [SerializeField] private float damage;
+    public float Damage { get { return damage; } }
 
     private Vector2 direction;
+    private Vector2 knockback;
 
     private enum state { FOLLOW, STOP, RETREAT}
     private state enemyState;
+    private bool beingHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,17 +52,19 @@ public class EnemyAi : MonoBehaviour
             else if (Vector2.Distance(transform.position, player.position) < retreatingDistance)
             {
                 enemyState = state.RETREAT;
-            }
+            }                       
         }
         else
         {
             enemyState = state.STOP;
         }
+
+        ChangeDirection();
     }
 
     private void FixedUpdate()
     {
-        if (PlayerInSight)
+        if (PlayerInSight && !beingHit)
         {
             switch (enemyState)
             {
@@ -73,5 +79,56 @@ public class EnemyAi : MonoBehaviour
                     break;
             }
         }
+        else if(beingHit)
+        {
+            rb.AddForce(knockback.normalized * 10, ForceMode2D.Impulse);
+        }
+    }
+
+    private void ChangeDirection()
+    {
+        if (damage > 0)
+        {
+            if (rb.velocity.x > 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            }
+            else if (rb.velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            }
+        }
+        else
+        {
+            if ((transform.position.x - player.position.x) < -0.2f)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            }
+            else if ((transform.position.x - player.position.x) > 0.2f)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+            }
+        }
+    }
+
+    public void Hit(int dmg, Vector2 velocity)
+    {
+        StatsClass stats = GetComponent<StatsClass>();
+        knockback = velocity;
+        beingHit = true;
+        stats.Health -= dmg;
+
+        if (stats.Health < 0)
+        {
+            Destroy(gameObject);
+        }
+
+        StartCoroutine(HitCoroutine());
+    }
+
+    private IEnumerator HitCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        beingHit = false;
     }
 }

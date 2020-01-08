@@ -27,7 +27,7 @@ public class WeaponRotation : MonoBehaviour
             playerControl = false;
         }
 
-        childObj = transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        childObj = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class WeaponRotation : MonoBehaviour
 
         transform.position = holder.transform.position;
 
-        ChangeSortingLayer(holder.transform.localScale.x, transform.rotation.eulerAngles.z);
+        ChangeSortingLayer(holder.transform.localScale.x, transform.rotation.eulerAngles.z);        
     }
 
     private void ChangeSortingLayer(float xScale, float zAngle)

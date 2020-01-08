@@ -31,9 +31,12 @@ public class WeaponFunctions : MonoBehaviour
         }
         gun = GetComponent<ShootGun>();
         meleeAttack = GetComponent<MeleeAttack>();
-
-        GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
-        transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
+        if (holder.Primary != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
+            transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
+        }
+        
     }
 
     void Update()
@@ -95,16 +98,21 @@ public class WeaponFunctions : MonoBehaviour
 
     private void AiShooting()
     {
-        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck"));
+        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol"));
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, ai.Range, tileLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, ai.Range, tileLayer);        
 
         if (hit.collider != null)
         {
+            //if (transform.parent.parent.name == "Giant Maggot")
+            //{
+            //    Debug.Log(hit.collider);
+            //}
+
             if (hit.collider.CompareTag("Player"))
             {
                 ai.PlayerInSight = true;
-                if (timer >= holder.Primary.ReloadTime && !shooting)
+                if (holder.Primary != null && timer >= holder.Primary.ReloadTime && !shooting)
                 {
                     StartCoroutine(Shoot());
                 }
@@ -128,13 +136,13 @@ public class WeaponFunctions : MonoBehaviour
         {
             for (int i = 0; i < holder.Primary.ShootBullets; i++)
             {
-                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary);
+                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
                 yield return new WaitForSeconds(0.05f);
             }
         }
         else
         {
-            gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary);
+            gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
         }
 
         shooting = false;
