@@ -59,7 +59,10 @@ public class EnemyAi : MonoBehaviour
             enemyState = state.STOP;
         }
 
-        ChangeDirection();
+        if (!beingHit)
+        {
+            ChangeDirection();
+        }
     }
 
     private void FixedUpdate()
@@ -81,7 +84,7 @@ public class EnemyAi : MonoBehaviour
         }
         else if(beingHit)
         {
-            rb.AddForce(knockback.normalized * 10, ForceMode2D.Impulse);
+            rb.AddForce(knockback.normalized * 5, ForceMode2D.Impulse);
         }
     }
 
@@ -118,7 +121,7 @@ public class EnemyAi : MonoBehaviour
         beingHit = true;
         stats.Health -= dmg;
 
-        if (stats.Health < 0)
+        if (stats.Health <= 0)
         {
             Destroy(gameObject);
         }
@@ -128,7 +131,14 @@ public class EnemyAi : MonoBehaviour
 
     private IEnumerator HitCoroutine()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.08f);
+
+        for (int i = 0; i < 9; i++)
+        {
+            rb.velocity *= 0.9f;
+        }
+        yield return new WaitForSeconds(0.05f);
+        
         beingHit = false;
     }
 }

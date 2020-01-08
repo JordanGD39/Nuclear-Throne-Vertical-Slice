@@ -10,8 +10,11 @@ public class Roll : MonoBehaviour
     [SerializeField] private Vector2 movement;
     [SerializeField] private float rollSpeed;
     private bool rolling = false;
+    private bool slide = false;
+    private bool rollTrigger = false;
     private bool addForce = false;
     private bool bounce = false;
+    private bool canBounce = false;
     public bool WallHori { get; set; }
     public bool WallVert { get; set; }
 
@@ -40,6 +43,7 @@ public class Roll : MonoBehaviour
         if (Input.GetButtonDown("Active") && !rolling)
         {
             mov.CantMove = true;
+            rollTrigger = true;
         }
 
         if (mov.CantMove && rolling)
@@ -61,16 +65,16 @@ public class Roll : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if (mov.CantMove)
+        if (mov.CantMove && rollTrigger)
         {
             rolling = true;
+
             if (!addForce && !bounce)
             {
                 rb.AddForce(movement * rollSpeed, ForceMode2D.Impulse);
                 addForce = true;
             }
-            else if (bounce)
+            else if (bounce && canBounce)
             {
                 if (WallHori)
                 {
@@ -94,23 +98,37 @@ public class Roll : MonoBehaviour
                 rb.velocity = Vector2.ClampMagnitude(rb.velocity, 10);
             }
         }
+
+        if (slide)
+        {
+            rb.AddForce(rb.velocity * 10);
+            rb.velocity *= 0.9f;
+        }
     }
 
     private IEnumerator RollTime()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
+        canBounce = true;
+        yield return new WaitForSeconds(0.4f);
         mov.CantMove = false;
+        rollTrigger = false;
+        slide = true;
         yield return new WaitForSeconds(0.39f);
         rolling = false;
-        rb.velocity *= 0;
-        addForce = false;
+        addForce = false;        
+        yield return new WaitForSeconds(0.2f);
+        slide = false;
+        canBounce = false;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (mov.CantMove)
+        if (mov.CantMove && rollTrigger)
         {
-            StopCoroutine("RollTime");
+            StopCoroutine("RollTime");            
+            mov.CantMove = true;
+            rolling = true;
             StartCoroutine("RollTime");
             bounce = true;
         }

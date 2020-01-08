@@ -53,7 +53,7 @@ public class BulletBehaviour : MonoBehaviour
         }
         else
         {
-            if (!collision.CompareTag("Bullet"))
+            if (!collision.CompareTag("Bullet") && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
             {
                 Destroy(gameObject);
             }            
