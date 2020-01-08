@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Slash
   m_EditorClassIdentifier: 
   fireType: 12
-  sprite: {fileID: -9091358912108377176, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  sprite: {fileID: 1517721568099873063, guid: c121677f89832f54ea41f61a184077d2, type: 3}
   hits: 1
-  speed: 0
+  wallHits: 0
+  speed: 20
   dissapear: 0
   explode: 0
   playerDamage: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Slug
   m_EditorClassIdentifier: 
   fireType: 9
-  sprite: {fileID: 4609863686831011126, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  sprite: {fileID: 2117974628513092102, guid: c121677f89832f54ea41f61a184077d2, type: 3}
   hits: 1
+  wallHits: 1
   speed: 20
   dissapear: 0
   explode: 0

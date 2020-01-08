@@ -23,4 +23,4 @@ MonoBehaviour:
   ammoWaste: 0
   shootBullets: 1
   spreadAngle: 5
-  melee: 1
+  melee: 0

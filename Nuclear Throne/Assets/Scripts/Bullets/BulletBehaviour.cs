@@ -2,28 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehaviour : MonoBehaviour
+public class BulletBehaviour : AttackBox
 {
-    private Rigidbody2D rb;
-
     [SerializeField] private float speed;
     public float Speed { get { return speed; } set { speed = value; } }
 
     [SerializeField] private Bullet bullet;
 
-    public bool Loaded { get; set; }
-
-    public Weapon WeaponThatShot { get; set; }
-
-    // Start is called before the first frame update
-    void Start()
-    {        
-        rb = GetComponent<Rigidbody2D>();
-        Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-        GetComponent<BoxCollider2D>().size = S;
+    protected override void Start()
+    {
+        base.Start();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Loaded)

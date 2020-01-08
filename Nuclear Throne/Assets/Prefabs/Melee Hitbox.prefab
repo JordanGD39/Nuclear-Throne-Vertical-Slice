@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8779074055825646734}
   - component: {fileID: 2305166728070924741}
   - component: {fileID: 6949068808667034102}
-  - component: {fileID: 1108868012866176259}
   m_Layer: 0
   m_Name: Melee Hitbox
   m_TagString: Untagged
@@ -130,17 +129,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1108868012866176259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212323909902828018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6acdb4fe80489f242824788c7655ee4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  bullet: {fileID: 11400000, guid: 8b780710884e63e4dbc2cdbf8cf030a0, type: 2}
