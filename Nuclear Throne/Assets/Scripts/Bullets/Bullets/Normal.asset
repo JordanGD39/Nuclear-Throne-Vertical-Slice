@@ -15,6 +15,7 @@ MonoBehaviour:
   fireType: 0
   sprite: {fileID: 2104277586114583918, guid: c121677f89832f54ea41f61a184077d2, type: 3}
   hits: 1
-  dissapear: 0
+  speed: 20
+  dissapear: 1
   explode: 0
   playerDamage: 0
