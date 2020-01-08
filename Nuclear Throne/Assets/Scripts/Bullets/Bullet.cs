@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Bullet", menuName = "Bullet")]
 public class Bullet : ScriptableObject
 {
-    public enum type { NORMAL, FIRE, LASER, PLASMA, LIGHTNING, EXPLOSION, MISSILE, SEEKER, DISC, SLUG, SHELL, BOLT }
+    public enum type { NORMAL, FIRE, LASER, PLASMA, LIGHTNING, EXPLOSION, MISSILE, SEEKER, DISC, SLUG, SHELL, BOLT, MELEE }
     public type fireType;
 
     [SerializeField] private Sprite sprite;

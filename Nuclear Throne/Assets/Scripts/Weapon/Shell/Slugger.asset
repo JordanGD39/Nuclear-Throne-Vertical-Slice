@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
-  m_Name: Revolver
+  m_Name: Slugger
   m_EditorClassIdentifier: 
-  weaponName: Revolver
-  sprite: {fileID: 21300000, guid: 414b88b9b4d40214aa58e263452e6f56, type: 3}
+  weaponName: Slugger
+  sprite: {fileID: 8305375372020179590, guid: c121677f89832f54ea41f61a184077d2, type: 3}
   weaponType: 0
-  bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
-  damage: 3
-  reloadTime: 0.2
+  bullet: {fileID: 11400000, guid: 3b42fc9c6aab35244986ea013b73ef8a, type: 2}
+  damage: 22
+  reloadTime: 0.73
   shootCoords: 0
   startAmmo: 96
   ammoWaste: 1
   shootBullets: 1
-  spreadAngle: 4
+  spreadAngle: 5
   melee: 0
