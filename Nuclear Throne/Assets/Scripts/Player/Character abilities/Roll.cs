@@ -13,10 +13,6 @@ public class Roll : MonoBehaviour
     private bool slide = false;
     private bool rollTrigger = false;
     private bool addForce = false;
-    private bool bounce = false;
-    private bool canBounce = false;
-    public bool WallHori { get; set; }
-    public bool WallVert { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +37,9 @@ public class Roll : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Active") && !rolling)
-        {
+        {            
             mov.CantMove = true;
-            rollTrigger = true;
+            rollTrigger = true;            
         }
 
         if (mov.CantMove && rolling)
@@ -67,28 +63,17 @@ public class Roll : MonoBehaviour
     {
         if (mov.CantMove && rollTrigger)
         {
-            rolling = true;
+            CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+            col.sharedMaterial.bounciness = 1;
+            col.enabled = false;
+            col.enabled = true;
 
-            if (!addForce && !bounce)
+            rolling = true;
+            
+            if (!addForce)
             {
                 rb.AddForce(movement * rollSpeed, ForceMode2D.Impulse);
                 addForce = true;
-            }
-            else if (bounce && canBounce)
-            {
-                if (WallHori)
-                {
-                    rb.velocity *= 0;
-                    rb.AddForce(new Vector2(-movement.x, movement.y) * rollSpeed, ForceMode2D.Impulse);
-                }
-
-                if (WallVert)
-                {
-                    rb.velocity *= 0;
-                    rb.AddForce(new Vector2(movement.x, -movement.y) * rollSpeed, ForceMode2D.Impulse);
-                }
-
-                bounce = false;
             }
 
             StartCoroutine(RollTime());            
@@ -108,29 +93,18 @@ public class Roll : MonoBehaviour
 
     private IEnumerator RollTime()
     {
-        yield return new WaitForSeconds(0.1f);
-        canBounce = true;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.5f);
         mov.CantMove = false;
         rollTrigger = false;
         slide = true;
         yield return new WaitForSeconds(0.39f);
         rolling = false;
-        addForce = false;        
+        addForce = false;
+        CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+        col.sharedMaterial.bounciness = 0;
+        col.enabled = false;
+        col.enabled = true;
         yield return new WaitForSeconds(0.2f);
-        slide = false;
-        canBounce = false;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (mov.CantMove && rollTrigger)
-        {
-            StopCoroutine("RollTime");            
-            mov.CantMove = true;
-            rolling = true;
-            StartCoroutine("RollTime");
-            bounce = true;
-        }
+        slide = false;        
     }
 }

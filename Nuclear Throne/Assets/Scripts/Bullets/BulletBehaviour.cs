@@ -45,7 +45,7 @@ public class BulletBehaviour : MonoBehaviour
         }
         else if (!PlayerControl && collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity);
+            collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
             if (bullet.Dissapear)
             {
                 Destroy(gameObject);

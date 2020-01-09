@@ -133,7 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4641313066213250597}
   - component: {fileID: 4641313066213250596}
-  m_Layer: 0
+  - component: {fileID: 2135531122}
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,6 +204,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2135531122
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641313066213250618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.92727274, y: 0.8727273}
+  m_Direction: 0
 --- !u!1 &4641313066455244226
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +233,7 @@ GameObject:
   - component: {fileID: 4641313066455244233}
   - component: {fileID: 4641313066455244232}
   - component: {fileID: 4641313066455244238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bandit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -271,6 +288,9 @@ MonoBehaviour:
   stoppingDistance: 5
   retreatingDistance: 2.5
   speed: 3
+  damage: 0
+  touchDamage: 0
+  deathKnockback: 3
 --- !u!70 &4641313066455244232
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,7 +301,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -306,7 +326,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &4641313067199034608
 GameObject:
