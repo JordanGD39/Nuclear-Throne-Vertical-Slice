@@ -9,17 +9,22 @@ public class BulletBehaviour : AttackBox
 
     [SerializeField] private Bullet bullet;
 
+    private int wallHitCounter;
+
     protected override void Start()
     {
         base.Start();
+        wallHitCounter = 0;
+
+        if (Loaded)
+        {
+            rb.velocity = transform.TransformVector(Vector3.up * speed);
+        }
     }
 
     void Update()
     {
-        if (Loaded)
-        {
-            rb.velocity = transform.TransformVector(Vector3.up * speed);
-        }        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,9 +37,24 @@ public class BulletBehaviour : AttackBox
                 Destroy(gameObject);
             }
         }
+        else if (collision.gameObject.layer == 8)
+        {
+            rb.velocity = transform.InverseTransformVector(rb.velocity);
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 180.0f);
+
+            /*if (wallHitCounter <= bullet.WallHits)
+            {
+                wallHitCounter++;
+
+            }
+            else
+            {
+                Destroy(gameObject);
+            }*/
+        }
         else
         {
-            if (!collision.CompareTag("Bullet"))
+            if (!collision.CompareTag("Bullet") && !collision.CompareTag("Player"))
             {
                 Destroy(gameObject);
             }            
