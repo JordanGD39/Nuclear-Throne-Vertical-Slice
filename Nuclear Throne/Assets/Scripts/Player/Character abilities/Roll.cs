@@ -97,13 +97,13 @@ public class Roll : MonoBehaviour
         mov.CantMove = false;
         rollTrigger = false;
         slide = true;
-        yield return new WaitForSeconds(0.39f);
-        rolling = false;
-        addForce = false;
         CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
         col.sharedMaterial.bounciness = 0;
         col.enabled = false;
         col.enabled = true;
+        yield return new WaitForSeconds(0.39f);
+        rolling = false;
+        addForce = false;        
         yield return new WaitForSeconds(0.2f);
         slide = false;        
     }

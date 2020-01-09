@@ -35,7 +35,7 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (PlayerControl && collision.CompareTag("Enemy"))
+        if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
         {
             collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
             if (bullet.Dissapear)

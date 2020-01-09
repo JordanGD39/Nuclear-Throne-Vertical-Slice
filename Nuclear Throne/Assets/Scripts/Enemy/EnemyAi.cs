@@ -154,6 +154,8 @@ public class EnemyAi : MonoBehaviour
                 col.enabled = false;
                 col.enabled = true;
 
+                transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = "Corpses";
+
                 knockbackForce = deathKnockback;
                 Dead = true;
                 transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.grey;
