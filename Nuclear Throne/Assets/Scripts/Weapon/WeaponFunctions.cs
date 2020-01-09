@@ -137,7 +137,7 @@ public class WeaponFunctions : MonoBehaviour
         {
             if (ai.PlayerInSight)
             {
-                if (holder.Primary != null && timer >= holder.Primary.ReloadTime && !shooting)
+                if (holder.Primary != null && timer >= holder.Primary.ReloadTime + Random.Range(0,1) && !shooting)
                 {
                     StartCoroutine(Shoot());
                 }

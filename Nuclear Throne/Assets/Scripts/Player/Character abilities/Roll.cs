@@ -90,6 +90,17 @@ public class Roll : MonoBehaviour
         }
     }
 
+    public void StopRolling()
+    {
+        rolling = false;
+        rollTrigger = false;
+        StopCoroutine("RollTime");
+        CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+        col.sharedMaterial.bounciness = 0;
+        col.enabled = false;
+        col.enabled = true;
+    }
+
     private IEnumerator RollTime()
     {
         yield return new WaitForSeconds(0.5f);

@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
         StatsClass stats = GetComponent<StatsClass>();        
         if (!beingHit && !Dead)
         {
+            GetComponent<Roll>().StopRolling();
             rb.velocity *= 0;
             knockback = velocity;
             if (stats.Health > 0)
