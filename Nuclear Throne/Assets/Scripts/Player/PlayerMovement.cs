@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator anim;
     private Transform cursor;
 
     [SerializeField] private float speed;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         cursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Transform>();
     }
 
@@ -24,10 +26,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        movement = movement.normalized;
+        movement = movement.normalized;        
 
         if (!CantMove)
         {
+            anim.SetFloat("Speed", movement.magnitude);
+
             if ((transform.position.x - cursor.position.x) < -0.2f)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);

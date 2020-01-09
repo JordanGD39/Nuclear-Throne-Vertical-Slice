@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BanditBullet
   m_EditorClassIdentifier: 
   fireType: 0
-  sprite: {fileID: 4609863686831011126, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  sprite: {fileID: 21300000, guid: b745bff30f3d12f4bbceb6976561ba92, type: 3}
   hits: 1
   speed: 10
   dissapear: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private bool beingHit = false;
+    public bool Dead { get; set; } = false;
     private bool getKnockback = false;
     private Vector2 knockback;
     private Rigidbody2D rb;
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
     public void Hit(int dmg, Vector2 velocity, bool knocked)
     {
         StatsClass stats = GetComponent<StatsClass>();        
-        if (!beingHit)
+        if (!beingHit && !Dead)
         {
             rb.velocity *= 0;
             knockback = velocity;
@@ -51,13 +52,20 @@ public class Player : MonoBehaviour
         for (int i = 0; i < 9; i++)
         {
             rb.velocity *= 0.9f;
+            yield return null;
         }
-        yield return new WaitForSeconds(0.05f);
 
         beingHit = false;
+
         if (GetComponent<StatsClass>().Health <= 0)
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+            Dead = true;
+            transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.grey;
+            Destroy(transform.parent.GetChild(1).gameObject);
+            GetComponent<PlayerMovement>().enabled = false;
+            yield return new WaitForSeconds(0.5f);
+            rb.velocity *= 0;
+
         }
         else
         {

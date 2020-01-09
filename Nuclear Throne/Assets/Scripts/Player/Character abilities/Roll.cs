@@ -29,7 +29,6 @@ public class Roll : MonoBehaviour
         if (!mov.CantMove && !rolling && mov.Movement.x == 0 && mov.Movement.y == 0)
         {
             movement = (mousePos - transform.position).normalized;
-            movement.Normalize();
         }
         else if (!mov.CantMove && !rolling && (mov.Movement.x != 0 || mov.Movement.y != 0))
         {

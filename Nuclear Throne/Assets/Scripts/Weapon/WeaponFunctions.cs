@@ -28,6 +28,11 @@ public class WeaponFunctions : MonoBehaviour
             holder = transform.parent.parent.GetComponent<StatsClass>();
             playerControl = false;
             ai = transform.parent.parent.GetComponent<EnemyAi>();
+
+            if (holder.GetComponent<EnemyAi>().BadAimer)
+            {
+                holder.transform.GetChild(2).transform.rotation = holder.transform.GetChild(3).transform.rotation;
+            }
         }
         gun = GetComponent<ShootGun>();
         meleeAttack = GetComponent<MeleeAttack>();
@@ -36,7 +41,6 @@ public class WeaponFunctions : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
             transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
         }
-        
     }
 
     void Update()
@@ -98,33 +102,46 @@ public class WeaponFunctions : MonoBehaviour
 
     private void AiShooting()
     {
-        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol"));
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, ai.Range, tileLayer);        
-
-        if (hit.collider != null)
+        if (!ai.BadAimer)
         {
-            //if (transform.parent.parent.name == "Giant Maggot")
-            //{
-            //    Debug.Log(hit.collider);
-            //}
+            int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol"));
 
-            if (hit.collider.CompareTag("Player"))
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, ai.Range, tileLayer);
+
+            if (hit.collider != null)
             {
-                ai.PlayerInSight = true;
-                if (holder.Primary != null && timer >= holder.Primary.ReloadTime && !shooting)
+                //if (transform.parent.parent.name == "Giant Maggot")
+                //{
+                //    Debug.Log(hit.collider);
+                //}
+
+                if (hit.collider.CompareTag("Player"))
                 {
-                    StartCoroutine(Shoot());
+                    ai.PlayerInSight = true;
+                    if (holder.Primary != null && timer >= holder.Primary.ReloadTime && !shooting)
+                    {
+                        StartCoroutine(Shoot());
+                    }
+                }
+                else
+                {
+                    ai.PlayerInSight = false;
                 }
             }
             else
             {
                 ai.PlayerInSight = false;
             }
-        }   
+        }
         else
         {
-            ai.PlayerInSight = false;
+            if (ai.PlayerInSight)
+            {
+                if (holder.Primary != null && timer >= holder.Primary.ReloadTime && !shooting)
+                {
+                    StartCoroutine(Shoot());
+                }
+            }
         }
     }
 
@@ -143,6 +160,12 @@ public class WeaponFunctions : MonoBehaviour
         else
         {
             gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
+        }
+
+        if (!playerControl && holder.GetComponent<EnemyAi>().BadAimer)
+        {
+            holder.transform.GetChild(2).transform.rotation = holder.transform.GetChild(3).transform.rotation;
+            holder.GetComponent<EnemyAi>().ChangeDirection();
         }
 
         shooting = false;

@@ -47,6 +47,9 @@ TagManager:
   - name: BG
     uniqueID: 1724951855
     locked: 0
+  - name: Corpses
+    uniqueID: 2226884487
+    locked: 0
   - name: Player
     uniqueID: 848088867
     locked: 0

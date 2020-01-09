@@ -20,8 +20,11 @@ public class BulletBehaviour : MonoBehaviour
     void Start()
     {        
         rb = GetComponent<Rigidbody2D>();
-        Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-        GetComponent<BoxCollider2D>().size = S;
+        if (bullet.fireType != Bullet.type.NORMAL)
+        {
+            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+            GetComponent<BoxCollider2D>().size = S;
+        }
     }
 
     // Update is called once per frame

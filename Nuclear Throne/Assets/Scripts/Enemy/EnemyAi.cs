@@ -6,6 +6,7 @@ public class EnemyAi : MonoBehaviour
 {
     private Transform player;
     private Rigidbody2D rb;
+    private Animator anim;
 
     [SerializeField] private bool playerInSight = false;
     public bool PlayerInSight { get { return playerInSight; } set { playerInSight = value; } }
@@ -17,7 +18,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float retreatingDistance;
     [SerializeField] private float speed;
     [SerializeField] private int damage;
-    [SerializeField] private bool touchDamage;
+    [SerializeField] private bool follower = true;
+    [SerializeField] private bool touchDamage;    
     public bool TouchDamage { get { return touchDamage; } }
 
     public bool WallHori { get; set; }
@@ -28,19 +30,24 @@ public class EnemyAi : MonoBehaviour
     private float knockbackForce;
     [SerializeField] private float deathKnockback = 4;
 
-    private enum state { FOLLOW, STOP, RETREAT}
+    private enum state { FOLLOW, PATROL, RETREAT}
     private state enemyState;
     private bool beingHit = false;
+    private bool patrolling = false;
     private bool bouncing = false;
     public bool Dead { get; set; }
 
     private PhysicsMaterial2D physMat;
+
+    [SerializeField] private bool badAimer;
+    public bool BadAimer { get { return badAimer; } }
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         physMat = new PhysicsMaterial2D();
         physMat.bounciness = 0;
         physMat.friction = 0;
@@ -58,41 +65,57 @@ public class EnemyAi : MonoBehaviour
             direction = player.position - transform.position;
             direction.Normalize();
 
-            if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+            if (follower)
             {
-                enemyState = state.FOLLOW;
+                if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+                {
+                    enemyState = state.FOLLOW;
+                }
+                else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatingDistance)
+                {
+                    enemyState = state.PATROL;
+                }
+                else if (Vector2.Distance(transform.position, player.position) < retreatingDistance)
+                {
+                    enemyState = state.RETREAT;
+                }
             }
-            else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatingDistance)
-            {
-                enemyState = state.STOP;
-            }
-            else if (Vector2.Distance(transform.position, player.position) < retreatingDistance)
-            {
-                enemyState = state.RETREAT;
-            }                       
         }
         else
         {
-            enemyState = state.STOP;
+            enemyState = state.PATROL;
         }
 
-        if (!beingHit && !Dead)
+        if (!beingHit && !Dead && !badAimer)
         {
             ChangeDirection();
+        }
+
+        if (badAimer && !Dead)
+        {
+            PlayerDetect();
         }
     }
 
     private void FixedUpdate()
     {
-        if (PlayerInSight && !beingHit)
+        if (playerInSight && !beingHit)
         {
             switch (enemyState)
             {
                 case state.FOLLOW:
                     rb.velocity = direction * speed;
                     break;
-                case state.STOP:
-                    rb.velocity *= 0.9f;
+                case state.PATROL:
+                    if (!patrolling && !Dead)
+                    {                        
+                        rb.velocity *= 0.9f;                        
+
+                        if (rb.velocity.magnitude <= 0)
+                        {
+                            SetPatrolState();                            
+                        }
+                    }
                     break;
                 case state.RETREAT:
                     rb.velocity = direction * -speed;
@@ -103,6 +126,21 @@ public class EnemyAi : MonoBehaviour
         {
             rb.AddForce(knockback.normalized * knockbackForce, ForceMode2D.Impulse);
         }
+        else
+        {
+            if (enemyState == state.PATROL)
+            {
+                if (!patrolling && !Dead)
+                {
+                    rb.velocity *= 0.9f;
+
+                    if (rb.velocity.magnitude <= 0)
+                    {
+                        SetPatrolState();
+                    }
+                }
+            }
+        }
 
         if (Dead && !beingHit)
         {
@@ -110,7 +148,65 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-    private void ChangeDirection()
+    private void SetPatrolState()
+    {
+        patrolling = true;
+        StartCoroutine("Patrol");
+    }
+
+    private IEnumerator Patrol()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        while (enemyState == state.PATROL && !Dead)
+        {
+            Debug.Log("Patrolling");
+
+            int x = Random.Range(-1, 2);
+            int y = Random.Range(-1, 2);
+
+            if (x == 0)
+            {
+                y = 1;
+            }
+
+            rb.velocity = new Vector2(x, y) * speed;
+
+            yield return new WaitForSeconds(2);
+        }
+
+        patrolling = false;
+    }
+
+    private void PlayerDetect()
+    {
+        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol"));
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.GetChild(3).position, transform.GetChild(3).up, range, tileLayer);
+
+        Vector2 aimPos = player.position - transform.position;
+
+        float rotationZ = Mathf.Atan2(aimPos.y, aimPos.x) * Mathf.Rad2Deg;
+        transform.GetChild(3).rotation = Quaternion.Euler(0f, 0f, rotationZ - 90);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                playerInSight = true;
+            }
+            else
+            {
+                playerInSight = false;
+            }
+        }
+        else
+        {
+            playerInSight = false;
+        }
+    }
+
+    public void ChangeDirection()
     {
         if (damage > 0)
         {
@@ -143,7 +239,7 @@ public class EnemyAi : MonoBehaviour
             rb.velocity *= 0;
             StatsClass stats = GetComponent<StatsClass>();
             knockback = velocity;
-            knockbackForce = 1;
+            knockbackForce = 0.5f;
             beingHit = true;
             stats.Health -= dmg;
 
@@ -156,10 +252,20 @@ public class EnemyAi : MonoBehaviour
 
                 transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = "Corpses";
 
+                if (stats.Primary == null)
+                {
+                    transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.gray;
+                }                
+
                 knockbackForce = deathKnockback;
                 Dead = true;
-                transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.grey;
-                Destroy(transform.GetChild(1).gameObject);                
+                Destroy(transform.GetChild(1).gameObject);
+                Destroy(transform.GetChild(2).gameObject);
+                anim.SetBool("Dead", true);
+            }
+            else
+            {
+                anim.SetTrigger("Hit");
             }
 
             StartCoroutine(HitCoroutine());
