@@ -8,12 +8,18 @@ public class AttackBox : MonoBehaviour
 
     public bool Loaded { get; set; }
 
+    [SerializeField] protected Bullet bullet;
+    public Bullet BulletFired { get { return bullet; } set { bullet = value; } }
+
     public Weapon WeaponThatShot { get; set; }
 
     virtual protected void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-        GetComponent<BoxCollider2D>().size = S;
+        if (bullet.fireType != Bullet.type.NORMAL)
+        {
+            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+            GetComponent<BoxCollider2D>().size = S;
+        }
     }
 }

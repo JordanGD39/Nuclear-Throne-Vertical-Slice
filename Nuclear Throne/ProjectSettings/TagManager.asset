@@ -19,8 +19,8 @@ TagManager:
   - Tile
   - WallCheck
   - Weapon
-  - 
-  - 
+  - Enemy
+  - EnemyWallCol
   - 
   - 
   - 
@@ -47,14 +47,17 @@ TagManager:
   - name: BG
     uniqueID: 1724951855
     locked: 0
-  - name: FG
-    uniqueID: 3297945323
+  - name: Corpses
+    uniqueID: 2226884487
+    locked: 0
+  - name: Player
+    uniqueID: 848088867
     locked: 0
   - name: NPC
     uniqueID: 4102709517
     locked: 0
-  - name: Player
-    uniqueID: 848088867
+  - name: FG
+    uniqueID: 3297945323
     locked: 0
   - name: UI
     uniqueID: 912358559

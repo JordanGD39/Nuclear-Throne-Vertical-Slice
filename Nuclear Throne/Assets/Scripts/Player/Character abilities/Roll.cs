@@ -10,10 +10,9 @@ public class Roll : MonoBehaviour
     [SerializeField] private Vector2 movement;
     [SerializeField] private float rollSpeed;
     private bool rolling = false;
+    private bool slide = false;
+    private bool rollTrigger = false;
     private bool addForce = false;
-    private bool bounce = false;
-    public bool WallHori { get; set; }
-    public bool WallVert { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +29,6 @@ public class Roll : MonoBehaviour
         if (!mov.CantMove && !rolling && mov.Movement.x == 0 && mov.Movement.y == 0)
         {
             movement = (mousePos - transform.position).normalized;
-            movement.Normalize();
         }
         else if (!mov.CantMove && !rolling && (mov.Movement.x != 0 || mov.Movement.y != 0))
         {
@@ -38,8 +36,9 @@ public class Roll : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Active") && !rolling)
-        {
+        {            
             mov.CantMove = true;
+            rollTrigger = true;            
         }
 
         if (mov.CantMove && rolling)
@@ -61,30 +60,19 @@ public class Roll : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if (mov.CantMove)
+        if (mov.CantMove && rollTrigger)
         {
+            CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+            col.sharedMaterial.bounciness = 1;
+            col.enabled = false;
+            col.enabled = true;
+
             rolling = true;
-            if (!addForce && !bounce)
+            
+            if (!addForce)
             {
                 rb.AddForce(movement * rollSpeed, ForceMode2D.Impulse);
                 addForce = true;
-            }
-            else if (bounce)
-            {
-                if (WallHori)
-                {
-                    rb.velocity *= 0;
-                    rb.AddForce(new Vector2(-movement.x, movement.y) * rollSpeed, ForceMode2D.Impulse);
-                }
-
-                if (WallVert)
-                {
-                    rb.velocity *= 0;
-                    rb.AddForce(new Vector2(movement.x, -movement.y) * rollSpeed, ForceMode2D.Impulse);
-                }
-
-                bounce = false;
             }
 
             StartCoroutine(RollTime());            
@@ -94,25 +82,39 @@ public class Roll : MonoBehaviour
                 rb.velocity = Vector2.ClampMagnitude(rb.velocity, 10);
             }
         }
+
+        if (slide)
+        {
+            rb.AddForce(rb.velocity * 10);
+            rb.velocity *= 0.9f;
+        }
+    }
+
+    public void StopRolling()
+    {
+        rolling = false;
+        rollTrigger = false;
+        StopCoroutine("RollTime");
+        CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+        col.sharedMaterial.bounciness = 0;
+        col.enabled = false;
+        col.enabled = true;
     }
 
     private IEnumerator RollTime()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         mov.CantMove = false;
+        rollTrigger = false;
+        slide = true;
+        CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+        col.sharedMaterial.bounciness = 0;
+        col.enabled = false;
+        col.enabled = true;
         yield return new WaitForSeconds(0.39f);
         rolling = false;
-        rb.velocity *= 0;
-        addForce = false;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (mov.CantMove)
-        {
-            StopCoroutine("RollTime");
-            StartCoroutine("RollTime");
-            bounce = true;
-        }
+        addForce = false;        
+        yield return new WaitForSeconds(0.2f);
+        slide = false;        
     }
 }

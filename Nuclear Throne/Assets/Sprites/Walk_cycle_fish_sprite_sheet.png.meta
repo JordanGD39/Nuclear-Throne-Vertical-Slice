@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 90e5620390a428f4daaeffaed7ba08b5
+guid: 3382d6eebb459114284ad1a48d11a0c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -379420023043529297
-    second: Bandit_Sprite_sheet1_0
+      213: -122021935784281931
+    second: Walk_cycle_fish_sprite_sheet_0
   - first:
-      213: 2479419501529671194
-    second: Bandit_Sprite_sheet1_1
+      213: 5578370632723301399
+    second: Walk_cycle_fish_sprite_sheet_1
   - first:
-      213: -6342963570142028591
-    second: Bandit_Sprite_sheet1_2
+      213: -8831100134339180723
+    second: Walk_cycle_fish_sprite_sheet_2
   - first:
-      213: -5706159696965569581
-    second: Bandit_Sprite_sheet1_3
+      213: -3604838812131984341
+    second: Walk_cycle_fish_sprite_sheet_3
+  - first:
+      213: 3704643321496244929
+    second: Walk_cycle_fish_sprite_sheet_4
+  - first:
+      213: 3414041271305775220
+    second: Walk_cycle_fish_sprite_sheet_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 155
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -84,7 +90,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -98,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bandit_Sprite_sheet1_0
+      name: Walk_cycle_fish_sprite_sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 17
-        height: 16
+        x: 21
+        y: 81
+        width: 40
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89ba959fc97937f46852c1cf63c8ba6c
-      internalID: -379420023043529297
+      spriteID: 2efa2339c94ccc148876e2529948560a
+      internalID: -122021935784281931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bandit_Sprite_sheet1_1
+      name: Walk_cycle_fish_sprite_sheet_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 16
-        height: 15
+        x: 100
+        y: 86
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3cac849e6ff3d548a2faa15a5064c00
-      internalID: 2479419501529671194
+      spriteID: dd3776af633804947b2f2f39fa097c35
+      internalID: 5578370632723301399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bandit_Sprite_sheet1_2
+      name: Walk_cycle_fish_sprite_sheet_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 17
-        height: 15
+        x: 180
+        y: 81
+        width: 41
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21b520f545359d74c826c314d29c557a
-      internalID: -6342963570142028591
+      spriteID: 08fc98b5274d1314595242d1a635fb9b
+      internalID: -8831100134339180723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bandit_Sprite_sheet1_3
+      name: Walk_cycle_fish_sprite_sheet_3
       rect:
         serializedVersion: 2
-        x: 53
-        y: 0
-        width: 17
-        height: 16
+        x: 16
+        y: 18
+        width: 45
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +181,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09043096629574b4a9d3c50a6d04ea1a
-      internalID: -5706159696965569581
+      spriteID: 13e67f1ffcbf3bb49a5ce5c32f596abf
+      internalID: -3604838812131984341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_cycle_fish_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 16
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e782f239a99c814182fc06e45b5f2b1
+      internalID: 3704643321496244929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_cycle_fish_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 16
+        width: 45
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31903161ff7d45b45be03984ac42b850
+      internalID: 3414041271305775220
       vertices: []
       indices: 
       edges: []

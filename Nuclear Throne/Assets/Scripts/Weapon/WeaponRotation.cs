@@ -27,13 +27,13 @@ public class WeaponRotation : MonoBehaviour
             playerControl = false;
         }
 
-        childObj = transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        childObj = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         //Weapon Rotation with the Mouse-position
-        Vector2 aimPos;
+        Vector2 aimPos = new Vector2(0,0);
 
         if (playerControl)
         {
@@ -41,15 +41,21 @@ public class WeaponRotation : MonoBehaviour
         }
         else
         {
-            aimPos = player.position - transform.position;
+            aimPos = player.position - transform.position;           
         }
-        
-        float rotationZ = Mathf.Atan2(aimPos.y, aimPos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90);
 
-        transform.position = holder.transform.position;
+        if (playerControl || !holder.GetComponent<EnemyAi>().BadAimer)
+        {
+            float rotationZ = Mathf.Atan2(aimPos.y, aimPos.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 90);
+        }
 
-        ChangeSortingLayer(holder.transform.localScale.x, transform.rotation.eulerAngles.z);
+        if (playerControl)
+        {
+            transform.position = holder.transform.position;
+        }        
+
+        ChangeSortingLayer(holder.transform.localScale.x, transform.rotation.eulerAngles.z);        
     }
 
     private void ChangeSortingLayer(float xScale, float zAngle)
