@@ -11,6 +11,7 @@ public class ShootGun : MonoBehaviour
         BulletBehaviour bulletScript = bulletObj.GetComponent<BulletBehaviour>();
         bulletScript.WeaponThatShot = weapon;
         bulletScript.Speed = bullet.Speed;
+        bulletScript.BulletFired = bullet;
         bulletScript.Loaded = true;
         bulletScript.PlayerControl = playerControl;
         bulletObj.GetComponent<SpriteRenderer>().enabled = true;

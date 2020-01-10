@@ -10,6 +10,7 @@ public class BulletBehaviour : MonoBehaviour
     public float Speed { get { return speed; } set { speed = value; } }
 
     [SerializeField] private Bullet bullet;
+    public Bullet BulletFired { get { return bullet; } set { bullet = value; } }
 
     public bool Loaded { get; set; }
     public bool PlayerControl { get; set; }
@@ -38,28 +39,37 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
+        if (bullet.Hits == 1)
         {
-            collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-            if (bullet.Dissapear)
+            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
-                Destroy(gameObject);
+                collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+                if (bullet.Dissapear)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else if (!PlayerControl && collision.CompareTag("Player"))
+            {
+                collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
+                if (bullet.Dissapear)
+                {
+                    Debug.Log("WHYYY");
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                if (!collision.CompareTag("Bullet") && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
-        else if (!PlayerControl && collision.CompareTag("Player"))
-        {
-            collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-            if (bullet.Dissapear)
-            {
-                Destroy(gameObject);
-            }
-        }
-        else
-        {
-            if (!collision.CompareTag("Bullet") && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
-            {
-                Destroy(gameObject);
-            }            
-        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
     }
 }

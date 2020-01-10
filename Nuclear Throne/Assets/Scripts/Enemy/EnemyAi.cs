@@ -160,19 +160,16 @@ public class EnemyAi : MonoBehaviour
 
         while (enemyState == state.PATROL && !Dead)
         {
-            Debug.Log("Patrolling");
+            rb.velocity *= 0;
+
+            yield return new WaitForSeconds(2);
 
             int x = Random.Range(-1, 2);
             int y = Random.Range(-1, 2);
 
-            if (x == 0)
-            {
-                y = 1;
-            }
-
             rb.velocity = new Vector2(x, y) * speed;
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
 
         patrolling = false;
