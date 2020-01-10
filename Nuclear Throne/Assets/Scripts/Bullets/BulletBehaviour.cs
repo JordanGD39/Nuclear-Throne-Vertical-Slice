@@ -39,18 +39,7 @@ public class BulletBehaviour : AttackBox
         }
         else if (collision.gameObject.layer == 8)
         {
-            rb.velocity = transform.InverseTransformVector(rb.velocity);
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 180.0f);
-
-            /*if (wallHitCounter <= bullet.WallHits)
-            {
-                wallHitCounter++;
-
-            }
-            else
-            {
-                Destroy(gameObject);
-            }*/
+            Destroy(gameObject);
         }
         else
         {
