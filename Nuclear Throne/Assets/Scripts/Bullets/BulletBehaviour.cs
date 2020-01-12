@@ -17,6 +17,8 @@ public class BulletBehaviour : MonoBehaviour
 
     public Weapon WeaponThatShot { get; set; }
 
+    private int hits = 0;
+
     // Start is called before the first frame update
     void Start()
     {        
@@ -39,24 +41,22 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (bullet.Hits == 1)
+        hits = 0;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (bullet.Hits > hits)
         {
             if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
                 collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                if (bullet.Dissapear)
-                {
-                    Destroy(gameObject);
-                }
+                hits++;
             }
             else if (!PlayerControl && collision.CompareTag("Player"))
             {
                 collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                if (bullet.Dissapear)
-                {
-                    Debug.Log("WHYYY");
-                    Destroy(gameObject);
-                }
+                hits++;
             }
             else
             {
@@ -66,10 +66,12 @@ public class BulletBehaviour : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        
+        else
+        {
+            if (bullet.Dissapear)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

@@ -111,9 +111,9 @@ public class EnemyAi : MonoBehaviour
                     {                        
                         rb.velocity *= 0.9f;                        
 
-                        if (rb.velocity.magnitude <= 0)
+                        if (rb.velocity.magnitude <= 1)
                         {
-                            SetPatrolState();                            
+                            SetPatrolState();                         
                         }
                     }
                     break;
@@ -134,7 +134,7 @@ public class EnemyAi : MonoBehaviour
                 {
                     rb.velocity *= 0.9f;
 
-                    if (rb.velocity.magnitude <= 0)
+                    if (rb.velocity.magnitude <= 1)
                     {
                         SetPatrolState();
                     }
@@ -156,7 +156,7 @@ public class EnemyAi : MonoBehaviour
 
     private IEnumerator Patrol()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         while (enemyState == state.PATROL && !Dead)
         {
@@ -167,7 +167,10 @@ public class EnemyAi : MonoBehaviour
             int x = Random.Range(-1, 2);
             int y = Random.Range(-1, 2);
 
-            rb.velocity = new Vector2(x, y) * speed;
+            if (!Dead)
+            {
+                rb.velocity = new Vector2(x, y) * speed;
+            }            
 
             yield return new WaitForSeconds(1);
         }
@@ -231,7 +234,7 @@ public class EnemyAi : MonoBehaviour
 
     public void Hit(int dmg, Vector2 velocity)
     {
-        if (!Dead && !beingHit)
+        if (!Dead)
         {
             rb.velocity *= 0;
             StatsClass stats = GetComponent<StatsClass>();
