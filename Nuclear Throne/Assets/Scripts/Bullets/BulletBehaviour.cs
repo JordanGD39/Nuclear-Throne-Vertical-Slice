@@ -83,9 +83,8 @@ public class BulletBehaviour : AttackBox
             {
                 rb.velocity *= new Vector2(-1.0f, 1.0f);
             }
-
-            if ((transform.position.y > (col.gameObject.transform.position.y + getRectY)) ||
-                (transform.position.y < (col.gameObject.transform.position.y - getRectY)))
+            else if ((transform.position.y > (col.gameObject.transform.position.y + getRectY)) ||
+                     (transform.position.y < (col.gameObject.transform.position.y - getRectY)))
             {
                 rb.velocity *= new Vector2(1.0f, -1.0f);
             }
