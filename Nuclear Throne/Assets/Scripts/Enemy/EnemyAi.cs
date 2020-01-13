@@ -22,9 +22,6 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private bool touchDamage;    
     public bool TouchDamage { get { return touchDamage; } }
 
-    public bool WallHori { get; set; }
-    public bool WallVert { get; set; }
-
     private Vector2 direction;
     private Vector2 knockback;
     private float knockbackForce;
@@ -60,7 +57,9 @@ public class EnemyAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerInSight && !Dead)
+        if (Dead) return;
+
+        if (PlayerInSight)
         {
             direction = player.position - transform.position;
             direction.Normalize();
@@ -86,12 +85,12 @@ public class EnemyAi : MonoBehaviour
             enemyState = state.PATROL;
         }
 
-        if (!beingHit && !Dead && !badAimer)
+        if (!beingHit && !badAimer)
         {
             ChangeDirection();
         }
 
-        if (badAimer && !Dead)
+        if (badAimer)
         {
             PlayerDetect();
         }
@@ -99,6 +98,8 @@ public class EnemyAi : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Dead) return;
+
         if (playerInSight && !beingHit)
         {
             switch (enemyState)
@@ -142,7 +143,7 @@ public class EnemyAi : MonoBehaviour
             }
         }
 
-        if (Dead && !beingHit)
+        if (!beingHit)
         {
             rb.velocity *= 0.9f;
         }
@@ -259,6 +260,7 @@ public class EnemyAi : MonoBehaviour
 
                 knockbackForce = deathKnockback;
                 Dead = true;
+                gameObject.layer = 14;
                 Destroy(transform.GetChild(1).gameObject);
                 Destroy(transform.GetChild(2).gameObject);
                 anim.SetBool("Dead", true);

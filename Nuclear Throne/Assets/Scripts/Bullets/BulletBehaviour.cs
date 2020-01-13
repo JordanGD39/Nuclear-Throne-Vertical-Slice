@@ -36,7 +36,15 @@ public class BulletBehaviour : MonoBehaviour
         if (Loaded)
         {
             rb.velocity = transform.TransformVector(Vector3.up * speed);
-        }        
+        }
+
+        if (bullet.Hits <= hits)
+        {
+            if (bullet.Dissapear)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +56,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (bullet.Hits > hits)
         {
-            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
+            if (PlayerControl && collision.CompareTag("Enemy"))
             {
                 collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
                 hits++;
@@ -60,17 +68,10 @@ public class BulletBehaviour : MonoBehaviour
             }
             else
             {
-                if (!collision.CompareTag("Bullet") && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
+                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
                 {
                     Destroy(gameObject);
                 }
-            }
-        }
-        else
-        {
-            if (bullet.Dissapear)
-            {
-                Destroy(gameObject);
             }
         }
     }

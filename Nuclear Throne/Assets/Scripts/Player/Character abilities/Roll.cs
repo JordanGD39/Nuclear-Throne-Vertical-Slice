@@ -35,7 +35,7 @@ public class Roll : MonoBehaviour
             movement = mov.Movement;           
         }
 
-        if (Input.GetButtonDown("Active") && !rolling)
+        if (Input.GetButtonDown("Roll") && !rolling)
         {            
             mov.CantMove = true;
             rollTrigger = true;            

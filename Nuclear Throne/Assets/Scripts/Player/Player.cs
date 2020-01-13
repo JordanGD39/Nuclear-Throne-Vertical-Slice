@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         if (!beingHit && !Dead)
         {
             GetComponent<Roll>().StopRolling();
-            rb.velocity *= 0;
+            rb.velocity = Vector2.zero;
             knockback = velocity;
             if (stats.Health > 0)
             {
