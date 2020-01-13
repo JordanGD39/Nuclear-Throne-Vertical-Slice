@@ -8,7 +8,6 @@ public class Chest : MonoBehaviour
     public List<Weapon> WeaponDrops { get { return weaponDrops; } set { weaponDrops = value; } }
 
     [SerializeField] private int weaponsNumber = 1;
-    [SerializeField] private float shootingForce = 1;
 
     [SerializeField] private GameObject pickUpPref;
 
@@ -24,16 +23,22 @@ public class Chest : MonoBehaviour
 
                 weapon.WeaponOfGameObject = weaponDrops[Random.Range(0, weaponDrops.Count)];
 
-                if (i > 1)
+                //weapon ammo per weapon
+
+                if (i > 0)
                 {
                     Vector2 dir = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
 
-                    if (dir.magnitude == 0)
+                    if (dir.x == 0 && dir.y == 0)
                     {
                         dir.x = 1;
                     }
 
-                    weaponGameObject.GetComponent<Rigidbody2D>().AddForce(dir * shootingForce, ForceMode2D.Impulse);
+                    Debug.Log(dir + " Weapon: " + weapon.WeaponOfGameObject.Name);
+
+                    dir.Normalize();
+
+                    weaponGameObject.GetComponent<Rigidbody2D>().AddForce(dir * 10, ForceMode2D.Impulse);
                 }
             }
         }

@@ -35,11 +35,11 @@ public class PickUp : MonoBehaviour
 
         spr.sprite = weapon.SpriteOfWeapon;
 
-        col.size = spr.sprite.bounds.size;
+        col.size = spr.sprite.bounds.size + new Vector3(0.25f, 0.25f, 0);
         col.offset = spr.sprite.bounds.center;
 
-        transform.GetChild(0).GetComponent<BoxCollider2D>().size = col.size;
-        transform.GetChild(0).GetComponent<BoxCollider2D>().offset = col.offset;
+        transform.GetChild(0).GetComponent<BoxCollider2D>().size = spr.sprite.bounds.size;
+        transform.GetChild(0).GetComponent<BoxCollider2D>().offset = spr.sprite.bounds.center;
     }
 
     private void Update()
