@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45d72149f51938f4c90ad3c82fc4affa, type: 3}
-  m_Name: Slug
+  m_Name: Shell
   m_EditorClassIdentifier: 
   fireType: 9
   sprite: {fileID: 21300000, guid: a1434398b1b83194c9e49a2a66ba34a4, type: 3}
   hits: 1
-  wallHits: 1
+  wallHits: 2
   speed: 20
   dissapear: 1
   explode: 0

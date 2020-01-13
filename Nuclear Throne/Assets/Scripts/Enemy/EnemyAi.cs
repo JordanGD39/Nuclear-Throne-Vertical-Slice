@@ -42,7 +42,6 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private bool badAimer;
     public bool BadAimer { get { return badAimer; } }
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -57,7 +56,6 @@ public class EnemyAi : MonoBehaviour
         col.enabled = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (PlayerInSight && !Dead)
