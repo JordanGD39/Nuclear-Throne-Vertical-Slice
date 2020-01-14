@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 1517721568099873063, guid: c121677f89832f54ea41f61a184077d2, type: 3}
   hits: 1
   wallHits: 0
-  speed: 20
+  speed: 0
   dissapear: 0
   explode: 0
   playerDamage: 0

@@ -11,7 +11,6 @@ public class WeaponFunctions : MonoBehaviour
     private StatsClass holder;
     private EnemyAi ai;
     private ShootGun gun;
-    private MeleeAttack meleeAttack;
 
     [SerializeField] private GameObject bulletPref;
 
@@ -35,7 +34,7 @@ public class WeaponFunctions : MonoBehaviour
             }
         }
         gun = GetComponent<ShootGun>();
-        meleeAttack = GetComponent<MeleeAttack>();
+
         if (holder.Primary != null)
         {
             GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
@@ -61,8 +60,8 @@ public class WeaponFunctions : MonoBehaviour
     {
         //Left Mouse-button Click: Fire        
 
-        if (!holder.Primary.Melee)
-        {
+        //if (!holder.Primary.Melee)
+        //{
             if (holder.Primary.weaponType == Weapon.type.AUTO || holder.Primary.weaponType == Weapon.type.AUTOBURST)
             {
                 if (Input.GetButton("Fire1"))
@@ -83,11 +82,11 @@ public class WeaponFunctions : MonoBehaviour
                     }
                 }
             }
-        }
+        /*}
         else
         {
             //Debug.Log("Melee");
-        }
+        }*/
 
         //E-key Press: Weapon Switch
         if (Input.GetButtonDown("Switch"))

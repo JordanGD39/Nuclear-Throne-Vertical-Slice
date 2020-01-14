@@ -2,19 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehaviour : AttackBox
+public class BulletBehaviour : MonoBehaviour
 {
+    private Rigidbody2D rb;
+
     [SerializeField] private float speed;
     public float Speed { get { return speed; } set { speed = value; } }
 
+    [SerializeField] private Bullet bullet;
+    public Bullet BulletFired { get { return bullet; } set { bullet = value; } }
+
+    public bool Loaded { get; set; }
     public bool PlayerControl { get; set; }
+
+    public Weapon WeaponThatShot { get; set; }
+
+    private int hits = 0;
 
     private int wallHitCounter;
     private bool wallHit;
 
-    protected override void Start()
+    void Start()
     {
-        base.Start();
+        rb = GetComponent<Rigidbody2D>();
+        if (bullet.fireType != Bullet.type.NORMAL)
+        {
+            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+            GetComponent<BoxCollider2D>().size = S;
+        }
+
         wallHitCounter = 0;
         wallHit = false;
 
