@@ -18,17 +18,23 @@ public class BulletBehaviour : MonoBehaviour
     public Weapon WeaponThatShot { get; set; }
 
     private int hits = 0;
-
     private int wallHitCounter;
+    private float reload;
     private bool wallHit;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
         if (bullet.fireType != Bullet.type.NORMAL)
         {
             Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
             GetComponent<BoxCollider2D>().size = S;
+        }
+
+        if (bullet.fireType == Bullet.type.MELEE)
+        {
+            reload = WeaponThatShot.ReloadTime - 0.1f;
         }
 
         wallHitCounter = 0;
@@ -40,9 +46,17 @@ public class BulletBehaviour : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
-        
+        if (bullet.fireType == Bullet.type.MELEE)
+        {
+            /*if (transform.parent.gameObject.layer == 10)
+            {
+                transform.position = transform.parent.position;
+            }*/
+
+            Destroy(gameObject, reload);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,7 +65,7 @@ public class BulletBehaviour : MonoBehaviour
         {
             if (collision.gameObject.layer == 8)
             {
-                WallHitSequence(collision, wallHitCounter, wallHit);
+                WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
                 wallHit = true;
                 StartCoroutine(WallHitCoroutine());
             }
@@ -82,14 +96,9 @@ public class BulletBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void WallHitSequence(Collider2D col, int counter, bool hit, Bullet.type type)
     {
-        
-    }
-
-    private void WallHitSequence(Collider2D col, int counter, bool hit)
-    {
-        if (counter < bullet.WallHits && !hit)
+        if (counter < bullet.WallHits && !hit && (type != Bullet.type.MELEE))
         {
             float getRectX = 0.5f;// col.gameObject.GetComponent<SpriteRenderer>().sprite.rect.x / 2;
             float getRectY = 0.5f;// col.gameObject.GetComponent<SpriteRenderer>().sprite.rect.y / 2;
@@ -108,7 +117,7 @@ public class BulletBehaviour : MonoBehaviour
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
             wallHitCounter++;
         }
-        else if (counter >= bullet.WallHits && !hit)
+        else if (counter >= bullet.WallHits && !hit && (type != Bullet.type.MELEE))
         {
             Destroy(gameObject);
         }
