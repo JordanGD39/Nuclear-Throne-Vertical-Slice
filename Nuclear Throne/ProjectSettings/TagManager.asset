@@ -17,13 +17,13 @@ TagManager:
   - 
   - 
   - Tile
-  - WallCheck
   - Weapon
   - Enemy
   - EnemyWallCol
-  - 
-  - 
-  - 
+  - Dead
+  - Player
+  - PickUp
+  - Bullet
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Corpses
     uniqueID: 2226884487
+    locked: 0
+  - name: PickUps
+    uniqueID: 310102257
     locked: 0
   - name: Player
     uniqueID: 848088867

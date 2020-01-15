@@ -34,7 +34,6 @@ public class WeaponFunctions : MonoBehaviour
             }
         }
         gun = GetComponent<ShootGun>();
-
         if (holder.Primary != null)
         {
             GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
@@ -58,35 +57,27 @@ public class WeaponFunctions : MonoBehaviour
 
     private void InputButtons()
     {
-        //Left Mouse-button Click: Fire        
-
-        //if (!holder.Primary.Melee)
-        //{
-            if (holder.Primary.weaponType == Weapon.type.AUTO || holder.Primary.weaponType == Weapon.type.AUTOBURST)
+        //Left Mouse-button Click: Fire
+        if (holder.Primary.weaponType == Weapon.type.AUTO)
+        {
+            if (Input.GetButton("Fire1"))
             {
-                if (Input.GetButton("Fire1"))
+                if (timer >= holder.Primary.ReloadTime && !shooting)
                 {
-                    if (timer >= holder.Primary.ReloadTime && !shooting)
-                    {
-                        StartCoroutine(Shoot());
-                    }                    
-                }
+                    StartCoroutine(Shoot());
+                }                    
             }
-            else
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (timer >= holder.Primary.ReloadTime && !shooting)
-                    {
-                        StartCoroutine(Shoot());
-                    }
-                }
-            }
-        /*}
+        }
         else
         {
-            //Debug.Log("Melee");
-        }*/
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (timer >= holder.Primary.ReloadTime && !shooting)
+                {
+                        StartCoroutine(Shoot());
+                }
+            }
+        }
 
         //E-key Press: Weapon Switch
         if (Input.GetButtonDown("Switch"))
@@ -148,26 +139,133 @@ public class WeaponFunctions : MonoBehaviour
     {
         shooting = true;
 
-        if (holder.Primary.ShootBullets > 1)
+        bool norm = false;
+        bool shell = false;
+        bool bolt = false;
+        bool explosive = false;
+        bool energy = false;
+
+        bool canShoot = true;
+
+        switch (holder.Primary.WeaponBullet.fireType)
         {
-            for (int i = 0; i < holder.Primary.ShootBullets; i++)
-            {
-                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
-                yield return new WaitForSeconds(0.05f);
-            }
-        }
-        else
-        {
-            gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
+            case Bullet.type.NORMAL:
+                norm = true;
+                break;
+            case Bullet.type.FIRE:
+                norm = true;
+                break;
+            case Bullet.type.LASER:
+                energy = true;
+                break;
+            case Bullet.type.PLASMA:
+                energy = true;
+                break;
+            case Bullet.type.LIGHTNING:
+                energy = true;
+                break;
+            case Bullet.type.EXPLOSION:
+                explosive = true;
+                break;
+            case Bullet.type.MISSILE:
+                explosive = true;
+                break;
+            case Bullet.type.SEEKER:
+                explosive = true;
+                break;
+            case Bullet.type.DISC:
+                norm = true;
+                break;
+            case Bullet.type.SLUG:
+                shell = true;
+                break;
+            case Bullet.type.SHELL:
+                shell = true;
+                break;
+            case Bullet.type.BOLT:
+                bolt = true;
+                break;
         }
 
-        if (!playerControl && holder.GetComponent<EnemyAi>().BadAimer)
+        if (norm)
         {
-            holder.transform.GetChild(2).transform.rotation = holder.transform.GetChild(3).transform.rotation;
-            holder.GetComponent<EnemyAi>().ChangeDirection();
+            if (holder.Ammo >= holder.Primary.AmmoWaste)
+            {
+                holder.Ammo -= holder.Primary.AmmoWaste;
+            }
+            else
+            {
+                canShoot = false;
+            }
+        }
+        else if (shell)
+        {
+            if (holder.ShellAmmo >= holder.Primary.AmmoWaste)
+            {
+                holder.ShellAmmo -= holder.Primary.AmmoWaste;
+            }
+            else
+            {
+                canShoot = false;
+            }
+        }
+        else if (bolt)
+        {
+            if (holder.BoltAmmo >= holder.Primary.AmmoWaste)
+            {
+                holder.BoltAmmo -= holder.Primary.AmmoWaste;
+            }
+            else
+            {
+                canShoot = false;
+            }
+        }
+        else if (explosive)
+        {
+            if (holder.ExplosiveAmmo >= holder.Primary.AmmoWaste)
+            {
+                holder.ExplosiveAmmo -= holder.Primary.AmmoWaste;
+            }
+            else
+            {
+                canShoot = false;
+            }
+        }
+        else if (energy)
+        {
+            if (holder.EnergyAmmo >= holder.Primary.AmmoWaste)
+            {
+                holder.EnergyAmmo -= holder.Primary.AmmoWaste;
+            }
+            else
+            {
+                canShoot = false;
+            }
+        }
+
+        if (canShoot)
+        {
+            if (holder.Primary.ShootBullets > 1)
+            {
+                for (int i = 0; i < holder.Primary.ShootBullets; i++)
+                {
+                    gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
+                    yield return new WaitForSeconds(0.05f);
+                }
+            }
+            else
+            {
+                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
+            }
+
+            if (!playerControl && holder.GetComponent<EnemyAi>().BadAimer)
+            {
+                holder.transform.GetChild(2).transform.rotation = holder.transform.GetChild(3).transform.rotation;
+                holder.GetComponent<EnemyAi>().ChangeDirection();
+            }            
+            timer = 0;
         }
 
         shooting = false;
-        timer = 0;
     }
 }

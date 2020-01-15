@@ -12,7 +12,7 @@ public class Weapon : ScriptableObject
     [SerializeField] private Sprite sprite;
     public Sprite SpriteOfWeapon { get { return sprite; } }
 
-    public enum type { SINGLE, BURST, AUTO, AUTOBURST}
+    public enum type { SINGLE, AUTO}
     public type weaponType;
 
     [SerializeField] private Bullet bullet;

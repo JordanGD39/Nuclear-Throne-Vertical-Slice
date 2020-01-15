@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -192257779
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 8305375372020179590, guid: c121677f89832f54ea41f61a184077d2,
     type: 3}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4641313066213250596}
   - component: {fileID: 2135531122}
   - component: {fileID: 8200045262687871147}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -192257779
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7756923078217917794, guid: ccaf9ee6de0d2be4794ec50ce055a379,
     type: 3}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4641313066455244233}
   - component: {fileID: 4641313066455244232}
   - component: {fileID: 4641313066455244238}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Bandit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -192257779
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: -2
   m_Sprite: {fileID: -5650359497974500146, guid: ccaf9ee6de0d2be4794ec50ce055a379,
     type: 3}

@@ -17,6 +17,6 @@ MonoBehaviour:
   hits: 1
   wallHits: 0
   speed: 6
-  dissapear: 0
+  dissapear: 1
   explode: 0
   playerDamage: 0

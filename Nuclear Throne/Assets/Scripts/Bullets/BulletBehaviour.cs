@@ -50,14 +50,27 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (bullet.fireType == Bullet.type.MELEE)
         {
-            transform.position = transform.parent.position + transform.TransformVector(new Vector3(0.0f, 1.0f, 0.0f));
-            Destroy(gameObject, reload);
+          transform.position = transform.parent.position + transform.TransformVector(new Vector3(0.0f, 1.0f, 0.0f));
+          Destroy(gameObject, reload);
+        }
+
+        if (bullet.Hits <= hits)
+        {
+            if (bullet.Dissapear)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (bullet.Hits == 1)
+        hits = 0;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (bullet.Hits > hits)
         {
             if (collision.gameObject.layer == 8)
             {
@@ -68,19 +81,12 @@ public class BulletBehaviour : MonoBehaviour
             else if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
                 collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                if (bullet.Dissapear)
-                {
-                    Destroy(gameObject);
-                }
+                hits++;
             }
             else if (!PlayerControl && collision.CompareTag("Player"))
             {
                 collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                if (bullet.Dissapear)
-                {
-                    Debug.Log("WHYYY");
-                    Destroy(gameObject);
-                }
+                hits++;
             }
             else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
             {
@@ -99,7 +105,7 @@ public class BulletBehaviour : MonoBehaviour
             }
             else
             {
-                if (!collision.CompareTag("Bullet") && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
+                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
                 {
                     Destroy(gameObject);
                 }

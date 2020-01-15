@@ -12,13 +12,13 @@ public class Bullet : ScriptableObject
     public Sprite SpriteOfBullet { get { return sprite; } }
 
     [SerializeField] private int hits = 1;
-    public int Hits { get { return hits; } set { hits = value; } }
+    public int Hits { get { return hits; } }
 
     [SerializeField] private int wallHits = 0;
     public int WallHits { get { return wallHits; } set { wallHits = value; } }
 
     [SerializeField] private float speed = 20;
-    public float Speed { get { return speed; } set { speed = value; } }
+    public float Speed { get { return speed; } }
 
     [SerializeField] private bool dissapear = false;
     public bool Dissapear { get { return dissapear; } }
