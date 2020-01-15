@@ -40,7 +40,7 @@ public class BulletBehaviour : MonoBehaviour
         wallHitCounter = 0;
         wallHit = false;
 
-        if (Loaded)
+        if (Loaded && bullet.fireType != Bullet.type.MELEE)
         {
             rb.velocity = transform.TransformVector(Vector3.up * speed);
         }
@@ -50,11 +50,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (bullet.fireType == Bullet.type.MELEE)
         {
-            /*if (transform.parent.gameObject.layer == 10)
-            {
-                transform.position = transform.parent.position;
-            }*/
-
+            transform.position = transform.parent.position + transform.TransformVector(new Vector3(0.0f, 1.0f, 0.0f));
             Destroy(gameObject, reload);
         }
     }
@@ -84,6 +80,21 @@ public class BulletBehaviour : MonoBehaviour
                 {
                     Debug.Log("WHYYY");
                     Destroy(gameObject);
+                }
+            }
+            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            {
+                BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
+
+                enemBulBhv.PlayerControl = true;
+
+                if (WeaponThatShot.Name != "Screwdriver")
+                {
+                    enemBulBhv.rb.velocity *= -1;
+                }
+                else
+                {
+                    Destroy(collision.gameObject);
                 }
             }
             else

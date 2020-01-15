@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Flame Shotgun
   m_EditorClassIdentifier: 
   weaponName: Flame Shotgun
-  weaponType: 0
+  sprite: {fileID: 0}
+  weaponType: 1
   bullet: {fileID: 11400000, guid: 849a35e214eda9440b1e4699a409213e, type: 2}
   damage: 3
   reloadTime: 0.5
+  shootCoords: 0
   startAmmo: 49
   ammoWaste: 1
+  shootBullets: 1
   spreadAngle: 15
+  melee: 0

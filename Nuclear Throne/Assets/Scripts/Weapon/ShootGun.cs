@@ -8,7 +8,7 @@ public class ShootGun : MonoBehaviour
     {
         GameObject bulletObj = Instantiate(bulletPrefab, transform.GetChild(0).position, transform.parent.rotation);
         bulletObj.transform.Rotate(0, 0, Random.Range(-weapon.SpreadAngle, weapon.SpreadAngle + 1));
-        bulletObj.transform.parent = transform;
+        bulletObj.transform.parent = transform.parent.parent.GetChild(0);
         BulletBehaviour bulletScript = bulletObj.GetComponent<BulletBehaviour>();
         bulletScript.WeaponThatShot = weapon;
         bulletScript.Speed = bullet.Speed;
