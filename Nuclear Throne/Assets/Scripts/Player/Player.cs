@@ -9,10 +9,16 @@ public class Player : MonoBehaviour
     private bool getKnockback = false;
     private Vector2 knockback;
     private Rigidbody2D rb;
+    StatsClass stats;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<StatsClass>();
+        if (GetComponent<Roll>() != null)
+        {
+            stats.Ammo = 120;
+        }
     }
 
     private void FixedUpdate()
@@ -25,8 +31,7 @@ public class Player : MonoBehaviour
     }
 
     public void Hit(int dmg, Vector2 velocity, bool knocked)
-    {
-        StatsClass stats = GetComponent<StatsClass>();        
+    {                
         if (!beingHit && !Dead)
         {
             GetComponent<Roll>().StopRolling();

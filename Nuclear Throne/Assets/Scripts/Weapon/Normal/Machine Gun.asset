@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Machine Gun
   sprite: {fileID: 1804634792976682056, guid: c121677f89832f54ea41f61a184077d2, type: 3}
-  weaponType: 0
+  weaponType: 1
   bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
   damage: 3
   reloadTime: 0.17
