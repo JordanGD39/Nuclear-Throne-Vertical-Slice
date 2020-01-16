@@ -14,6 +14,9 @@ public class Bullet : ScriptableObject
     [SerializeField] private int hits = 1;
     public int Hits { get { return hits; } }
 
+    [SerializeField] private int wallHits = 0;
+    public int WallHits { get { return wallHits; } set { wallHits = value; } }
+
     [SerializeField] private float speed = 20;
     public float Speed { get { return speed; } }
 

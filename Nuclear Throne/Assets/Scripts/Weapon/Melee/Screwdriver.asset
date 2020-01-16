@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Screwdriver
   m_EditorClassIdentifier: 
   weaponName: Screwdriver
-  sprite: {fileID: 2144489849482904671, guid: c121677f89832f54ea41f61a184077d2, type: 3}
+  sprite: {fileID: -1869201037525138396, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
   weaponType: 0
-  bullet: {fileID: 11400000, guid: 8b780710884e63e4dbc2cdbf8cf030a0, type: 2}
+  bullet: {fileID: 11400000, guid: 17355be3dd134f943ae1979c0ead068d, type: 2}
   damage: 6
   reloadTime: 0.37
-  shootCoords: 0
+  shootCoords: 0.08
   startAmmo: 0
   ammoWaste: 0
   shootBullets: 1

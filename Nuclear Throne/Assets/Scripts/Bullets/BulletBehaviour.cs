@@ -18,24 +18,40 @@ public class BulletBehaviour : MonoBehaviour
     public Weapon WeaponThatShot { get; set; }
 
     private int hits = 0;
+    private int wallHitCounter;
+    private float reload;
+    private bool wallHit;
 
-    // Start is called before the first frame update
-    void Start()
-    {        
+    private void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
+
         if (bullet.fireType != Bullet.type.NORMAL)
         {
             Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
             GetComponent<BoxCollider2D>().size = S;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Loaded)
+        if (bullet.fireType == Bullet.type.MELEE)
+        {
+            reload = WeaponThatShot.ReloadTime - 0.1f;
+        }
+
+        wallHitCounter = 0;
+        wallHit = false;
+
+        if (Loaded && bullet.fireType != Bullet.type.MELEE)
         {
             rb.velocity = transform.TransformVector(Vector3.up * speed);
+        }
+    }
+
+    private void Update()
+    {
+        if (bullet.fireType == Bullet.type.MELEE)
+        {
+          transform.position = transform.parent.position + transform.TransformVector(new Vector3(0.0f, 1.0f, 0.0f));
+          Destroy(gameObject, reload);
         }
 
         if (bullet.Hits <= hits)
@@ -56,7 +72,13 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (bullet.Hits > hits)
         {
-            if (PlayerControl && collision.CompareTag("Enemy"))
+            if (collision.gameObject.layer == 8)
+            {
+                WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
+                wallHit = true;
+                StartCoroutine(WallHitCoroutine());
+            }
+            else if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
                 collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
                 hits++;
@@ -66,6 +88,21 @@ public class BulletBehaviour : MonoBehaviour
                 collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
                 hits++;
             }
+            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            {
+                BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
+
+                enemBulBhv.PlayerControl = true;
+
+                if (WeaponThatShot.Name != "Screwdriver")
+                {
+                    enemBulBhv.rb.velocity *= -1;
+                }
+                else
+                {
+                    Destroy(collision.gameObject);
+                }
+            }
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
@@ -74,5 +111,39 @@ public class BulletBehaviour : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void WallHitSequence(Collider2D col, int counter, bool hit, Bullet.type type)
+    {
+        if (counter < bullet.WallHits && !hit && (type != Bullet.type.MELEE))
+        {
+            float getRectX = 0.5f;// col.gameObject.GetComponent<SpriteRenderer>().sprite.rect.x / 2;
+            float getRectY = 0.5f;// col.gameObject.GetComponent<SpriteRenderer>().sprite.rect.y / 2;
+
+            if ((transform.position.x > (col.gameObject.transform.position.x + getRectX)) ||
+                (transform.position.x < (col.gameObject.transform.position.x - getRectX)))
+            {
+                rb.velocity *= new Vector2(-1.0f, 1.0f);
+            }
+            else if ((transform.position.y > (col.gameObject.transform.position.y + getRectY)) ||
+                     (transform.position.y < (col.gameObject.transform.position.y - getRectY)))
+            {
+                rb.velocity *= new Vector2(1.0f, -1.0f);
+            }
+
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
+            wallHitCounter++;
+        }
+        else if (counter >= bullet.WallHits && !hit && (type != Bullet.type.MELEE))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator WallHitCoroutine()
+    {
+        yield return new WaitForSeconds(0.0005f);
+
+        wallHit = false;
     }
 }

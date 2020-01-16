@@ -11,7 +11,6 @@ public class WeaponFunctions : MonoBehaviour
     private StatsClass holder;
     private EnemyAi ai;
     private ShootGun gun;
-    private MeleeAttack meleeAttack;
 
     [SerializeField] private GameObject bulletPref;
 
@@ -35,7 +34,6 @@ public class WeaponFunctions : MonoBehaviour
             }
         }
         gun = GetComponent<ShootGun>();
-        meleeAttack = GetComponent<MeleeAttack>();
         if (holder.Primary != null)
         {
             GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
@@ -59,34 +57,26 @@ public class WeaponFunctions : MonoBehaviour
 
     private void InputButtons()
     {
-        //Left Mouse-button Click: Fire        
-
-        if (!holder.Primary.Melee)
+        //Left Mouse-button Click: Fire
+        if (holder.Primary.weaponType == Weapon.type.AUTO)
         {
-            if (holder.Primary.weaponType == Weapon.type.AUTO)
+            if (Input.GetButton("Fire1"))
             {
-                if (Input.GetButton("Fire1"))
+                if (timer >= holder.Primary.ReloadTime && !shooting)
                 {
-                    if (timer >= holder.Primary.ReloadTime && !shooting)
-                    {
-                        StartCoroutine(Shoot());
-                    }                    
-                }
-            }
-            else
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (timer >= holder.Primary.ReloadTime && !shooting)
-                    {
-                        StartCoroutine(Shoot());
-                    }
-                }
+                    StartCoroutine(Shoot());
+                }                    
             }
         }
         else
         {
-            //Debug.Log("Melee");
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (timer >= holder.Primary.ReloadTime && !shooting)
+                {
+                        StartCoroutine(Shoot());
+                }
+            }
         }
 
         //E-key Press: Weapon Switch
