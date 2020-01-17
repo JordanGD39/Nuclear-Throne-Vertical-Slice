@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4641313066152499073}
   - component: {fileID: 4641313066152499078}
   - component: {fileID: 4641313066152499079}
-  - component: {fileID: 4641313066152499076}
   m_Layer: 10
   m_Name: Weapon
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4641313066152499098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4641313067518404418}
@@ -109,18 +108,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be6eb8bb41327de46b09eb6f23622f6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4641313066152499076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4641313066152499098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08cfe874b31286149ad38c1b008c6c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4641313066213250618

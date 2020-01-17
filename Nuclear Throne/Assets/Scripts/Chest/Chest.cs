@@ -18,6 +18,7 @@ public class Chest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<Animator>().SetTrigger("Opened");
 
             if (weaponsChest)
             {                

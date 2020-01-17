@@ -126,12 +126,14 @@ MonoBehaviour:
   - {fileID: 6660620642610324848, guid: 833d22980f322c74ca71415b5f9e26fb, type: 3}
   - {fileID: 6273881424712247542, guid: 4ba845593884d3a408d847b5ab1ae29d, type: 3}
   - {fileID: 6311964794715380820, guid: 374bd0971d8ca2f4a8e2e83bcade1d20, type: 3}
+  - {fileID: 6737408354201928536, guid: 97e465dbc57baad4ca3b627fb7403851, type: 3}
   extraSprites:
   - {fileID: -1329030765393020640, guid: 7c881a609624e804290a21afdbdac228, type: 3}
   - {fileID: 814388298513811021, guid: 7c881a609624e804290a21afdbdac228, type: 3}
   - {fileID: -7139420109098843469, guid: 7c881a609624e804290a21afdbdac228, type: 3}
   - {fileID: -4169512302269176130, guid: 3b277cbb01ad1a84080b7fe60302168d, type: 3}
   edges:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

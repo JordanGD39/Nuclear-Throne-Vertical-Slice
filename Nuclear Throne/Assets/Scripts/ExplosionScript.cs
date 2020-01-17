@@ -6,7 +6,7 @@ public class ExplosionScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 16)
         {
             Destroy(collision.gameObject);
         }

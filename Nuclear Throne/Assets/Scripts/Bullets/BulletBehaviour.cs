@@ -26,12 +26,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        if (bullet.fireType != Bullet.type.NORMAL)
-        {
-            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-            GetComponent<BoxCollider2D>().size = S;
-        }
-
+        Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size * 0.4f;
+        GetComponent<BoxCollider2D>().size = S;
+        
         if (bullet.fireType == Bullet.type.MELEE)
         {
             reload = WeaponThatShot.ReloadTime - 0.1f;

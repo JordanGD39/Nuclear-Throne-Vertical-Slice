@@ -69,6 +69,10 @@ public class SpriteEdgeCheck : MonoBehaviour
         if (edges[0] != null || edges[1] != null|| edges[2] != null|| edges[3] != null)
         {
             GetComponent<SpriteRenderer>().sprite = extraSprites[3];
+            if (edges[4] == null)
+            {
+                edges[4] = Instantiate(sprites[4], new Vector3(transform.position.x, transform.position.y - transform.parent.position.y, transform.position.z), transform.rotation);
+            }
         }
     }
 }
