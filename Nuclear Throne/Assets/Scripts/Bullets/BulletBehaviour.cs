@@ -66,6 +66,22 @@ public class BulletBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hits = 0;
+
+        if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+        {
+            BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
+
+            enemBulBhv.PlayerControl = true;
+
+            if (WeaponThatShot.Name != "Screwdriver")
+            {
+                enemBulBhv.rb.velocity *= -1;
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -88,24 +104,9 @@ public class BulletBehaviour : MonoBehaviour
                 collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
                 hits++;
             }
-            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
-            {
-                BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
-
-                enemBulBhv.PlayerControl = true;
-
-                if (WeaponThatShot.Name != "Screwdriver")
-                {
-                    enemBulBhv.rb.velocity *= -1;
-                }
-                else
-                {
-                    Destroy(collision.gameObject);
-                }
-            }
             else
             {
-                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
+                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet"))
                 {
                     Destroy(gameObject);
                 }
