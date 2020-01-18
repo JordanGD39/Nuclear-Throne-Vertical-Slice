@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public Rigidbody2D RigBod { get { return rb; } set { rb = value; } }
 
     [SerializeField] private float speed;
     public float Speed { get { return speed; } set { speed = value; } }
@@ -18,9 +19,6 @@ public class BulletBehaviour : MonoBehaviour
     public Weapon WeaponThatShot { get; set; }
 
     private int hits = 0;
-    private int wallHitCounter;
-    private float reload;
-    private bool wallHit;
 
     private void Start()
     {
@@ -31,14 +29,6 @@ public class BulletBehaviour : MonoBehaviour
             Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
             GetComponent<BoxCollider2D>().size = S;
         }
-
-        if (bullet.fireType == Bullet.type.MELEE)
-        {
-            reload = WeaponThatShot.ReloadTime - 0.1f;
-        }
-
-        wallHitCounter = 0;
-        wallHit = false;
 
         if (Loaded && bullet.fireType != Bullet.type.MELEE)
         {
@@ -51,7 +41,15 @@ public class BulletBehaviour : MonoBehaviour
         if (bullet.fireType == Bullet.type.MELEE)
         {
           transform.position = transform.parent.position + transform.TransformVector(new Vector3(0.0f, 1.0f, 0.0f));
-          Destroy(gameObject, reload);
+
+            if (WeaponThatShot.Name == "Screwdriver")
+            {
+                Destroy(gameObject, 0.17f);
+            }
+            else
+            {
+                Destroy(gameObject, 0.37f);
+            }
         }
 
         if (bullet.Hits <= hits)
@@ -65,36 +63,39 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hits = 0;
-
-        if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+        if (!collision.CompareTag("Bullet"))
         {
-            BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
+            hits = 0;
+        }
 
-            enemBulBhv.PlayerControl = true;
+        if (collision.gameObject.name != "PhysicsMat")
+        {
+            if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            {
+                //Debug.Log(collision.gameObject.name);
 
-            if (WeaponThatShot.Name != "Screwdriver")
-            {
-                enemBulBhv.rb.velocity *= -1;
-            }
-            else
-            {
-                Destroy(collision.gameObject);
+                BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
+
+                if (WeaponThatShot.Name != "Screwdriver" && !enemBulBhv.PlayerControl)
+                {
+                    enemBulBhv.rb.velocity *= -1;
+                    enemBulBhv.transform.rotation = transform.rotation;
+                }
+                else if (WeaponThatShot.Name == "Screwdriver" && !enemBulBhv.PlayerControl)
+                {
+                    Destroy(collision.gameObject);
+                }
+
+                enemBulBhv.PlayerControl = true;
             }
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (bullet.Hits > hits)
+        if (bullet.Hits > hits && (collision.gameObject.name != "PhysicsMat"))
         {
-            if (collision.gameObject.layer == 8)
-            {
-                WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
-                wallHit = true;
-                StartCoroutine(WallHitCoroutine());
-            }
-            else if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
+            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
                 collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
                 hits++;
@@ -112,39 +113,5 @@ public class BulletBehaviour : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void WallHitSequence(Collider2D col, int counter, bool hit, Bullet.type type)
-    {
-        if (counter < bullet.WallHits && !hit && (type != Bullet.type.MELEE))
-        {
-            float getRectX = 0.5f;// col.gameObject.GetComponent<SpriteRenderer>().sprite.rect.x / 2;
-            float getRectY = 0.5f;// col.gameObject.GetComponent<SpriteRenderer>().sprite.rect.y / 2;
-
-            if ((transform.position.x > (col.gameObject.transform.position.x + getRectX)) ||
-                (transform.position.x < (col.gameObject.transform.position.x - getRectX)))
-            {
-                rb.velocity *= new Vector2(-1.0f, 1.0f);
-            }
-            else if ((transform.position.y > (col.gameObject.transform.position.y + getRectY)) ||
-                     (transform.position.y < (col.gameObject.transform.position.y - getRectY)))
-            {
-                rb.velocity *= new Vector2(1.0f, -1.0f);
-            }
-
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
-            wallHitCounter++;
-        }
-        else if (counter >= bullet.WallHits && !hit && (type != Bullet.type.MELEE))
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private IEnumerator WallHitCoroutine()
-    {
-        yield return new WaitForSeconds(0.0005f);
-
-        wallHit = false;
     }
 }

@@ -13,7 +13,7 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetButtonDown("Pickup"))
+        if (collision.CompareTag("Player"))
         {
             GetComponent<BoxCollider2D>().enabled = false;
             for (int i = 0; i < weaponsNumber; i++)
