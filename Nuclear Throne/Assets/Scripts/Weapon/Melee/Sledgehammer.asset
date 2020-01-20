@@ -19,7 +19,6 @@ MonoBehaviour:
   damage: 24
   reloadTime: 1.17
   shootCoords: 0.08
-  startAmmo: 0
   ammoWaste: 0
   shootBullets: 1
   spreadAngle: 0

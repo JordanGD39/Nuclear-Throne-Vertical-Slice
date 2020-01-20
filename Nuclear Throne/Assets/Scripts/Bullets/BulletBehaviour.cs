@@ -89,21 +89,7 @@ public class BulletBehaviour : MonoBehaviour
 
         if (collision.gameObject.name != "PhysicsMat")
         {
-            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
-            {
-                if (!bullet.Explode)
-                {
-                    collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                }
-            }
-            else if (!PlayerControl && collision.CompareTag("Player"))
-            {
-                if (!bullet.Explode)
-                {
-                    collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                }
-            }
-            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
             {
                 BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
 
@@ -167,7 +153,8 @@ public class BulletBehaviour : MonoBehaviour
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
-                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE &&
+                    !bullet.Explode)
                 {
                     Destroy(gameObject);
                 }

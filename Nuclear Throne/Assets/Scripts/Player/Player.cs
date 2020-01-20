@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         {
             stats.Ammo = 120;
             stats.ExplosiveAmmo = 120;
+            stats.ShellAmmo = 40;
         }
     }
 
