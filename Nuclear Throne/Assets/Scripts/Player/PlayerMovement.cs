@@ -26,8 +26,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        movement = movement.normalized;        
-
+        movement = movement.normalized;
         if (!CantMove)
         {
             anim.SetFloat("Speed", movement.magnitude);

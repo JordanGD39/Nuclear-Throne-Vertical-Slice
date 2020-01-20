@@ -10,6 +10,7 @@ public class BulletBehaviour : MonoBehaviour
     public float Speed { get { return speed; } set { speed = value; } }
 
     [SerializeField] private Bullet bullet;
+    [SerializeField] private GameObject explosionPref;
     public Bullet BulletFired { get { return bullet; } set { bullet = value; } }
 
     public bool Loaded { get; set; }
@@ -19,15 +20,25 @@ public class BulletBehaviour : MonoBehaviour
 
     private int hits = 0;
 
+    private float timer = 0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        if (bullet.fireType != Bullet.type.NORMAL)
+        float percentage = 0.4f;
+
+        if (bullet.fireType == Bullet.type.EXPLOSION)
         {
-            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-            GetComponent<BoxCollider2D>().size = S;
+            percentage = 1;
+            transform.GetChild(0).gameObject.SetActive(true);
+            rb.drag = 3;
         }
+
+        Vector2 s = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size * percentage;
+        GetComponent<BoxCollider2D>().size = s;
+
+        transform.GetChild(0).GetComponent<BoxCollider2D>().size = s;
 
         if (Loaded && bullet.fireType != Bullet.type.MELEE)
         {
@@ -51,6 +62,15 @@ public class BulletBehaviour : MonoBehaviour
             }
         }
 
+        if (bullet.fireType == Bullet.type.EXPLOSION)
+        {
+            timer += Time.deltaTime;
+            if (timer > 2)
+            {
+                Explode();
+            }
+        }
+
         if (bullet.Hits <= hits)
         {
             if (bullet.Dissapear)
@@ -69,7 +89,42 @@ public class BulletBehaviour : MonoBehaviour
 
         if (collision.gameObject.name != "PhysicsMat")
         {
-            if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            if (collision.gameObject.layer == 8)
+            {
+                if (!bullet.Explode)
+                {
+                    WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
+                    wallHit = true;
+                    StartCoroutine(WallHitCoroutine());
+                }
+            }
+            else if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
+            {
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+                    hits++;
+                }
+                else
+                {
+                    Explode();
+                    hits++;
+                }
+            }
+            else if (!PlayerControl && collision.CompareTag("Player"))
+            {
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
+                    hits++;
+                }
+                else
+                {
+                    Explode();
+                    hits++;
+                }
+            }
+            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
             {
                 BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
 
@@ -84,7 +139,20 @@ public class BulletBehaviour : MonoBehaviour
 
                 enemBulBhv.PlayerControl = true;
             }
+            else
+            {
+                if (!bullet.Explode && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
+    }
+
+    private void Explode()
+    {
+        Instantiate(explosionPref, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -24,9 +24,9 @@ TagManager:
   - Player
   - PickUp
   - Bullet
-  - 
-  - 
-  - 
+  - BlankUnderTile
+  - Ammo
+  - BulletCol
   - 
   - 
   - 
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: NPC
     uniqueID: 4102709517
+    locked: 0
+  - name: PlayerHit
+    uniqueID: 3656914219
     locked: 0
   - name: FG
     uniqueID: 3297945323

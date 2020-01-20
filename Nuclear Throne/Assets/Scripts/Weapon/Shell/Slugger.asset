@@ -18,8 +18,7 @@ MonoBehaviour:
   bullet: {fileID: 11400000, guid: 3b42fc9c6aab35244986ea013b73ef8a, type: 2}
   damage: 22
   reloadTime: 0.73
-  shootCoords: 0
-  startAmmo: 96
+  shootCoords: 0.3
   ammoWaste: 1
   shootBullets: 0
   spreadAngle: 5

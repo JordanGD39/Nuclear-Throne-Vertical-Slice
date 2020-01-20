@@ -16,7 +16,7 @@ public class Weapon : ScriptableObject
     public type weaponType;
 
     [SerializeField] private Bullet bullet;
-    public Bullet WeaponBullet { get { return bullet; } }
+    public Bullet WeaponBullet { get { return bullet; } set { bullet = value; } }
 
     [SerializeField] private int damage;
     public int Damage { get { return damage; } }
@@ -26,9 +26,6 @@ public class Weapon : ScriptableObject
 
     [SerializeField] private float shootCoords = 0;
     public float ShootCoords { get { return shootCoords; } }
-
-    [SerializeField] private int startAmmo = 96;
-    public int StartAmmo { get { return startAmmo; } }
 
     [SerializeField] private int ammoWaste = 1;
     public int AmmoWaste { get { return ammoWaste; } }
