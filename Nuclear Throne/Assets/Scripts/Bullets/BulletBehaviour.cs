@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public Rigidbody2D RigBod { get { return rb; } set { rb = value; } }
 
     [SerializeField] private float speed;
     public float Speed { get { return speed; } set { speed = value; } }
@@ -35,6 +34,11 @@ public class BulletBehaviour : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             rb.drag = 3;
         }
+
+        Vector2 s = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size * percentage;
+        GetComponent<BoxCollider2D>().size = s;
+
+        transform.GetChild(0).GetComponent<BoxCollider2D>().size = s;
 
         if (Loaded && bullet.fireType != Bullet.type.MELEE)
         {
@@ -85,16 +89,27 @@ public class BulletBehaviour : MonoBehaviour
 
         if (collision.gameObject.name != "PhysicsMat")
         {
-            if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
-                //Debug.Log(collision.gameObject.name);
-
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+                }
+            }
+            else if (!PlayerControl && collision.CompareTag("Player"))
+            {
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
+                }
+            }
+            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            {
                 BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
 
                 if (WeaponThatShot.Name != "Screwdriver" && !enemBulBhv.PlayerControl)
                 {
                     enemBulBhv.rb.velocity *= -1;
-                    enemBulBhv.transform.rotation = transform.rotation;
                 }
                 else if (WeaponThatShot.Name == "Screwdriver" && !enemBulBhv.PlayerControl)
                 {
@@ -103,7 +118,20 @@ public class BulletBehaviour : MonoBehaviour
 
                 enemBulBhv.PlayerControl = true;
             }
+            else
+            {
+                if (!bullet.Explode && !collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet"))
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
+    }
+
+    private void Explode()
+    {
+        Instantiate(explosionPref, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -112,17 +140,34 @@ public class BulletBehaviour : MonoBehaviour
         {
             if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
-                collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                hits++;
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+                    hits++;
+                }
+                else
+                {
+                    Explode();
+                    hits++;
+                }
             }
             else if (!PlayerControl && collision.CompareTag("Player"))
             {
-                collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                hits++;
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
+                    hits++;
+                }
+                else
+                {
+                    Explode();
+                    hits++;
+                }
             }
             else
             {
-                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet"))
+                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
                 {
                     Destroy(gameObject);
                 }

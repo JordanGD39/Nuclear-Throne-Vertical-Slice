@@ -16,8 +16,8 @@ MonoBehaviour:
   bulletType: 1
   sprite: {fileID: 21300000, guid: a1434398b1b83194c9e49a2a66ba34a4, type: 3}
   hits: 1
-  wallHits: 1
   speed: 20
   dissapear: 1
   explode: 0
   playerDamage: 0
+  wallBounce: 1

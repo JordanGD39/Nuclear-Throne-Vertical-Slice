@@ -15,7 +15,7 @@ public class BulletPhysicsMat : MonoBehaviour
     private void Start()
     {
         physMat = new PhysicsMaterial2D();
-        physMat.bounciness = 0;
+        physMat.bounciness = 1;
         physMat.friction = 0;
 
         bCol = transform.GetComponent<BoxCollider2D>();
@@ -39,8 +39,11 @@ public class BulletPhysicsMat : MonoBehaviour
     {
         if (wallHit)
         {
-            BulletBehaviour bBehaviour = GetComponentInParent<BulletBehaviour>();
-            bBehaviour.RigBod.velocity *= 0.8f;
+            Rigidbody2D rigidbody = GetComponentInParent<Rigidbody2D>();
+            rigidbody.velocity *= 0.98f;
+
+            transform.parent.rotation = Quaternion.Euler(transform.parent.eulerAngles.x, transform.parent.eulerAngles.y,
+            (-90.0f + Mathf.Atan2(rigidbody.velocity.y, rigidbody.velocity.x) * (180 / Mathf.PI)));
         }
     }
 
@@ -48,12 +51,9 @@ public class BulletPhysicsMat : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            physMat.bounciness = 1;
-
-            if (!wallHit)
+            if (!wallHit && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
             {
-                //transform.rotation = Quaternion.Euler(transform.eulerAngles.x,
-                //transform.eulerAngles.y, transform.eulerAngles.z + 180.0f);
+                Destroy(transform.parent.gameObject, 1.0f);
             }
 
             wallHit = true;
