@@ -120,7 +120,7 @@ public class BulletBehaviour : MonoBehaviour
             }
             else
             {
-                if (!bullet.Explode && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
+                if (!bullet.Explode && !collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet"))
                 {
                     Destroy(gameObject);
                 }
