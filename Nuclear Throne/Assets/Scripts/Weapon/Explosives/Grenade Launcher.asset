@@ -9,14 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d72149f51938f4c90ad3c82fc4affa, type: 3}
+  m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
   m_Name: Grenade Launcher
   m_EditorClassIdentifier: 
-  fireType: 5
+  weaponName: Grenade Launcher
   sprite: {fileID: -7292374845137529908, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
-  hits: 1
-  wallHits: 0
-  speed: 20
-  dissapear: 0
-  explode: 1
-  playerDamage: 1
+  weaponType: 0
+  bullet: {fileID: 11400000, guid: 7d10069b659cb8a499b11ef3fdbe0586, type: 2}
+  damage: 15
+  reloadTime: 0.67
+  shootCoords: 0.2
+  ammoWaste: 1
+  shootBullets: 1
+  spreadAngle: 3
+  melee: 0

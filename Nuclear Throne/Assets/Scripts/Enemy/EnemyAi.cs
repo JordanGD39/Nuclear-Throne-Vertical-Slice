@@ -64,15 +64,17 @@ public class EnemyAi : MonoBehaviour
 
             if (follower)
             {
-                if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+                float distance = Vector2.Distance(transform.position, player.position);
+
+                if (distance > stoppingDistance)
                 {
                     enemyState = state.FOLLOW;
                 }
-                else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatingDistance)
+                else if (distance < stoppingDistance && distance > retreatingDistance)
                 {
                     enemyState = state.PATROL;
                 }
-                else if (Vector2.Distance(transform.position, player.position) < retreatingDistance)
+                else if (distance < retreatingDistance)
                 {
                     enemyState = state.RETREAT;
                 }
@@ -96,6 +98,11 @@ public class EnemyAi : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (beingHit)
+        {
+            rb.AddForce(knockback * knockbackForce, ForceMode2D.Impulse);
+        }
+
         if (Dead) return;
 
         if (playerInSight && !beingHit)
@@ -120,11 +127,7 @@ public class EnemyAi : MonoBehaviour
                     rb.velocity = direction * -speed;
                     break;
             }
-        }
-        else if(beingHit)
-        {
-            rb.AddForce(knockback.normalized * knockbackForce, ForceMode2D.Impulse);
-        }
+        }        
         else
         {
             if (enemyState == state.PATROL)
@@ -139,11 +142,6 @@ public class EnemyAi : MonoBehaviour
                     }
                 }
             }
-        }
-
-        if (!beingHit)
-        {
-            rb.velocity *= 0.9f;
         }
     }
 
@@ -235,11 +233,12 @@ public class EnemyAi : MonoBehaviour
     {
         if (!Dead)
         {
-            rb.velocity *= 0;
+            rb.velocity = Vector2.zero;
             StatsClass stats = GetComponent<StatsClass>();
             knockback = velocity;
-            knockbackForce = 0.5f;
-            beingHit = true;
+            knockback.Normalize();
+            knockbackForce = 0.5f;           
+            
             stats.Health -= dmg;
 
             if (stats.Health <= 0)
@@ -262,11 +261,15 @@ public class EnemyAi : MonoBehaviour
                 Destroy(transform.GetChild(1).gameObject);
                 Destroy(transform.GetChild(2).gameObject);
                 anim.SetBool("Dead", true);
+                rb.drag = 4;
             }
             else
             {
                 anim.SetTrigger("Hit");
             }
+
+
+            beingHit = true;
 
             StartCoroutine(HitCoroutine());
         }

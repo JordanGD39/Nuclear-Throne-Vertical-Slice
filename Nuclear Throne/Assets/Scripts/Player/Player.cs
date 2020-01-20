@@ -9,15 +9,18 @@ public class Player : MonoBehaviour
     private bool getKnockback = false;
     private Vector2 knockback;
     private Rigidbody2D rb;
+    private SpriteRenderer spr;
     StatsClass stats;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsClass>();
+        spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         if (GetComponent<Roll>() != null)
         {
             stats.Ammo = 120;
+            stats.ExplosiveAmmo = 120;
         }
     }
 
@@ -46,9 +49,17 @@ public class Player : MonoBehaviour
                 getKnockback = true;
             }
             beingHit = true;
-            stats.Health -= dmg;            
+            stats.Health -= dmg;
+            StartCoroutine("HigherLayer");
             StartCoroutine(HitCoroutine());          
         }
+    }
+
+    private IEnumerator HigherLayer()
+    {
+        spr.sortingLayerName = "PlayerHit";
+        yield return new WaitForSeconds(0.5f);
+        spr.sortingLayerName = "Player";
     }
 
     private IEnumerator HitCoroutine()
@@ -60,15 +71,16 @@ public class Player : MonoBehaviour
             rb.velocity *= 0.9f;
             yield return null;
         }
-
-        beingHit = false;
+        
+        beingHit = false;        
 
         if (GetComponent<StatsClass>().Health <= 0)
         {
             Dead = true;
-            transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.grey;
+            spr.color = Color.grey;
             Destroy(transform.parent.GetChild(1).gameObject);
             GetComponent<PlayerMovement>().enabled = false;
+            GetComponent<Roll>().enabled = false;
             yield return new WaitForSeconds(0.5f);
             rb.velocity *= 0;
 
