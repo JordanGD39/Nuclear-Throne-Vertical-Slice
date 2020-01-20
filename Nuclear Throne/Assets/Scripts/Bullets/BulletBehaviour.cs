@@ -23,6 +23,8 @@ public class BulletBehaviour : MonoBehaviour
     private float reload;
     private bool wallHit;
 
+    private float timer = 0;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -63,6 +65,15 @@ public class BulletBehaviour : MonoBehaviour
           Destroy(gameObject, reload);
         }
 
+        if (bullet.fireType == Bullet.type.EXPLOSION)
+        {
+            timer += Time.deltaTime;
+            if (timer > 2)
+            {
+                Explode();                
+            }
+        }
+
         if (bullet.Hits <= hits)
         {
             if (bullet.Dissapear)
@@ -83,9 +94,12 @@ public class BulletBehaviour : MonoBehaviour
         {
             if (collision.gameObject.layer == 8)
             {
-                WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
-                wallHit = true;
-                StartCoroutine(WallHitCoroutine());
+                if (!bullet.Explode)
+                {
+                    WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
+                    wallHit = true;
+                    StartCoroutine(WallHitCoroutine());
+                }
             }
             else if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
@@ -130,7 +144,7 @@ public class BulletBehaviour : MonoBehaviour
             }
             else
             {
-                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !bullet.Explode)
+                if (!bullet.Explode && !collision.CompareTag("Player") && !collision.CompareTag("Enemy"))
                 {
                     Destroy(gameObject);
                 }

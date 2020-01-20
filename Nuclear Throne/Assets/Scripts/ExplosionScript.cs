@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class ExplosionScript : MonoBehaviour
 {
+    [SerializeField] private GameObject brokenPref;
+
+    [SerializeField] private Sprite[] sprites;
+
+    private void Start()
+    {
+        Destroy(transform.parent.gameObject, 2);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 8 || collision.gameObject.layer == 16)
         {
-            Destroy(collision.gameObject);
+            GameObject tile = Instantiate(brokenPref, collision.transform.position, Quaternion.identity);
+            tile.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, 4)];
+            Destroy(collision.gameObject);            
         }
 
         if (collision.CompareTag("Player"))

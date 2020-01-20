@@ -226,6 +226,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599642073e99cfa468d25f5ad1e77151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brokenPref: {fileID: 5400978094444645038, guid: 5c41d0ca0b165674f8ae408912d5fe92,
+    type: 3}
+  sprites:
+  - {fileID: -4537515893787903837, guid: 3b277cbb01ad1a84080b7fe60302168d, type: 3}
+  - {fileID: -7657955008240977234, guid: 3b277cbb01ad1a84080b7fe60302168d, type: 3}
+  - {fileID: 2686723744202447890, guid: 3b277cbb01ad1a84080b7fe60302168d, type: 3}
+  - {fileID: -4256245675541109346, guid: 3b277cbb01ad1a84080b7fe60302168d, type: 3}
 --- !u!50 &2602933597347962620
 Rigidbody2D:
   serializedVersion: 4
