@@ -15,7 +15,7 @@ public class BulletPhysicsMat : MonoBehaviour
     private void Start()
     {
         physMat = new PhysicsMaterial2D();
-        physMat.bounciness = 0;
+        physMat.bounciness = 1;
         physMat.friction = 0;
 
         bCol = transform.GetComponent<BoxCollider2D>();
@@ -51,8 +51,6 @@ public class BulletPhysicsMat : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            physMat.bounciness = 1;
-
             if (!wallHit && bullet.fireType != Bullet.type.MELEE)
             {
                 Destroy(transform.parent.gameObject, 1.0f);
