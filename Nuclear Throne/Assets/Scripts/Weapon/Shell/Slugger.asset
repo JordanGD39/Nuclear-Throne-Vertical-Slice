@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
   m_Name: Slugger
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   weaponName: Slugger
   sprite: {fileID: -7900295659209866551, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
   weaponType: 0
