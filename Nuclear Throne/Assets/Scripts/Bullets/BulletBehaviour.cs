@@ -89,16 +89,7 @@ public class BulletBehaviour : MonoBehaviour
 
         if (collision.gameObject.name != "PhysicsMat")
         {
-            if (collision.gameObject.layer == 8)
-            {
-                if (!bullet.Explode)
-                {
-                    WallHitSequence(collision, wallHitCounter, wallHit, bullet.fireType);
-                    wallHit = true;
-                    StartCoroutine(WallHitCoroutine());
-                }
-            }
-            else if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
+            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
                 if (!bullet.Explode)
                 {
