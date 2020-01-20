@@ -20,7 +20,7 @@ MonoBehaviour:
   reloadTime: 0.73
   shootCoords: 0
   startAmmo: 96
-  ammoWaste: 0
-  shootBullets: 1
+  ammoWaste: 1
+  shootBullets: 0
   spreadAngle: 5
   melee: 0

@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public Rigidbody2D RigBod { get { return rb; } set { rb = value; } }
 
     [SerializeField] private float speed;
     public float Speed { get { return speed; } set { speed = value; } }
@@ -72,14 +71,11 @@ public class BulletBehaviour : MonoBehaviour
         {
             if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
             {
-                //Debug.Log(collision.gameObject.name);
-
                 BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
 
                 if (WeaponThatShot.Name != "Screwdriver" && !enemBulBhv.PlayerControl)
                 {
                     enemBulBhv.rb.velocity *= -1;
-                    enemBulBhv.transform.rotation = transform.rotation;
                 }
                 else if (WeaponThatShot.Name == "Screwdriver" && !enemBulBhv.PlayerControl)
                 {
@@ -107,7 +103,8 @@ public class BulletBehaviour : MonoBehaviour
             }
             else
             {
-                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet"))
+                if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE)
                 {
                     Destroy(gameObject);
                 }
