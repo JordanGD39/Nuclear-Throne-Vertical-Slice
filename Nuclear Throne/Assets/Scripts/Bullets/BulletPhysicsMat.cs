@@ -51,7 +51,7 @@ public class BulletPhysicsMat : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            if (!wallHit && bullet.fireType != Bullet.type.MELEE)
+            if (!wallHit && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
             {
                 Destroy(transform.parent.gameObject, 1.0f);
             }

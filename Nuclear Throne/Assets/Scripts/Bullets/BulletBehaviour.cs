@@ -94,12 +94,6 @@ public class BulletBehaviour : MonoBehaviour
                 if (!bullet.Explode)
                 {
                     collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                    hits++;
-                }
-                else
-                {
-                    Explode();
-                    hits++;
                 }
             }
             else if (!PlayerControl && collision.CompareTag("Player"))
@@ -107,12 +101,6 @@ public class BulletBehaviour : MonoBehaviour
                 if (!bullet.Explode)
                 {
                     collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                    hits++;
-                }
-                else
-                {
-                    Explode();
-                    hits++;
                 }
             }
             else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
@@ -152,18 +140,34 @@ public class BulletBehaviour : MonoBehaviour
         {
             if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
             {
-                collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                hits++;
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+                    hits++;
+                }
+                else
+                {
+                    Explode();
+                    hits++;
+                }
             }
             else if (!PlayerControl && collision.CompareTag("Player"))
             {
-                collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                hits++;
+                if (!bullet.Explode)
+                {
+                    collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
+                    hits++;
+                }
+                else
+                {
+                    Explode();
+                    hits++;
+                }
             }
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
-                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE)
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
                 {
                     Destroy(gameObject);
                 }
