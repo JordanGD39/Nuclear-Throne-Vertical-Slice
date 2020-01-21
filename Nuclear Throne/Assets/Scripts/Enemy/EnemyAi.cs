@@ -27,6 +27,10 @@ public class EnemyAi : MonoBehaviour
     private float knockbackForce;
     [SerializeField] private float deathKnockback = 4;
 
+    //Item Drops
+    [SerializeField] private GameObject[] pickUpItem;
+    [SerializeField] private int radDropAmount;
+
     private enum state { FOLLOW, PATROL, RETREAT}
     private state enemyState;
     private bool beingHit = false;
@@ -243,6 +247,8 @@ public class EnemyAi : MonoBehaviour
 
             if (stats.Health <= 0)
             {
+                DropItems(pickUpItem[0], radDropAmount);
+
                 CapsuleCollider2D col = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
                 col.sharedMaterial.bounciness = 1;
                 col.enabled = false;
@@ -272,6 +278,20 @@ public class EnemyAi : MonoBehaviour
             beingHit = true;
 
             StartCoroutine(HitCoroutine());
+        }
+    }
+
+    private void DropItems(GameObject radItem, int amount) //For Dropping Rads, Ammo and Health
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            GameObject obj = Instantiate(radItem, transform.position, transform.rotation);
+            float randomAngle = Random.Range(0, (2 + Mathf.PI));
+
+            obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
+                                                     Random.Range(-5.0f, 5.0f) * 80.0f);
+            obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.eulerAngles.x, obj.transform.rotation.eulerAngles.y,
+                                                      (-90.0f + (randomAngle * (360 / (2 + Mathf.PI)))));
         }
     }
 

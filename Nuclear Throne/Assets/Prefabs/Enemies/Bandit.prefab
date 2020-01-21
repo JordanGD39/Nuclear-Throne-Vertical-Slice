@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6eb8bb41327de46b09eb6f23622f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletShotPref: {fileID: 0}
 --- !u!1 &4641313066213250618
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +303,9 @@ MonoBehaviour:
   follower: 1
   touchDamage: 0
   deathKnockback: 3
+  pickUpItem:
+  - {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f, type: 3}
+  radDropAmount: 2
   badAimer: 1
 --- !u!70 &4641313066455244232
 CapsuleCollider2D:
