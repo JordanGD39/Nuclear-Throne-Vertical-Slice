@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
   m_Name: Machine Gun
   m_EditorClassIdentifier: 
-  weaponName: Machine Gun
+  weaponName: MACHINE GUN
   sprite: {fileID: -2384850958105000590, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
   weaponType: 1
   bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
   damage: 3
   reloadTime: 0.17
   shootCoords: 0.4
-  startAmmo: 96
   ammoWaste: 1
   shootBullets: 1
   spreadAngle: 6

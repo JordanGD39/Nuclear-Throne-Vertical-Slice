@@ -250,11 +250,12 @@ public class EnemyAi : MonoBehaviour
 
                 transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = "Corpses";
 
-                if (stats.Primary == null)
+                if (stats.Primary == null || !follower)
                 {
                     transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.gray;
-                }                
+                }
 
+                GetComponent<EnemyDrop>().Drop();
                 knockbackForce = deathKnockback;
                 Dead = true;
                 gameObject.layer = 14;

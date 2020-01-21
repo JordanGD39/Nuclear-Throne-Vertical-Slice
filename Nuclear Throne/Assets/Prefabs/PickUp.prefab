@@ -124,6 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
   pickUpPref: {fileID: 4968427382902227489}
+  textPref: {fileID: 7216052649574561883, guid: e8fd1c6de0b1aa94eace90a43d53ac5a,
+    type: 3}
 --- !u!50 &6089336869947821528
 Rigidbody2D:
   serializedVersion: 4

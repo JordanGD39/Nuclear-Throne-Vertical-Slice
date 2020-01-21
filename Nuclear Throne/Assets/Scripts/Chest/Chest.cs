@@ -18,7 +18,14 @@ public class Chest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<Animator>().SetTrigger("Opened");
+            if (GetComponent<Animator>() != null)
+            {
+                GetComponent<Animator>().SetTrigger("Opened");
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
 
             if (weaponsChest)
             {                
@@ -66,14 +73,21 @@ public class Chest : MonoBehaviour
                     }
                     else
                     {
-                        weapon = player.Secondary;
+                        if (player.Secondary != null)
+                        {
+                            weapon = player.Secondary;
+                        }
+                        else
+                        {
+                            weapon = player.Primary;
+                        }
                     }
                 }
                 else
                 {
                     weapon = player.Primary;
 
-                    if (weapon.Melee)
+                    if (weapon.Melee && player.Secondary != null)
                     {
                         weapon = player.Secondary;
                     }
@@ -153,6 +167,7 @@ public class Chest : MonoBehaviour
             {
                 case Bullet.ammoType.NORMAL:
                     player.Ammo += 40 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 40 * multiplier + " BULLETS", transform);
 
                     if (player.Ammo > 120)
                     {
@@ -161,6 +176,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.SHELL:
                     player.ShellAmmo += 10 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 10 * multiplier + " BULLETS", transform);
                     if (player.ShellAmmo > 120)
                     {
                         player.ShellAmmo = 120;
@@ -168,6 +184,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.ENERGY:
                     player.EnergyAmmo += 10 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 10 * multiplier + " BULLETS", transform);
 
                     if (player.EnergyAmmo > 120)
                     {
@@ -176,6 +193,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.EXPLOSION:
                     player.ExplosiveAmmo += 8 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 8 * multiplier + " BULLETS", transform);
 
                     if (player.ExplosiveAmmo > 120)
                     {
@@ -184,6 +202,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.BOLT:
                     player.BoltAmmo += 7 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 7 * multiplier + " BULLETS", transform);
 
                     if (player.BoltAmmo > 120)
                     {
@@ -198,6 +217,7 @@ public class Chest : MonoBehaviour
             {
                 case Bullet.ammoType.NORMAL:
                     player.Ammo += 32 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 32 * multiplier+ " BULLETS", transform);
 
                     if (player.Ammo > 120)
                     {
@@ -206,6 +226,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.SHELL:
                     player.ShellAmmo += 8 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 8 * multiplier + " BULLETS", transform);
 
                     if (player.ShellAmmo > 120)
                     {
@@ -214,6 +235,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.ENERGY:
                     player.EnergyAmmo += 10 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 10 * multiplier + " BULLETS", transform);
 
                     if (player.EnergyAmmo > 120)
                     {
@@ -223,6 +245,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.EXPLOSION:
                     player.ExplosiveAmmo += 6 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 6 * multiplier + " BULLETS", transform);
 
                     if (player.ExplosiveAmmo > 120)
                     {
@@ -231,6 +254,7 @@ public class Chest : MonoBehaviour
                     break;
                 case Bullet.ammoType.BOLT:
                     player.BoltAmmo += 7 * multiplier;
+                    GameManager.instance.TextSpawn("+" + 7 * multiplier + " BULLETS", transform);
 
                     if (player.BoltAmmo > 120)
                     {

@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6eb8bb41327de46b09eb6f23622f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletShotPref: {fileID: 0}
 --- !u!1 &4641313066213250618
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +242,7 @@ GameObject:
   - component: {fileID: 4641313066455244233}
   - component: {fileID: 4641313066455244232}
   - component: {fileID: 4641313066455244238}
+  - component: {fileID: 3051723665642282255}
   m_Layer: 10
   m_Name: Bandit
   m_TagString: Enemy
@@ -340,6 +342,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3051723665642282255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641313066455244226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cbf0f4086ce624e97ea4faac201173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniAmmoPref: {fileID: 8050793065260167791, guid: 5d416559653b61844a4c298172440967,
+    type: 3}
 --- !u!1 &4641313067199034608
 GameObject:
   m_ObjectHideFlags: 0

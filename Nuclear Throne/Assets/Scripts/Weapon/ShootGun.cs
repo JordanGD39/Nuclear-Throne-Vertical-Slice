@@ -6,34 +6,34 @@ public class ShootGun : MonoBehaviour
 {
     [SerializeField] private GameObject bulletShotPref;
 
-    private bool laser = false;
+    //private bool laser = false;
 
-    private Weapon weaponSave;
+    //private Weapon weaponSave;
 
-    private void Update()
-    {
-        if (laser)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+    //private void Update()
+    //{
+    //    if (laser)
+    //    {
+    //        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
 
-            if (hit.collider != null)
-            {
-                if (hit.collider.CompareTag("Enemy"))
-                {
-                    Debug.Log("Gamer");
-                }
-            }
-        }        
-    }
+    //        if (hit.collider != null)
+    //        {
+    //            if (hit.collider.CompareTag("Enemy"))
+    //            {
+    //                Debug.Log("Gamer");
+    //            }
+    //        }
+    //    }        
+    //}
 
     public void Shoot(GameObject bulletPrefab, Bullet bullet, Weapon weapon, bool playerControl)
     {
-        if (bullet.fireType == Bullet.type.LASER)
-        {
-            laser = true;
-            weaponSave = weapon;
-            return;
-        }
+        //if (bullet.fireType == Bullet.type.LASER)
+        //{
+        //    laser = true;
+        //    weaponSave = weapon;
+        //    return;
+        //}
         GameObject bulletObj = Instantiate(bulletPrefab, transform.GetChild(0).position, transform.parent.rotation);
         bulletObj.transform.Rotate(0, 0, Random.Range(-weapon.SpreadAngle, weapon.SpreadAngle + 1));
 

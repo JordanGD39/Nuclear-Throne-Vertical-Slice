@@ -82,11 +82,14 @@ public class WeaponFunctions : MonoBehaviour
         //E-key Press: Weapon Switch
         if (Input.GetButtonDown("Switch"))
         {
-            Weapon weaponHolder = holder.Primary;
-            holder.Primary = holder.Secondary;
-            holder.Secondary = weaponHolder;
-            GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
-            transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
+            if (holder.Secondary != null)
+            {
+                Weapon weaponHolder = holder.Primary;
+                holder.Primary = holder.Secondary;
+                holder.Secondary = weaponHolder;
+                GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
+                transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
+            }
         }
     }
 
