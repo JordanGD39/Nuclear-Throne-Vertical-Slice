@@ -29,12 +29,21 @@ public class RadBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) //Player Layer
+        if (collision.CompareTag("Player")) //Player Tag
         {
             if (pickable)
             {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8) //Tile Layer
+        {
+            Debug.Log("Wall.");
+            rb.freezeRotation = true;
         }
     }
 
@@ -51,6 +60,14 @@ public class RadBehaviour : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             velDrop = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8) //Tile Layer
+        {
+            rb.freezeRotation = false;
         }
     }
 
