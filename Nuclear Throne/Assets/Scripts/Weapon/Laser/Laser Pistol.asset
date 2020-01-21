@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
+  m_Name: Laser Pistol
+  m_EditorClassIdentifier: 
+  weaponName: Laser Pistol
+  sprite: {fileID: -5081397497249240502, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
+  weaponType: 0
+  bullet: {fileID: 11400000, guid: b353fd9d46b79c54eb164f2268bf5248, type: 2}
+  damage: 2
+  reloadTime: 0.5
+  shootCoords: 0
+  ammoWaste: 1
+  shootBullets: 1
+  spreadAngle: 0
+  melee: 0

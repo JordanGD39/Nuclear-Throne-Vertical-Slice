@@ -6,8 +6,34 @@ public class ShootGun : MonoBehaviour
 {
     [SerializeField] private GameObject bulletShotPref;
 
+    private bool laser = false;
+
+    private Weapon weaponSave;
+
+    private void Update()
+    {
+        if (laser)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+
+            if (hit.collider != null)
+            {
+                if (hit.collider.CompareTag("Enemy"))
+                {
+                    Debug.Log("Gamer");
+                }
+            }
+        }        
+    }
+
     public void Shoot(GameObject bulletPrefab, Bullet bullet, Weapon weapon, bool playerControl)
     {
+        if (bullet.fireType == Bullet.type.LASER)
+        {
+            laser = true;
+            weaponSave = weapon;
+            return;
+        }
         GameObject bulletObj = Instantiate(bulletPrefab, transform.GetChild(0).position, transform.parent.rotation);
         bulletObj.transform.Rotate(0, 0, Random.Range(-weapon.SpreadAngle, weapon.SpreadAngle + 1));
 
@@ -24,7 +50,7 @@ public class ShootGun : MonoBehaviour
         bulletScript.PlayerControl = playerControl;
         bulletObj.GetComponent<SpriteRenderer>().enabled = true;
         bulletObj.GetComponent<SpriteRenderer>().sprite = bullet.SpriteOfBullet;
-        if (playerControl)
+        if (playerControl && (bullet.fireType == Bullet.type.NORMAL || bullet.fireType == Bullet.type.SHELL))
         {
             GameObject groundBullet = Instantiate(bulletShotPref, transform.parent.parent.GetChild(0).position, transform.rotation);
             groundBullet.transform.Rotate(0, 0, Random.Range(-360, 361));

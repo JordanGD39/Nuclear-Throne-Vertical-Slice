@@ -20,6 +20,8 @@ public class BulletBehaviour : MonoBehaviour
 
     private int hits = 0;
 
+    private bool touchingSomething = false;
+
     private float timer = 0;
 
     private void Start()
@@ -28,11 +30,14 @@ public class BulletBehaviour : MonoBehaviour
 
         float percentage = 0.4f;
 
-        if (bullet.fireType == Bullet.type.EXPLOSION)
+        if (bullet.fireType == Bullet.type.EXPLOSION || bullet.fireType == Bullet.type.LASER)
         {
             percentage = 1;
-            transform.GetChild(0).gameObject.SetActive(true);
-            rb.drag = 3;
+            if (bullet.fireType == Bullet.type.EXPLOSION)
+            {
+                transform.GetChild(0).gameObject.SetActive(true);
+                rb.drag = 3;
+            }
         }
 
         Vector2 s = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size * percentage;
@@ -89,21 +94,7 @@ public class BulletBehaviour : MonoBehaviour
 
         if (collision.gameObject.name != "PhysicsMat")
         {
-            if (PlayerControl && collision.CompareTag("Enemy") && !collision.GetComponent<EnemyAi>().Dead)
-            {
-                if (!bullet.Explode)
-                {
-                    collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                }
-            }
-            else if (!PlayerControl && collision.CompareTag("Player"))
-            {
-                if (!bullet.Explode)
-                {
-                    collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                }
-            }
-            else if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
+            if (PlayerControl && collision.CompareTag("Bullet") && (bullet.fireType == Bullet.type.MELEE))
             {
                 BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
 
@@ -143,6 +134,7 @@ public class BulletBehaviour : MonoBehaviour
                 if (!bullet.Explode)
                 {
                     collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
+                    touchingSomething = true;
                     hits++;
                 }
                 else
@@ -156,6 +148,7 @@ public class BulletBehaviour : MonoBehaviour
                 if (!bullet.Explode)
                 {
                     collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
+                    touchingSomething = true;
                     hits++;
                 }
                 else
@@ -167,11 +160,24 @@ public class BulletBehaviour : MonoBehaviour
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
-                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && bullet.fireType != Bullet.type.LASER && !bullet.Explode)
                 {
                     Destroy(gameObject);
                 }
+
+                if (bullet.fireType == Bullet.type.LASER)
+                {
+                    touchingSomething = true;
+                }
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (bullet.fireType == Bullet.type.LASER)
+        {
+            touchingSomething = false;
         }
     }
 }
