@@ -19,7 +19,7 @@ public class Cannister : MonoBehaviour
                 float randomAngle = Random.Range(0, (2 + Mathf.PI));
 
                 obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
-                                                         Random.Range(-MAX_RADIUS, MAX_RADIUS) * 40.0f);
+                                                         Random.Range(-MAX_RADIUS, MAX_RADIUS) * 80.0f);
                 obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.eulerAngles.x, obj.transform.rotation.eulerAngles.y,
                                                           (-90.0f + (randomAngle * (360 / (2 + Mathf.PI)))));
             }

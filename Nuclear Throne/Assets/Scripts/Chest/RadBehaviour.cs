@@ -8,29 +8,36 @@ public class RadBehaviour : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private bool pickable;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pickable = false;
+
+        StartCoroutine(PickCorountine());
     }
 
     private void Update()
     {
-        /*if ((rb.velocity.x < VEL_THRESHOLD && rb.velocity.x > -VEL_THRESHOLD) &&
-            (rb.velocity.y < VEL_THRESHOLD && rb.velocity.y > -VEL_THRESHOLD))
-        {
-            rb.velocity *= 0.0f;
-        }
-        else
-        {*/
-            rb.velocity *= 0.95f;
-        //}
+        rb.velocity *= 0.95f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) //Player Layer
         {
-            Destroy(gameObject);
+            if (pickable)
+            {
+                Destroy(gameObject);
+            }
         }
+    }
+
+    IEnumerator PickCorountine()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        pickable = true;
     }
 }
