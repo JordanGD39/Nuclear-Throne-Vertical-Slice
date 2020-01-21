@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class RadBehaviour : MonoBehaviour
 {
-    const float VEL_THRESHOLD = 0.2f;
-
     private Rigidbody2D rb;
 
     private bool pickable;
+    private bool velDrop;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pickable = false;
+        velDrop = false;
 
         StartCoroutine(PickCorountine());
+        velDrop = true;
     }
 
     private void Update()
     {
-        rb.velocity *= 0.95f;
+        if (velDrop)
+        {
+            rb.velocity *= 0.95f;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,6 +35,22 @@ public class RadBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            velDrop = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            velDrop = true;
         }
     }
 

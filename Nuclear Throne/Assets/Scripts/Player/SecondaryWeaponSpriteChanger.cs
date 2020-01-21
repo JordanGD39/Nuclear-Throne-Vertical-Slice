@@ -19,7 +19,7 @@ public class SecondaryWeaponSpriteChanger : MonoBehaviour
     {
         if (Input.GetButtonDown("Switch"))
         {
-            secondaryWeapon = GetComponentInParent<StatsClass>().Primary.SpriteOfWeapon;
+            secondaryWeapon = GetComponentInParent<StatsClass>().Secondary.SpriteOfWeapon;
             rendr.sprite = secondaryWeapon;
         }
     }
