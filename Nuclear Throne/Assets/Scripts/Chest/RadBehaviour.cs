@@ -15,6 +15,10 @@ public class RadBehaviour : MonoBehaviour
         pickable = false;
         velDrop = false;
 
+        float randomAngle = Random.Range(0, (2 + Mathf.PI));
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y,
+                                             (-90.0f + (randomAngle * (360 / (2 + Mathf.PI)))));
+
         StartCoroutine(PickCorountine());
         velDrop = true;
     }

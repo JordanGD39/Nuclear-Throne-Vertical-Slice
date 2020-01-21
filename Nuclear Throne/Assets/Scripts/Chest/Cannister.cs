@@ -11,7 +11,7 @@ public class Cannister : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 13) //Player Layer
+        if (collision.gameObject.layer == 13 || collision.gameObject.layer == 15) //Player or Bullet Layer
         {
             for (int i = 0; i < itemAmount; i++)
             {
@@ -20,11 +20,26 @@ public class Cannister : MonoBehaviour
 
                 obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
                                                          Random.Range(-MAX_RADIUS, MAX_RADIUS) * 80.0f);
-                obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.eulerAngles.x, obj.transform.rotation.eulerAngles.y,
-                                                          (-90.0f + (randomAngle * (360 / (2 + Mathf.PI)))));
             }
 
             Destroy(gameObject);
         }
     }
+
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 15) //Bullet Layer
+        {
+            for (int i = 0; i < itemAmount; i++)
+            {
+                GameObject obj = Instantiate(pickUpItem, transform.position, transform.rotation);
+                float randomAngle = Random.Range(0, (2 + Mathf.PI));
+
+                obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
+                                                         Random.Range(-MAX_RADIUS, MAX_RADIUS) * 80.0f);
+            }
+
+            Destroy(gameObject);
+        }
+    }*/
 }

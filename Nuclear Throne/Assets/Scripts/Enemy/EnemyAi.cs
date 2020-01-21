@@ -192,7 +192,7 @@ public class EnemyAi : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag("Player"))
+            if (hit.collider.gameObject.layer == 13)
             {
                 playerInSight = true;
             }
@@ -290,8 +290,6 @@ public class EnemyAi : MonoBehaviour
 
             obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
                                                      Random.Range(-5.0f, 5.0f) * 80.0f);
-            obj.transform.rotation = Quaternion.Euler(obj.transform.rotation.eulerAngles.x, obj.transform.rotation.eulerAngles.y,
-                                                      (-90.0f + (randomAngle * (360 / (2 + Mathf.PI)))));
         }
     }
 

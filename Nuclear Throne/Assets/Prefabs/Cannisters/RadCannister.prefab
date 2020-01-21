@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3114201766184233079}
   - component: {fileID: 1754742989168161543}
   - component: {fileID: 588759338708315549}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RadCannister
-  m_TagString: Untagged
+  m_TagString: Cannister
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

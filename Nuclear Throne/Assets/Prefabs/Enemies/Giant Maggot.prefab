@@ -74,7 +74,7 @@ MonoBehaviour:
   touchDamage: 1
   deathKnockback: 1
   pickUpItem:
-  - {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f, type: 3}
+  - {fileID: 0}
   radDropAmount: 10
   badAimer: 0
 --- !u!70 &2285615898390438625
