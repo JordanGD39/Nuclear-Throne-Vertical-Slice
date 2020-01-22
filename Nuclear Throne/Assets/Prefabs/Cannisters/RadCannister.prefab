@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3114201766184233079}
   - component: {fileID: 1754742989168161543}
   - component: {fileID: 588759338708315549}
+  - component: {fileID: 3488163862689088052}
   m_Layer: 10
   m_Name: RadCannister
   m_TagString: Cannister
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3066112138808006913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,9 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 310102257
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1318005102644552156, guid: c121677f89832f54ea41f61a184077d2,
-    type: 3}
-  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 91183427c4944ca498303f73c0c57449, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.28}
+    oldSize: {x: 0.75, y: 1.125}
     newSize: {x: 0.32, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -124,3 +124,22 @@ MonoBehaviour:
   pickUpItem: {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f,
     type: 3}
   itemAmount: 25
+--- !u!95 &3488163862689088052
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066112138808006913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16ab28041a624eb4989591ee4d3903cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

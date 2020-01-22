@@ -46,7 +46,6 @@ public class RadBehaviour : MonoBehaviour
     {
         if (collision.gameObject.layer == 8) //Tile Layer
         {
-            Debug.Log("Wall.");
             rb.freezeRotation = true;
         }
     }
