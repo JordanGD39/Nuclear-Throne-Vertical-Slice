@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExplosionScript : MonoBehaviour
 {
     [SerializeField] private GameObject brokenPref;
+    [SerializeField] private GameObject rubblePref;
 
     [SerializeField] private Sprite[] sprites;
 
@@ -17,8 +18,15 @@ public class ExplosionScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 8 || collision.gameObject.layer == 16)
         {
-            GameObject tile = Instantiate(brokenPref, collision.transform.position, Quaternion.identity);
+            GameObject tile = Instantiate(brokenPref, collision.transform.position, Quaternion.identity);            
             tile.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, 4)];
+
+            GameObject rubble = Instantiate(rubblePref, collision.transform.position, Quaternion.identity);
+            rubble.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(4, 7)];
+            rubble.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * 800);
+
+            Destroy(rubble, 3);
+
             Destroy(collision.gameObject);            
         }
 

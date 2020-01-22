@@ -10,7 +10,7 @@ public class EnemyDrop : MonoBehaviour
     {
         float rand = Random.Range(0, 100);
 
-        if (rand < 40)
+        if (rand < 20)
         {
             GameObject miniAmmo = Instantiate(miniAmmoPref, transform.position, Quaternion.identity);
         }

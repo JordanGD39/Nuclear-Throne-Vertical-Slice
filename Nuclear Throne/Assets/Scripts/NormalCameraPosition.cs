@@ -20,11 +20,20 @@ public class NormalCameraPosition : MonoBehaviour
     private float rotationSpeed = 3.0f;
     private bool stop;
 
+    [SerializeField] private Vector2 maxBounds;
+    [SerializeField] private Vector2 minBounds;
+
     public bool Stop { get { return stop; } set { stop = value; } }
 
     private void Start()
     {
         _target = GameObject.FindGameObjectWithTag("Player").transform;        
+    }
+
+    private void Update()
+    {
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minBounds.x, maxBounds.x),
+        Mathf.Clamp(transform.position.y, maxBounds.y, minBounds.y), transform.position.z);
     }
 
     private void LateUpdate()

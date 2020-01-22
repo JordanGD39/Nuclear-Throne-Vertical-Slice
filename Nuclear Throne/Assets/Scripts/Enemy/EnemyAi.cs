@@ -113,7 +113,7 @@ public class EnemyAi : MonoBehaviour
                     rb.velocity = direction * speed;
                     break;
                 case state.PATROL:
-                    if (!patrolling && !Dead)
+                    if (!patrolling)
                     {                        
                         rb.velocity *= 0.9f;                        
 
@@ -132,7 +132,7 @@ public class EnemyAi : MonoBehaviour
         {
             if (enemyState == state.PATROL)
             {
-                if (!patrolling && !Dead)
+                if (!patrolling)
                 {
                     rb.velocity *= 0.9f;
 
@@ -158,8 +158,11 @@ public class EnemyAi : MonoBehaviour
         while (enemyState == state.PATROL && !Dead)
         {
             rb.velocity *= 0;
-
-            yield return new WaitForSeconds(2);
+            if (damage > 1 || follower)
+            {
+                //If not small maggot
+                yield return new WaitForSeconds(2f);
+            }
 
             int x = Random.Range(-1, 2);
             int y = Random.Range(-1, 2);
@@ -256,6 +259,12 @@ public class EnemyAi : MonoBehaviour
                 }
 
                 GetComponent<EnemyDrop>().Drop();
+
+                if (GetComponent<MaggotSpawn>() != null)
+                {
+                    GetComponent<MaggotSpawn>().SpawnMaggots();
+                }              
+
                 knockbackForce = deathKnockback;
                 Dead = true;
                 gameObject.layer = 14;
@@ -296,7 +305,7 @@ public class EnemyAi : MonoBehaviour
             collision.GetComponent<Player>().Hit(damage, rb.velocity, false);
         }
 
-        if (Dead && collision.CompareTag("Enemy") && rb.velocity.magnitude > 1)
+        if (Dead && collision.CompareTag("Enemy") && rb.velocity.magnitude > 4)
         {
             collision.GetComponent<EnemyAi>().Hit(1, rb.velocity);
         }
