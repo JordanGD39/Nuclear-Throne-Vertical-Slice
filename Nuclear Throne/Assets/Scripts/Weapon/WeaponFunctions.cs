@@ -101,9 +101,11 @@ public class WeaponFunctions : MonoBehaviour
     {
         if (!ai.BadAimer)
         {
-            int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol"));
+            int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol")| LayerMask.GetMask("PlayerPointEffect"));
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, ai.Range, tileLayer);
+
+            Debug.DrawRay(transform.position, transform.up, Color.red);
 
             if (hit.collider != null)
             {

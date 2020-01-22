@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1143151543376087660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6480626727737527514}
-  m_Layer: 11
-  m_Name: PlayerDetecter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6480626727737527514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143151543376087660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3795308767750931729}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3795308766683594654
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +161,6 @@ Transform:
   - {fileID: 3795308768524029688}
   - {fileID: 2342155295774444931}
   - {fileID: 3795308767672740910}
-  - {fileID: 6480626727737527514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -208,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 12
+  level: 1
   primary: {fileID: 11400000, guid: efd7e3ca88c0d8b4ea1e305cd1677929, type: 2}
   secondary: {fileID: 0}
 --- !u!114 &3795308767750931732
@@ -232,6 +202,9 @@ MonoBehaviour:
   touchDamage: 1
   deathAnimBlack: 0
   deathKnockback: 0.5
+  pickUpItem:
+  - {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f, type: 3}
+  radDropAmount: 10
   badAimer: 0
 --- !u!50 &3795308767750931731
 Rigidbody2D:

@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  level: 1
   primary: {fileID: 0}
   secondary: {fileID: 0}
 --- !u!114 &4969714571706425757
@@ -393,6 +394,9 @@ MonoBehaviour:
   touchDamage: 1
   deathAnimBlack: 1
   deathKnockback: 4
+  pickUpItem:
+  - {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f, type: 3}
+  radDropAmount: 1
   badAimer: 0
 --- !u!70 &4969714571706425756
 CapsuleCollider2D:

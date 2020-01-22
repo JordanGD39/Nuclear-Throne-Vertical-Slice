@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2285615898390438631}
   - component: {fileID: 5447118124591515140}
   - component: {fileID: 6760339890085466798}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Giant Maggot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -49,9 +49,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af0e19e8d702e0146b18f9243a1676ce, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   health: 22
+  level: 1
   primary: {fileID: 0}
   secondary: {fileID: 0}
 --- !u!114 &2285615898390438624
@@ -64,8 +65,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b61427b1902ec6c42ab9035674e43fb5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerInSight: 0
   range: 8
   stoppingDistance: 0.1
@@ -76,6 +77,9 @@ MonoBehaviour:
   touchDamage: 1
   deathAnimBlack: 0
   deathKnockback: 0.5
+  pickUpItem:
+  - {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f, type: 3}
+  radDropAmount: 10
   badAimer: 0
 --- !u!70 &2285615898390438625
 CapsuleCollider2D:
@@ -124,8 +128,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58cbf0f4086ce624e97ea4faac201173, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   miniAmmoPref: {fileID: 8050793065260167791, guid: 5d416559653b61844a4c298172440967,
     type: 3}
 --- !u!114 &6760339890085466798
@@ -138,8 +142,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bb79cdfff06f384583c2cc3c37a68dc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   maggotPref: {fileID: 4969714571706425750, guid: 684543dcf9dcfc64bacfa0d3bfa3913c,
     type: 3}
 --- !u!1 &2285615899236411667
@@ -256,7 +260,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -354,8 +358,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d670122f8ae01c349ab76699d9e550ab, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bulletPref: {fileID: 1346002622296704672, guid: bf8e52ef1a03bec4b85d420b3042e47e,
     type: 3}
 --- !u!114 &6904407628319395468
@@ -368,8 +372,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be6eb8bb41327de46b09eb6f23622f6c, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bulletShotPref: {fileID: 0}
 --- !u!1 &6904407628339571718
 GameObject:
@@ -413,8 +417,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a384a8ff41b3e94a82caa67385741bf, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _canvas: {fileID: 0}
 --- !u!1 &6904407629348799370
 GameObject:

@@ -104,10 +104,6 @@ public class BulletBehaviour : MonoBehaviour
             anim.enabled = true;
             anim.SetTrigger("SwingTrigger");
         }
-        else
-        {
-            anim.enabled = false;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
