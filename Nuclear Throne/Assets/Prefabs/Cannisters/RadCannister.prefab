@@ -123,4 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpItem: {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f,
     type: 3}
-  itemAmount: 20
+  itemAmount: 25

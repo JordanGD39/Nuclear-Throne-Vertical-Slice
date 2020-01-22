@@ -35,10 +35,8 @@ public class BulletBehaviour : MonoBehaviour
             rb.drag = 3;
         }
 
-        Vector2 s = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size * percentage;
-        GetComponent<BoxCollider2D>().size = s;
-
-        transform.GetChild(0).GetComponent<BoxCollider2D>().size = s;
+        SetAnimator(bullet.fireType);
+        GetSize(percentage);
 
         if (Loaded && bullet.fireType != Bullet.type.MELEE)
         {
@@ -52,14 +50,7 @@ public class BulletBehaviour : MonoBehaviour
         {
           transform.position = transform.parent.position + transform.TransformVector(new Vector3(0.0f, 1.0f, 0.0f));
 
-            if (WeaponThatShot.Name == "Screwdriver")
-            {
-                Destroy(gameObject, 0.17f);
-            }
-            else
-            {
-                Destroy(gameObject, 0.37f);
-            }
+            Destroy(gameObject, 0.15f);
         }
 
         if (bullet.fireType == Bullet.type.EXPLOSION)
@@ -77,6 +68,40 @@ public class BulletBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    private void GetSize(float percentage)
+    {
+        Vector2 s;
+        if (bullet.fireType != Bullet.type.MELEE)
+        {
+            s = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size * percentage;
+            GetComponent<BoxCollider2D>().size = s;
+        }
+        else
+        {
+            s = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+            GetComponent<BoxCollider2D>().size = s;
+            GetComponent<BoxCollider2D>().offset = new Vector2(GetComponent<BoxCollider2D>().offset.x,
+            GetComponent<BoxCollider2D>().offset.y + (gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size.y / 2));
+        }
+
+        transform.GetChild(0).GetComponent<BoxCollider2D>().size = s;
+    }
+
+    private void SetAnimator(Bullet.type type)
+    {
+        Animator anim = GetComponent<Animator>();
+
+        if (type == Bullet.type.MELEE)
+        {
+            anim.enabled = true;
+            anim.SetTrigger("SwingTrigger");
+        }
+        else
+        {
+            anim.enabled = false;
         }
     }
 
