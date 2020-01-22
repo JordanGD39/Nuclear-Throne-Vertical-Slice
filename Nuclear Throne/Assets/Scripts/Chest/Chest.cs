@@ -13,6 +13,13 @@ public class Chest : MonoBehaviour
 
     [SerializeField] private GameObject pickUpPref;
 
+    private UiHandler ui;
+
+    private void Start()
+    {
+        ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -263,5 +270,7 @@ public class Chest : MonoBehaviour
                     break;
             }
         }
+
+        ui.UpdateAmmo();
     }
 }

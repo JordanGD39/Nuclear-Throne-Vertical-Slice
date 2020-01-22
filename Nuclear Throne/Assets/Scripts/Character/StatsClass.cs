@@ -6,6 +6,9 @@ public class StatsClass : MonoBehaviour
 {
     [SerializeField] private int health = 8;
     public int Health { get { return health; } set { health = value; } }
+
+    [SerializeField] private int level = 1;
+    public int Level { get { return level; } set { level = value; } }
     [SerializeField] private Weapon primary;
     [SerializeField] private Weapon secondary;
     public Weapon Primary { get { return primary; } set { primary = value; } }

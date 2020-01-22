@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: MACHINE GUN
   sprite: {fileID: -2384850958105000590, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
+  uiSprite: {fileID: 2415078317887781457, guid: 0f90e580ced2b6a4dade531cff8e2a88,
+    type: 3}
   weaponType: 1
   bullet: {fileID: 11400000, guid: 70ab60be1f02cf4469dae851e94e716d, type: 2}
   damage: 3

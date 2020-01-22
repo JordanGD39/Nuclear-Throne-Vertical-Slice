@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - WorldCanvas
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -305,16 +305,19 @@ public class EnemyAi : MonoBehaviour
         beingHit = false;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (Dead && collision.CompareTag("Enemy") && rb.velocity.magnitude > 4)
+        {
+            collision.GetComponent<EnemyAi>().Hit(1, rb.velocity);
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (touchDamage && collision.CompareTag("Player") && !Dead)
         {
             collision.GetComponent<Player>().Hit(damage, rb.velocity, false);
-        }
-
-        if (Dead && collision.CompareTag("Enemy") && rb.velocity.magnitude > 4)
-        {
-            collision.GetComponent<EnemyAi>().Hit(1, rb.velocity);
         }
     }
 }

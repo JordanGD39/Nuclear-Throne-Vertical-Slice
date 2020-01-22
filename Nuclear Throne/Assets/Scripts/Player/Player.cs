@@ -10,19 +10,24 @@ public class Player : MonoBehaviour
     private Vector2 knockback;
     private Rigidbody2D rb;
     private SpriteRenderer spr;
-    StatsClass stats;
+    private StatsClass stats;
+    private UiHandler ui;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsClass>();
         spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
+        ui.UpdateWeapon();        
         if (GetComponent<Roll>() != null)
         {
             stats.Ammo = 120;
             stats.ExplosiveAmmo = 120;
             stats.EnergyAmmo = 120;
         }
+
+        ui.UpdateAmmo();
     }
 
     private void FixedUpdate()
@@ -37,12 +42,18 @@ public class Player : MonoBehaviour
     public void Hit(int dmg, Vector2 velocity, bool knocked)
     {
         if (!beingHit && !Dead)
-        {
+        {            
             GetComponent<Roll>().StopRolling();
             rb.velocity = Vector2.zero;
             knockback = velocity;            
             stats.Health -= dmg;
 
+            if (stats.Health < 0)
+            {
+                stats.Health = 0;
+            }
+
+            ui.UpdateHealth();
             if (stats.Health > 0)
             {
                 getKnockback = knocked;

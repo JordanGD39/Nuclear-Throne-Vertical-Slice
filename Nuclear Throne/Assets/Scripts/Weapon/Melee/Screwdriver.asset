@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: SCREWDRIVER
   sprite: {fileID: -1869201037525138396, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
+  uiSprite: {fileID: 3414901824912693521, guid: 0f90e580ced2b6a4dade531cff8e2a88,
+    type: 3}
   weaponType: 0
   bullet: {fileID: 11400000, guid: 17355be3dd134f943ae1979c0ead068d, type: 2}
   damage: 6

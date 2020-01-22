@@ -231,7 +231,7 @@ MonoBehaviour:
   follower: 0
   touchDamage: 1
   deathAnimBlack: 0
-  deathKnockback: 3
+  deathKnockback: 0.5
   badAimer: 0
 --- !u!50 &3795308767750931731
 Rigidbody2D:

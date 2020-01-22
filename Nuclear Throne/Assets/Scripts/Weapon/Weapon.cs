@@ -12,6 +12,9 @@ public class Weapon : ScriptableObject
     [SerializeField] private Sprite sprite;
     public Sprite SpriteOfWeapon { get { return sprite; } }
 
+    [SerializeField] private Sprite uiSprite;
+    public Sprite UiSprite { get { return uiSprite; } }
+
     public enum type { SINGLE, AUTO}
     public type weaponType;
 

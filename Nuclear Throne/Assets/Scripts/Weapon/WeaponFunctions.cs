@@ -11,6 +11,7 @@ public class WeaponFunctions : MonoBehaviour
     private StatsClass holder;
     private EnemyAi ai;
     private ShootGun gun;
+    private UiHandler ui;
 
     [SerializeField] private GameObject bulletPref;
 
@@ -20,6 +21,7 @@ public class WeaponFunctions : MonoBehaviour
 
         if (holder != null)
         {
+            ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
             playerControl = true;
         }
         else
@@ -74,7 +76,7 @@ public class WeaponFunctions : MonoBehaviour
             {
                 if (timer >= holder.Primary.ReloadTime && !shooting)
                 {
-                        StartCoroutine(Shoot());
+                    StartCoroutine(Shoot());
                 }
             }
         }
@@ -89,6 +91,8 @@ public class WeaponFunctions : MonoBehaviour
                 holder.Secondary = weaponHolder;
                 GetComponent<SpriteRenderer>().sprite = holder.Primary.SpriteOfWeapon;
                 transform.GetChild(0).localPosition = new Vector3(0, holder.Primary.ShootCoords, 0);
+                ui.UpdateWeapon();
+                ui.UpdateAmmo();
             }
         }
     }
@@ -245,6 +249,11 @@ public class WeaponFunctions : MonoBehaviour
             {
                 canShoot = false;
             }
+        }
+
+        if (playerControl)
+        {
+            ui.UpdateAmmo();
         }
 
         if (canShoot)

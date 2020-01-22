@@ -14,10 +14,14 @@ public class PickUp : MonoBehaviour
 
     private bool notLoaded = false;
 
+    private UiHandler ui;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
 
         if (weapon != null)
         {
@@ -85,6 +89,9 @@ public class PickUp : MonoBehaviour
             playerWeapon.GetComponent<SpriteRenderer>().sprite = playerStats.Primary.SpriteOfWeapon;
             playerWeapon.transform.GetChild(0).localPosition = new Vector3(0, playerStats.Primary.ShootCoords, 0);
             GameManager.instance.TextSpawn(playerStats.Primary.Name + "!", transform);
+
+            ui.UpdateWeapon();
+
             Destroy(gameObject);
         }
     }
