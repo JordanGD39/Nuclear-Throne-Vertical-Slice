@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8557042149421735939}
   - component: {fileID: 1320724680}
   - component: {fileID: 1320724681}
+  - component: {fileID: 6191666245818567947}
   m_Layer: 15
   m_Name: Bullet
   m_TagString: Bullet
@@ -147,6 +148,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23678732, y: 0.53802335}
   m_EdgeRadius: 0
+--- !u!95 &6191666245818567947
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346002622296704672}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae2a08f00f9c14744b163bdc8c8db1eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6349616035272911631
 GameObject:
   m_ObjectHideFlags: 0

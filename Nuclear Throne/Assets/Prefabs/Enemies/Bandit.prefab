@@ -305,6 +305,9 @@ MonoBehaviour:
   touchDamage: 0
   deathAnimBlack: 1
   deathKnockback: 3
+  pickUpItem:
+  - {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f, type: 3}
+  radDropAmount: 2
   badAimer: 1
 --- !u!70 &4641313066455244232
 CapsuleCollider2D:

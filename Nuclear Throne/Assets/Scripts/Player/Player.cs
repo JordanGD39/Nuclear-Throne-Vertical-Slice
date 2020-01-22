@@ -19,12 +19,12 @@ public class Player : MonoBehaviour
         stats = GetComponent<StatsClass>();
         spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
-        ui.UpdateWeapon();        
+        ui.UpdateWeapon();
         if (GetComponent<Roll>() != null)
         {
             stats.Ammo = 120;
             stats.ExplosiveAmmo = 120;
-            stats.EnergyAmmo = 120;
+            stats.ShellAmmo = 40;
         }
 
         ui.UpdateAmmo();
@@ -42,10 +42,10 @@ public class Player : MonoBehaviour
     public void Hit(int dmg, Vector2 velocity, bool knocked)
     {
         if (!beingHit && !Dead)
-        {            
+        {
             GetComponent<Roll>().StopRolling();
             rb.velocity = Vector2.zero;
-            knockback = velocity;            
+            knockback = velocity;
             stats.Health -= dmg;
 
             if (stats.Health < 0)
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 
             beingHit = true;
             StartCoroutine("HigherLayer");
-            StartCoroutine(HitCoroutine());          
+            StartCoroutine(HitCoroutine());
         }
     }
 
@@ -86,8 +86,8 @@ public class Player : MonoBehaviour
             rb.velocity *= 0.9f;
             yield return null;
         }
-        
-        beingHit = false;        
+
+        beingHit = false;
 
         if (GetComponent<StatsClass>().Health <= 0)
         {
@@ -103,6 +103,6 @@ public class Player : MonoBehaviour
         else
         {
             GetComponent<PlayerMovement>().CantMove = false;
-        }        
+        }
     }
 }
