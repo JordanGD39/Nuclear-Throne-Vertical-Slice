@@ -2,16 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cannister : MonoBehaviour
+public class Cannister : ObjectHealth
 {
     const float MAX_RADIUS = 5.0f;
 
     [SerializeField] private GameObject pickUpItem;
     [SerializeField] private int itemAmount;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Animator anim;
+
+    protected override void Start()
     {
-        if (collision.gameObject.layer == 13 || collision.gameObject.layer == 15) //Player or Bullet Layer
+        anim = GetComponent<Animator>();
+
+        base.Start();
+    }
+
+    protected override void Update()
+    {
+        if (health <= 0 && active)
         {
             for (int i = 0; i < itemAmount; i++)
             {
@@ -22,24 +31,22 @@ public class Cannister : MonoBehaviour
                                                          Random.Range(-MAX_RADIUS, MAX_RADIUS) * 80.0f);
             }
 
-            Destroy(gameObject);
+            active = false;
+        }
+
+        base.Update();
+
+        if (!active)
+        {
+            anim.SetTrigger("Broken");
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 15) //Bullet Layer
+        if (collision.gameObject.layer == 13 && active) //Player Layer
         {
-            for (int i = 0; i < itemAmount; i++)
-            {
-                GameObject obj = Instantiate(pickUpItem, transform.position, transform.rotation);
-                float randomAngle = Random.Range(0, (2 + Mathf.PI));
-
-                obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
-                                                         Random.Range(-MAX_RADIUS, MAX_RADIUS) * 80.0f);
-            }
-
-            Destroy(gameObject);
+            health = 0;
         }
-    }*/
+    }
 }
