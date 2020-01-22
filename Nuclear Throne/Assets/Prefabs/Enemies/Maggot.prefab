@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332906514949718263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0041, y: -0.189, z: 0}
+  m_LocalScale: {x: 1.2631454, y: 1.0000316, z: 1}
   m_Children: []
   m_Father: {fileID: 4969714571706425752}
   m_RootOrder: 1
@@ -391,6 +391,7 @@ MonoBehaviour:
   damage: 1
   follower: 0
   touchDamage: 1
+  deathAnimBlack: 1
   deathKnockback: 4
   badAimer: 0
 --- !u!70 &4969714571706425756
@@ -553,7 +554,7 @@ Animator:
   m_GameObject: {fileID: 4969714572548139630}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c77bc55eedb44a345913b600b322909d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

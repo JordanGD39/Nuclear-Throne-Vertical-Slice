@@ -303,6 +303,7 @@ MonoBehaviour:
   damage: 0
   follower: 1
   touchDamage: 0
+  deathAnimBlack: 1
   deathKnockback: 3
   badAimer: 1
 --- !u!70 &4641313066455244232

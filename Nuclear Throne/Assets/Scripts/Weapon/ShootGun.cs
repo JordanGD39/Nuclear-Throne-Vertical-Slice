@@ -5,10 +5,16 @@ using UnityEngine;
 public class ShootGun : MonoBehaviour
 {
     [SerializeField] private GameObject bulletShotPref;
+    private CameraShake camShake;
 
     //private bool laser = false;
 
     //private Weapon weaponSave;
+
+    private void Start()
+    {
+        camShake = Camera.main.GetComponent<CameraShake>();
+    }
 
     //private void Update()
     //{
@@ -50,6 +56,12 @@ public class ShootGun : MonoBehaviour
         bulletScript.PlayerControl = playerControl;
         bulletObj.GetComponent<SpriteRenderer>().enabled = true;
         bulletObj.GetComponent<SpriteRenderer>().sprite = bullet.SpriteOfBullet;
+
+        if (!weapon.Melee && !bullet.Explode && playerControl)
+        {
+            StartCoroutine(camShake.Shake(0.1f, 0.1f));
+        }
+
         if (playerControl && (bullet.fireType == Bullet.type.NORMAL || bullet.fireType == Bullet.type.SHELL))
         {
             GameObject groundBullet = Instantiate(bulletShotPref, transform.parent.parent.GetChild(0).position, transform.rotation);

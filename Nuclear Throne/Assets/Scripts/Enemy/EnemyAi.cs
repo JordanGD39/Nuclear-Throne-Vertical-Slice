@@ -20,6 +20,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private bool follower = true;
     [SerializeField] private bool touchDamage;    
+    [SerializeField] private bool deathAnimBlack;    
     public bool TouchDamage { get { return touchDamage; } }
 
     private Vector2 direction;
@@ -253,7 +254,7 @@ public class EnemyAi : MonoBehaviour
 
                 transform.GetChild(0).GetComponent<SpriteRenderer>().sortingLayerName = "Corpses";
 
-                if (stats.Primary == null || !follower)
+                if (!deathAnimBlack)
                 {
                     transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.gray;
                 }
