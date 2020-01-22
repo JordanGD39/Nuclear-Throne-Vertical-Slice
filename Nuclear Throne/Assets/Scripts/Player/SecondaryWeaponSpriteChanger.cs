@@ -19,8 +19,15 @@ public class SecondaryWeaponSpriteChanger : MonoBehaviour
     {
         if (Input.GetButtonDown("Switch"))
         {
-            secondaryWeapon = GetComponentInParent<StatsClass>().Secondary.SpriteOfWeapon;
-            rendr.sprite = secondaryWeapon;
+            StartCoroutine(WaitCoroutine());
         }
+    }
+
+    IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(0.005f);
+
+        secondaryWeapon = GetComponentInParent<StatsClass>().Secondary.SpriteOfWeapon;
+        rendr.sprite = secondaryWeapon;
     }
 }
