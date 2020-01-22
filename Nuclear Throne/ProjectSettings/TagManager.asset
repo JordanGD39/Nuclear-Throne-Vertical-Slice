@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Bullet
   - Cannister
+  - WorldCanvas
+  - Canvas
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Ammo
   - BulletCol
   - Rad
-  - 
+  - PlayerPointEffect
   - 
   - 
   - 

@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseFunctionality : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class PauseFunctionality : MonoBehaviour
     private List<GameObject> weaponFunctions = new List<GameObject>();
 
     private bool pause;
+    private bool continueTroughMenu;
 
     private void Start()
     {
@@ -19,7 +23,16 @@ public class PauseFunctionality : MonoBehaviour
 
     private void Update()
     {
-        pause = GetPauseButton(pause);
+        if (pauseUI == null)
+        {
+            pauseUI = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(1).gameObject;
+            return;
+        }
+
+        if (!continueTroughMenu)
+        {
+            pause = GetPauseButton(pause);
+        }
         PauseGame(pause);
     }
 
@@ -64,11 +77,13 @@ public class PauseFunctionality : MonoBehaviour
         if (Input.GetButtonDown("Pause"))
         {
             if (pauseState)
-            {
+            {                
                 return false;
             }
             else
             {
+                pauseUI.transform.GetChild(1).GetChild(0).GetComponent<Button>().Select();
+                pauseUI.transform.GetChild(1).GetChild(0).GetComponent<Button>().OnSelect(null);
                 return true;
             }
         }
@@ -87,7 +102,21 @@ public class PauseFunctionality : MonoBehaviour
         {
             Time.timeScale = 1;
             ChangeComponentAvailability(true);
+            continueTroughMenu = false;
         }
+    }
+
+    public void Continue()
+    {
+        continueTroughMenu = true;
+        pause = false;
+    }
+
+    public void Retry()
+    {
+        continueTroughMenu = true;
+        pause = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void ChangeComponentAvailability(bool set)
