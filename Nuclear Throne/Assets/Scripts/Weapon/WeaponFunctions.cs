@@ -113,6 +113,7 @@ public class WeaponFunctions : MonoBehaviour
                     ai.PlayerInSight = true;
                     if (holder.Primary != null && timer >= holder.Primary.ReloadTime && !shooting)
                     {
+                        holder.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Attack");
                         StartCoroutine(Shoot());
                     }
                 }

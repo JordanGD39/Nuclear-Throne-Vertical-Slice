@@ -74,7 +74,8 @@ MonoBehaviour:
   damage: 1
   follower: 1
   touchDamage: 1
-  deathKnockback: 1
+  deathAnimBlack: 0
+  deathKnockback: 0.5
   badAimer: 0
 --- !u!70 &2285615898390438625
 CapsuleCollider2D:
@@ -250,7 +251,7 @@ Animator:
   m_GameObject: {fileID: 2285615899236411667}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 622f4ebcdac65b64cae25981c37740de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

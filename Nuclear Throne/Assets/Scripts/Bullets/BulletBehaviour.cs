@@ -134,7 +134,6 @@ public class BulletBehaviour : MonoBehaviour
                 if (!bullet.Explode)
                 {
                     collision.GetComponent<EnemyAi>().Hit(WeaponThatShot.Damage, rb.velocity);
-                    touchingSomething = true;
                     hits++;
                 }
                 else
@@ -147,8 +146,8 @@ public class BulletBehaviour : MonoBehaviour
             {
                 if (!bullet.Explode)
                 {
+                    Debug.Log("nani");
                     collision.GetComponent<Player>().Hit(WeaponThatShot.Damage, rb.velocity, true);
-                    touchingSomething = true;
                     hits++;
                 }
                 else
@@ -164,20 +163,7 @@ public class BulletBehaviour : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
-
-                if (bullet.fireType == Bullet.type.LASER)
-                {
-                    touchingSomething = true;
-                }
             }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (bullet.fireType == Bullet.type.LASER)
-        {
-            touchingSomething = false;
         }
     }
 }

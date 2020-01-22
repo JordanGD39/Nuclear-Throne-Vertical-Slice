@@ -38,7 +38,11 @@ public class Roll : MonoBehaviour
         if (Input.GetButtonDown("Roll") && !rolling)
         {            
             mov.CantMove = true;
-            rollTrigger = true;            
+            rollTrigger = true;
+            CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
+            col.sharedMaterial.bounciness = 1;
+            col.enabled = false;
+            col.enabled = true;
         }
 
         if (mov.CantMove && rolling)
@@ -62,11 +66,6 @@ public class Roll : MonoBehaviour
     {
         if (mov.CantMove && rollTrigger)
         {
-            CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
-            col.sharedMaterial.bounciness = 1;
-            col.enabled = false;
-            col.enabled = true;
-
             rolling = true;
             
             if (!addForce)
@@ -92,6 +91,7 @@ public class Roll : MonoBehaviour
 
     public void StopRolling()
     {
+        transform.GetChild(0).transform.rotation = Quaternion.Euler(0, 0, 0);
         rolling = false;
         rollTrigger = false;
         StopCoroutine("RollTime");

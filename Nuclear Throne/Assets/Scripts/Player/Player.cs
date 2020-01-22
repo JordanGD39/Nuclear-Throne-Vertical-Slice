@@ -35,22 +35,25 @@ public class Player : MonoBehaviour
     }
 
     public void Hit(int dmg, Vector2 velocity, bool knocked)
-    {                
+    {
         if (!beingHit && !Dead)
         {
             GetComponent<Roll>().StopRolling();
             rb.velocity = Vector2.zero;
-            knockback = velocity;
+            knockback = velocity;            
+            stats.Health -= dmg;
+
             if (stats.Health > 0)
             {
                 getKnockback = knocked;
+                transform.GetChild(0).GetComponent<Animator>().SetTrigger("Hit");
             }
             else
             {
                 getKnockback = true;
             }
+
             beingHit = true;
-            stats.Health -= dmg;
             StartCoroutine("HigherLayer");
             StartCoroutine(HitCoroutine());          
         }
@@ -78,10 +81,10 @@ public class Player : MonoBehaviour
         if (GetComponent<StatsClass>().Health <= 0)
         {
             Dead = true;
-            spr.color = Color.grey;
             Destroy(transform.parent.GetChild(1).gameObject);
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<Roll>().enabled = false;
+            transform.GetChild(0).GetComponent<Animator>().SetBool("Dead", true);
             yield return new WaitForSeconds(0.5f);
             rb.velocity *= 0;
 

@@ -61,7 +61,7 @@ public class EnemyAi : MonoBehaviour
         if (PlayerInSight)
         {
             direction = player.position - transform.position;
-            direction.Normalize();
+            direction.Normalize();            
 
             if (follower)
             {
@@ -104,7 +104,13 @@ public class EnemyAi : MonoBehaviour
             rb.AddForce(knockback * knockbackForce, ForceMode2D.Impulse);
         }
 
-        if (Dead) return;
+        if (Dead)
+        {
+            anim.SetFloat("Speed", 0);
+            return;
+        }
+
+        anim.SetFloat("Speed", rb.velocity.magnitude);
 
         if (playerInSight && !beingHit)
         {
