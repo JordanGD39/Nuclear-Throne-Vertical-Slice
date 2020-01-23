@@ -16,30 +16,8 @@ public class ShootGun : MonoBehaviour
         camShake = Camera.main.GetComponent<CameraShake>();
     }
 
-    //private void Update()
-    //{
-    //    if (laser)
-    //    {
-    //        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-
-    //        if (hit.collider != null)
-    //        {
-    //            if (hit.collider.CompareTag("Enemy"))
-    //            {
-    //                Debug.Log("Gamer");
-    //            }
-    //        }
-    //    }        
-    //}
-
     public void Shoot(GameObject bulletPrefab, Bullet bullet, Weapon weapon, bool playerControl)
     {
-        //if (bullet.fireType == Bullet.type.LASER)
-        //{
-        //    laser = true;
-        //    weaponSave = weapon;
-        //    return;
-        //}
         GameObject bulletObj = Instantiate(bulletPrefab, transform.GetChild(0).position, transform.parent.rotation);
         bulletObj.transform.Rotate(0, 0, Random.Range(-weapon.SpreadAngle, weapon.SpreadAngle + 1));
 
@@ -60,16 +38,16 @@ public class ShootGun : MonoBehaviour
         if (!weapon.Melee && !bullet.Explode && playerControl)
         {
             StartCoroutine(camShake.Shake(0.1f, 0.1f));
-        }
 
-        if (playerControl)
-        {
-            AudioManager.instance.Play("Shoot");
-        }
-        else
-        {
-            AudioManager.instance.Play("EnemyShoot");
-        }
+            if (playerControl)
+            {
+                AudioManager.instance.Play("Shoot");
+            }
+            else
+            {
+                AudioManager.instance.Play("EnemyShoot");
+            }
+        }        
 
         if (playerControl && (bullet.fireType == Bullet.type.NORMAL || bullet.fireType == Bullet.type.SHELL))
         {

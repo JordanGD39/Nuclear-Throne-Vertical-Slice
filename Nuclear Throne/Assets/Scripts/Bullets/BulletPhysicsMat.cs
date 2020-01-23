@@ -51,10 +51,10 @@ public class BulletPhysicsMat : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            if (!wallHit && bullet.fireType != Bullet.type.MELEE && bullet.Explode)
-            {
-                Destroy(transform.parent.gameObject, 1.0f);
-            }
+            //if (!wallHit && bullet.fireType != Bullet.type.MELEE && bullet.Explode)
+            //{
+            //    Destroy(transform.parent.gameObject, 1.0f);
+            //}
 
             wallHit = true;
             bCol.isTrigger = false;

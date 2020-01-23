@@ -15,6 +15,8 @@ public class AllEnemiesDefeated : MonoBehaviour
     public Vector2 Place { get { return mortemPlace; } set { mortemPlace = value; } }
     public bool EnemyDeath { get { return enemyDeath; } set { enemyDeath = value; } }
 
+    private bool done = false;
+
     private void Start()
     {
         level = GetComponent<LevelCheck>();
@@ -44,9 +46,10 @@ public class AllEnemiesDefeated : MonoBehaviour
                 }
             }
 
-            if (counter >= objList.Count)
+            if (counter >= objList.Count && !done)
             {
                 StartCoroutine(WaitCoroutine(portal, mortemPlace));
+                done = true;
             }
         }
 
@@ -57,6 +60,6 @@ public class AllEnemiesDefeated : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
 
-        GameObject hole = Instantiate(paste, place, Quaternion.Euler(0.0f, 0.0f, 0.0f));
+        GameObject hole = Instantiate(paste, place, Quaternion.Euler(0.0f, 0.0f, 0.0f));        
     }
 }

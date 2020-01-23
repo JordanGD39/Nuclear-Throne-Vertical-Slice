@@ -11,7 +11,7 @@ public class ExplosionScript : MonoBehaviour
 
     private void Start()
     {
-        Destroy(transform.parent.gameObject, 2);
+        Destroy(transform.parent.gameObject, 0.8f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
