@@ -19,15 +19,18 @@ public class Player : MonoBehaviour
         stats = GetComponent<StatsClass>();
         spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
-        ui.UpdateWeapon();
+
+        if (GameManager.instance.PlayerSaved != null)
+        {
+            stats = GameManager.instance.PlayerSaved;
+        }
+
         if (GetComponent<Roll>() != null)
         {
             stats.Ammo = 120;
             stats.ExplosiveAmmo = 120;
             stats.ShellAmmo = 40;
         }
-
-        ui.UpdateAmmo();
     }
 
     private void FixedUpdate()

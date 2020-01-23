@@ -66,6 +66,8 @@ public class RadBehaviour : MonoBehaviour
         {
             if (pickable)
             {
+                collision.GetComponent<StatsClass>().Rads++;
+                GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>().UpdateRads();
                 Destroy(gameObject);
             }
         }

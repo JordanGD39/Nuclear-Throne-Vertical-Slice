@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AllEnemiesDefeated : MonoBehaviour
 {
     [SerializeField] private GameObject portal;
 
-    private List<GameObject> enemies;
+    public List<GameObject> Enemies { get; set; }
     private LevelCheck level;
 
     private Vector2 mortemPlace;
@@ -19,14 +20,17 @@ public class AllEnemiesDefeated : MonoBehaviour
 
     private void Start()
     {
-        level = GetComponent<LevelCheck>();
-        enemies = level.FindObjectsOnLayerWithTag(10, "Enemy"); //Enemy Layer
+        if (SceneManager.GetActiveScene().buildIndex < 2)
+        {
+            level = GetComponent<LevelCheck>();
+            Enemies = level.FindObjectsOnLayerWithTag(10, "Enemy"); //Enemy Layer
+        }        
         enemyDeath = false;
     }
 
     private void Update()
     {
-        CheckEnemyDeaths(enemies, enemyDeath);
+        CheckEnemyDeaths(Enemies, enemyDeath);
     }
 
     private void CheckEnemyDeaths(List<GameObject> objList, bool died)
