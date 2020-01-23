@@ -90,7 +90,8 @@ public class PickUp : MonoBehaviour
             playerWeapon.transform.GetChild(0).localPosition = new Vector3(0, playerStats.Primary.ShootCoords, 0);
             GameManager.instance.TextSpawn(playerStats.Primary.Name + "!", transform);
 
-            ui.UpdateWeapon();
+            ui.UpdateWeapon();            
+            AudioManager.instance.Play("Reload");
 
             Destroy(gameObject);
         }

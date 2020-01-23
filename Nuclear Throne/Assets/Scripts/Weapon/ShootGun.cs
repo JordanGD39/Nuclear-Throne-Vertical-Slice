@@ -56,10 +56,19 @@ public class ShootGun : MonoBehaviour
         bulletScript.PlayerControl = playerControl;
         bulletObj.GetComponent<SpriteRenderer>().enabled = true;
         bulletObj.GetComponent<SpriteRenderer>().sprite = bullet.SpriteOfBullet;
-
+        
         if (!weapon.Melee && !bullet.Explode && playerControl)
         {
             StartCoroutine(camShake.Shake(0.1f, 0.1f));
+        }
+
+        if (playerControl)
+        {
+            AudioManager.instance.Play("Shoot");
+        }
+        else
+        {
+            AudioManager.instance.Play("EnemyShoot");
         }
 
         if (playerControl && (bullet.fireType == Bullet.type.NORMAL || bullet.fireType == Bullet.type.SHELL))

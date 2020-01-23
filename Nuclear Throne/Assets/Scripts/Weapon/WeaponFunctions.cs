@@ -255,7 +255,7 @@ public class WeaponFunctions : MonoBehaviour
 
         if (playerControl)
         {
-            ui.UpdateAmmo();
+            ui.UpdateAmmo();            
         }
 
         if (canShoot)

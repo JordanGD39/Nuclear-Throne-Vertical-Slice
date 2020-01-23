@@ -272,5 +272,6 @@ public class Chest : MonoBehaviour
         }
 
         ui.UpdateAmmo();
+        AudioManager.instance.Play("Reload");
     }
 }
