@@ -9,6 +9,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            GameManager.instance.PlayerSaved = collision.GetComponent<StatsClass>();
             GameManager.instance.Difficulty++;
             SceneManager.LoadScene(2);
         }
