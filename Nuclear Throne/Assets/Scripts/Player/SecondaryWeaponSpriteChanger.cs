@@ -8,7 +8,10 @@ public class SecondaryWeaponSpriteChanger : MonoBehaviour
     private SpriteRenderer rendr;
     private void Start()
     {
-        secondaryWeapon = GetComponentInParent<StatsClass>().Secondary.SpriteOfWeapon;
+        if (GetComponentInParent<StatsClass>().Secondary != null)
+        {
+            secondaryWeapon = GetComponentInParent<StatsClass>().Secondary.SpriteOfWeapon;
+        }
         rendr = GetComponent<SpriteRenderer>();
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 10.0f);
@@ -17,7 +20,7 @@ public class SecondaryWeaponSpriteChanger : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Switch"))
+        if (Input.GetButtonDown("Switch") && secondaryWeapon != null)
         {
             StartCoroutine(WaitCoroutine());
         }

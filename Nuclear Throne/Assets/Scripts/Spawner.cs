@@ -64,11 +64,25 @@ public class Spawner : MonoBehaviour
 
                 if (rand < 40)
                 {
-                    GameObject chest = Instantiate(chests[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-32f, 2), 0), transform.rotation);
+                    float y = Random.Range(-32f, 2);
+
+                    if (y > -4 && y < 4)
+                    {
+                        y = 5;
+                    }
+
+                    GameObject chest = Instantiate(chests[2], new Vector3(Random.Range(-8f, 19f), y, 0), transform.rotation);
                 }
                 else
                 {
-                    GameObject chest = Instantiate(chests[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-32f, 2), 0), transform.rotation);
+                    float y = Random.Range(-32f, 2);
+
+                    if (y > -4 && y < 4)
+                    {
+                        y = 5;
+                    }
+
+                    GameObject chest = Instantiate(chests[1], new Vector3(Random.Range(-8f, 19f), y, 0), transform.rotation);
                 }
             }
         }

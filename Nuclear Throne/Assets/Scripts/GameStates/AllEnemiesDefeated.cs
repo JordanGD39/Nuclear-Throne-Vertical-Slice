@@ -16,7 +16,7 @@ public class AllEnemiesDefeated : MonoBehaviour
     public Vector2 Place { get { return mortemPlace; } set { mortemPlace = value; } }
     public bool EnemyDeath { get { return enemyDeath; } set { enemyDeath = value; } }
 
-    private bool done = false;
+    public bool Done { get; set; }
 
     private void Start()
     {
@@ -50,10 +50,10 @@ public class AllEnemiesDefeated : MonoBehaviour
                 }
             }
 
-            if (counter >= objList.Count && !done)
+            if (counter >= objList.Count && !Done)
             {
                 StartCoroutine(WaitCoroutine(portal, mortemPlace));
-                done = true;
+                Done = true;
             }
         }
 

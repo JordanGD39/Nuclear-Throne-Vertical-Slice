@@ -93,23 +93,26 @@ public class UiHandler : MonoBehaviour
 
         weaponUI.GetChild(1).GetComponent<Text>().text = ammo.ToString();
 
-        switch (playerStats.Secondary.WeaponBullet.bulletType)
+        if (playerStats.Secondary != null)
         {
-            case Bullet.ammoType.NORMAL:
-                ammo = playerStats.Ammo;
-                break;
-            case Bullet.ammoType.SHELL:
-                ammo = playerStats.ShellAmmo;
-                break;
-            case Bullet.ammoType.ENERGY:
-                ammo = playerStats.EnergyAmmo;
-                break;
-            case Bullet.ammoType.EXPLOSION:
-                ammo = playerStats.ExplosiveAmmo;
-                break;
-            case Bullet.ammoType.BOLT:
-                ammo = playerStats.BoltAmmo;
-                break;
+            switch (playerStats.Secondary.WeaponBullet.bulletType)
+            {
+                case Bullet.ammoType.NORMAL:
+                    ammo = playerStats.Ammo;
+                    break;
+                case Bullet.ammoType.SHELL:
+                    ammo = playerStats.ShellAmmo;
+                    break;
+                case Bullet.ammoType.ENERGY:
+                    ammo = playerStats.EnergyAmmo;
+                    break;
+                case Bullet.ammoType.EXPLOSION:
+                    ammo = playerStats.ExplosiveAmmo;
+                    break;
+                case Bullet.ammoType.BOLT:
+                    ammo = playerStats.BoltAmmo;
+                    break;
+            }
         }
 
         weaponUI.GetChild(3).GetComponent<Text>().text = ammo.ToString();

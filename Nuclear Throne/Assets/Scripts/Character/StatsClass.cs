@@ -15,7 +15,7 @@ public class StatsClass : MonoBehaviour
     public Weapon Primary { get { return primary; } set { primary = value; } }
     public Weapon Secondary { get { return secondary; } set { secondary = value; } }
 
-    public int Ammo { get; set; } = 96;
+    public int Ammo { get; set; } = 120;
     public int ShellAmmo { get; set; } = 0;
     public int BoltAmmo { get; set; } = 0;
     public int ExplosiveAmmo { get; set; } = 0;

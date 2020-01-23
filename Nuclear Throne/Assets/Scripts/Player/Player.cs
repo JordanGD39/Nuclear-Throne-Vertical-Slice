@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -17,20 +18,23 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsClass>();
+
         spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
 
-        if (GameManager.instance.PlayerSaved != null)
+        if (GameManager.instance.GetComponent<StatsClass>().Primary != null)
         {
-            stats = GameManager.instance.PlayerSaved;
-        }
-
-        if (GetComponent<Roll>() != null)
-        {
-            stats.Ammo = 120;
-            stats.ExplosiveAmmo = 120;
-            stats.ShellAmmo = 40;
-        }
+            stats.Primary = GameManager.instance.GetComponent<StatsClass>().Primary;
+            stats.Secondary = GameManager.instance.GetComponent<StatsClass>().Secondary;
+            stats.Ammo = GameManager.instance.GetComponent<StatsClass>().Ammo;
+            stats.ShellAmmo = GameManager.instance.GetComponent<StatsClass>().ShellAmmo;
+            stats.BoltAmmo = GameManager.instance.GetComponent<StatsClass>().BoltAmmo;
+            stats.EnergyAmmo = GameManager.instance.GetComponent<StatsClass>().EnergyAmmo;
+            stats.ExplosiveAmmo = GameManager.instance.GetComponent<StatsClass>().ExplosiveAmmo;
+            stats.Level = GameManager.instance.GetComponent<StatsClass>().Level;
+            stats.Rads = GameManager.instance.GetComponent<StatsClass>().Rads;
+            stats.Health = GameManager.instance.GetComponent<StatsClass>().Health;
+        }        
     }
 
     private void FixedUpdate()
@@ -102,6 +106,10 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             rb.velocity *= 0;
 
+            yield return new WaitForSeconds(3);
+
+            GameManager.instance.Difficulty = 1;
+            SceneManager.LoadScene(1);
         }
         else
         {
