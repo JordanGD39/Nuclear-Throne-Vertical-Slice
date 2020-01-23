@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
             if (stats.Health < 0)
             {
                 stats.Health = 0;
+                StartCoroutine(WaitTillAppQuit());
             }
 
             ui.UpdateHealth();
@@ -98,11 +99,25 @@ public class Player : MonoBehaviour
             transform.GetChild(0).GetComponent<Animator>().SetBool("Dead", true);
             yield return new WaitForSeconds(0.5f);
             rb.velocity *= 0;
-
         }
         else
         {
             GetComponent<PlayerMovement>().CantMove = false;
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 21) //Portal Layer
+        {
+            StartCoroutine(WaitTillAppQuit());
+        }
+    }
+
+    IEnumerator WaitTillAppQuit()
+    {
+        yield return new WaitForSeconds(5.0f);
+
+        Application.Quit();
     }
 }

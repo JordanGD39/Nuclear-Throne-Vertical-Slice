@@ -14,11 +14,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
+  - 
+  - 
   - Tile
   - Weapon
   - Enemy
@@ -32,17 +32,17 @@ TagManager:
   - BulletCol
   - Rad
   - PlayerPointEffect
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - Portal
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
