@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1062893141909329580}
   - component: {fileID: 1062893141909329582}
   - component: {fileID: 1062893141909329583}
-  m_Layer: 0
+  - component: {fileID: 8220564138403631577}
+  m_Layer: 20
   m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5220684294705236769}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -108,3 +110,108 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0625, y: 1.1875}
   m_EdgeRadius: 0
+--- !u!114 &8220564138403631577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062893141909329581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1721ee3e0154c88419623bf6703593c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  normalSprites:
+  - {fileID: 3522771656053195901, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: 7985275693231753585, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: -2807907164240635290, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: -958707243947289498, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: 6556015145089371867, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: 8873506773210346464, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  destroyedSprites:
+  - {fileID: -4112871932160100782, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: -507301163891549722, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: 4806676390968145068, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: 7590729799304982821, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: -8653065952142702583, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+  - {fileID: 8103470115061998992, guid: d7c05d8a185ab5f43bc0fbcdefa9f078, type: 3}
+--- !u!1 &3895711234709890066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5220684294705236769}
+  - component: {fileID: 7981141503096564875}
+  - component: {fileID: 265017498847456367}
+  m_Layer: 20
+  m_Name: Push
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5220684294705236769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895711234709890066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1062893141909329580}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7981141503096564875
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895711234709890066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!250 &265017498847456367
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895711234709890066}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 11264
+  m_ForceMagnitude: 100
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 1
+  m_ForceTarget: 1
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0

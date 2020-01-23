@@ -11,14 +11,16 @@ public class PauseFunctionality : MonoBehaviour
 
     private List<GameObject> players = new List<GameObject>();
     private List<GameObject> weaponFunctions = new List<GameObject>();
+    private LevelCheck level;
 
     private bool pause;
     private bool continueTroughMenu;
 
     private void Start()
     {
-        players = FindObjectsOnLayer(13); //Player Layer
-        weaponFunctions = FindObjectsWithName("WeaponRotation", 10);
+        level = GetComponent<LevelCheck>();
+        players = level.FindObjectsOnLayer(13); //Player Layer
+        weaponFunctions = level.FindObjectsWithNameWithoutLayer("WeaponRotation", 10);
     }
 
     private void Update()
@@ -34,42 +36,6 @@ public class PauseFunctionality : MonoBehaviour
             pause = GetPauseButton(pause);
         }
         PauseGame(pause);
-    }
-
-    private List<GameObject> FindObjectsOnLayer(int layer)
-    {
-        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
-        List<GameObject> layerObjects = new List<GameObject>();
-
-        foreach (GameObject t in allObjects)
-        {
-            if (t.layer == layer)
-            {
-                layerObjects.Add(t);
-            }
-        }
-
-        allObjects = new GameObject[1];
-
-        return layerObjects;
-    }
-
-    private List<GameObject> FindObjectsWithName(string name, int layer)
-    {
-        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
-        List<GameObject> nameObjects = new List<GameObject>();
-
-        foreach (GameObject t in allObjects)
-        {
-            if (t.name == name && t.transform.parent.gameObject.layer != layer)
-            {
-                nameObjects.Add(t);
-            }
-        }
-
-        allObjects = new GameObject[1];
-
-        return nameObjects;
     }
 
     private bool GetPauseButton(bool pauseState)

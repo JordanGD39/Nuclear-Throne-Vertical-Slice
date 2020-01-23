@@ -180,8 +180,8 @@ public class BulletBehaviour : MonoBehaviour
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
-                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE &&
-                    !bullet.Explode)
+                    !collision.CompareTag("Bullet") &&
+                    bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
                 {
                     Destroy(gameObject);
                 }

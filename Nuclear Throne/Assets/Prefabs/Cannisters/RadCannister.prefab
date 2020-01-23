@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1754742989168161543}
   - component: {fileID: 588759338708315549}
   - component: {fileID: 3488163862689088052}
-  m_Layer: 10
+  m_Layer: 20
   m_Name: RadCannister
   m_TagString: Cannister
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.25}
+  m_Size: {x: 0.6, y: 1.125}
   m_EdgeRadius: 0
 --- !u!114 &588759338708315549
 MonoBehaviour:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb34d9a5dc99cb940a48c4d4cdffcbd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
   pickUpItem: {fileID: 5305860282617409840, guid: 9c6d8b703ce64f54aadcc0f3c70e119f,
     type: 3}
   itemAmount: 25
