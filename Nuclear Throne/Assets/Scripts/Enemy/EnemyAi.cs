@@ -8,6 +8,8 @@ public class EnemyAi : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    private AllEnemiesDefeated gManager;
+
     [SerializeField] private bool playerInSight = false;
     public bool PlayerInSight { get { return playerInSight; } set { playerInSight = value; } }
 
@@ -48,9 +50,12 @@ public class EnemyAi : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator>();
+        gManager = FindObjectOfType<AllEnemiesDefeated>().GetComponent<AllEnemiesDefeated>();
+
         physMat = new PhysicsMaterial2D();
         physMat.bounciness = 0;
         physMat.friction = 0;
+
         CapsuleCollider2D col = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
         col.sharedMaterial = physMat;
         col.enabled = false;
@@ -248,6 +253,8 @@ public class EnemyAi : MonoBehaviour
             if (stats.Health <= 0)
             {
                 DropItems(pickUpItem[0], radDropAmount);
+                gManager.EnemyDeath = true;
+                gManager.Place = transform.position;
 
                 CapsuleCollider2D col = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
                 col.sharedMaterial.bounciness = 1;
@@ -289,7 +296,7 @@ public class EnemyAi : MonoBehaviour
             float randomAngle = Random.Range(0, (2 + Mathf.PI));
 
             obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) *
-                                                     Random.Range(-5.0f, 5.0f) * 80.0f);
+                                                     Random.Range(-5.0f, 5.0f) * 40.0f);
         }
     }
 
@@ -316,6 +323,11 @@ public class EnemyAi : MonoBehaviour
         if (Dead && collision.CompareTag("Enemy") && rb.velocity.magnitude > 1)
         {
             collision.GetComponent<EnemyAi>().Hit(1, rb.velocity);
+        }
+
+        if (Dead && collision.gameObject.layer == 21) //Portal Layer
+        {
+            Destroy(gameObject, 1.0f);
         }
     }
 }

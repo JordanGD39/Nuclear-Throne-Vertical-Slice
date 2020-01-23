@@ -85,6 +85,10 @@ public class RadBehaviour : MonoBehaviour
         {
             velDrop = false;
         }
+        else if (collision.gameObject.layer == 21) //Portal Layer
+        {
+            Destroy(gameObject, 1.0f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
