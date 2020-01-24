@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private GameObject textPref;
+    public int Difficulty { get; set; }
+
+    public StatsClass PlayerSaved { get; set; }
+
     private Transform canvas;
 
     void Awake()

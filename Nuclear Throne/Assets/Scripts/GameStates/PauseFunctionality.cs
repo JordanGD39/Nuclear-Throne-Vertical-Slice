@@ -85,6 +85,13 @@ public class PauseFunctionality : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void Menu()
+    {
+        continueTroughMenu = true;
+        pause = false;
+        SceneManager.LoadScene(0);
+    }
+
     private void ChangeComponentAvailability(bool set)
     {
         pauseUI.SetActive(!set);
