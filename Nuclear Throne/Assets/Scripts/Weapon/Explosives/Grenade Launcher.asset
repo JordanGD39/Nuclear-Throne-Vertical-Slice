@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
   m_Name: Grenade Launcher
   m_EditorClassIdentifier: 
-  weaponName: Grenade Launcher
+  weaponName: GRENADE LAUNCHER
   sprite: {fileID: -7292374845137529908, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
   uiSprite: {fileID: -6344343437890535301, guid: 0f90e580ced2b6a4dade531cff8e2a88,
     type: 3}

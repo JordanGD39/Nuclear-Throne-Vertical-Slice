@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
   m_Name: Laser Pistol
   m_EditorClassIdentifier: 
-  weaponName: Laser Pistol
+  weaponName: LASER PISTOL
   sprite: {fileID: -5081397497249240502, guid: a7f65047a8477d34194de5bd7d0bc9d9, type: 3}
+  uiSprite: {fileID: 0}
   weaponType: 0
   bullet: {fileID: 11400000, guid: b353fd9d46b79c54eb164f2268bf5248, type: 2}
   damage: 2
