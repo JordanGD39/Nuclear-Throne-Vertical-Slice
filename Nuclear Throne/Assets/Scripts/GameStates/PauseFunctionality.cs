@@ -18,7 +18,7 @@ public class PauseFunctionality : MonoBehaviour
 
     private void Start()
     {
-        level = GetComponent<LevelCheck>();
+        level = GameManager.instance.GetComponent<LevelCheck>();
         players = level.FindObjectsOnLayer(13); //Player Layer
         weaponFunctions = level.FindObjectsWithNameWithoutLayer("WeaponRotation", 10);
     }
