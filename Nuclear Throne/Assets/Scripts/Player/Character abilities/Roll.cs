@@ -36,13 +36,13 @@ public class Roll : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Roll") && !rolling)
-        {            
+        {
             mov.CantMove = true;
             rollTrigger = true;
             CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
             col.sharedMaterial.bounciness = 1;
             col.enabled = false;
-            col.enabled = true;
+            col.enabled = true;            
         }
 
         if (mov.CantMove && rolling)

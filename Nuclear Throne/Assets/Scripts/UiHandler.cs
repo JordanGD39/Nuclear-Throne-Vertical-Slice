@@ -13,12 +13,15 @@ public class UiHandler : MonoBehaviour
 
     private void Start()
     {
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsClass>();
         Transform main = transform.GetChild(0);
+        weaponUI = main.GetChild(2);
         radUI = main.GetChild(0);
         healthUI = main.GetChild(1);
-        weaponUI = main.GetChild(2);
         ammoUI = main.GetChild(3);
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsClass>();
+
+        UpdateWeapon();
+        UpdateAmmo();
     }
 
     public void UpdateHealth()
@@ -31,6 +34,11 @@ public class UiHandler : MonoBehaviour
 
     public void UpdateWeapon()
     {
+        if (weaponUI == null)
+        {
+            return;
+        }
+
         weaponUI.GetChild(0).GetComponent<Image>().sprite = playerStats.Primary.UiSprite;
         if (playerStats.Secondary != null)
         {
@@ -47,6 +55,10 @@ public class UiHandler : MonoBehaviour
 
     public void UpdateAmmo()
     {
+        if (ammoUI == null)
+        {
+            return;
+        }
         //255, 196, 0 RGB
         int ammo = 0;
 
@@ -81,23 +93,26 @@ public class UiHandler : MonoBehaviour
 
         weaponUI.GetChild(1).GetComponent<Text>().text = ammo.ToString();
 
-        switch (playerStats.Secondary.WeaponBullet.bulletType)
+        if (playerStats.Secondary != null)
         {
-            case Bullet.ammoType.NORMAL:
-                ammo = playerStats.Ammo;
-                break;
-            case Bullet.ammoType.SHELL:
-                ammo = playerStats.ShellAmmo;
-                break;
-            case Bullet.ammoType.ENERGY:
-                ammo = playerStats.EnergyAmmo;
-                break;
-            case Bullet.ammoType.EXPLOSION:
-                ammo = playerStats.ExplosiveAmmo;
-                break;
-            case Bullet.ammoType.BOLT:
-                ammo = playerStats.BoltAmmo;
-                break;
+            switch (playerStats.Secondary.WeaponBullet.bulletType)
+            {
+                case Bullet.ammoType.NORMAL:
+                    ammo = playerStats.Ammo;
+                    break;
+                case Bullet.ammoType.SHELL:
+                    ammo = playerStats.ShellAmmo;
+                    break;
+                case Bullet.ammoType.ENERGY:
+                    ammo = playerStats.EnergyAmmo;
+                    break;
+                case Bullet.ammoType.EXPLOSION:
+                    ammo = playerStats.ExplosiveAmmo;
+                    break;
+                case Bullet.ammoType.BOLT:
+                    ammo = playerStats.BoltAmmo;
+                    break;
+            }
         }
 
         weaponUI.GetChild(3).GetComponent<Text>().text = ammo.ToString();
@@ -153,7 +168,16 @@ public class UiHandler : MonoBehaviour
     }
 
     public void UpdateRads()
-    {
+    {        
+        if (playerStats.Rads > 60)
+        {
+            playerStats.Rads = 0;
+            playerStats.Level++;
+        }
 
+        float rads = playerStats.Rads;
+
+        radUI.GetChild(2).GetComponent<Image>().fillAmount = rads / 60;
+        radUI.GetChild(4).GetComponent<Text>().text = playerStats.Level.ToString();
     }
 }
