@@ -9,8 +9,11 @@ public class ExplosionScript : MonoBehaviour
 
     [SerializeField] private Sprite[] sprites;
 
+    public bool PlayerDamage { get; set; } = true;
+
     private void Start()
     {
+        StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.15f, 0.4f));
         Destroy(transform.parent.gameObject, 0.8f);
     }
 
@@ -30,7 +33,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(collision.gameObject);            
         }
 
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && PlayerDamage)
         {
             float distanceX = transform.position.x - collision.transform.position.x;
             float distanceY = transform.position.y - collision.transform.position.y;

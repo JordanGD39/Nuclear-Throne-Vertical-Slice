@@ -22,19 +22,14 @@ public class Player : MonoBehaviour
         spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
 
-        if (GameManager.instance.GetComponent<StatsClass>().Primary != null)
+        if (SceneManager.GetActiveScene().buildIndex > 1)
         {
-            stats.Primary = GameManager.instance.GetComponent<StatsClass>().Primary;
-            stats.Secondary = GameManager.instance.GetComponent<StatsClass>().Secondary;
-            stats.Ammo = GameManager.instance.GetComponent<StatsClass>().Ammo;
-            stats.ShellAmmo = GameManager.instance.GetComponent<StatsClass>().ShellAmmo;
-            stats.BoltAmmo = GameManager.instance.GetComponent<StatsClass>().BoltAmmo;
-            stats.EnergyAmmo = GameManager.instance.GetComponent<StatsClass>().EnergyAmmo;
-            stats.ExplosiveAmmo = GameManager.instance.GetComponent<StatsClass>().ExplosiveAmmo;
-            stats.Level = GameManager.instance.GetComponent<StatsClass>().Level;
-            stats.Rads = GameManager.instance.GetComponent<StatsClass>().Rads;
-            stats.Health = GameManager.instance.GetComponent<StatsClass>().Health;
-        }        
+            GameManager.instance.LoadPlayer(stats);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            GameManager.instance.GetComponent<AllEnemiesDefeated>().CheckEnemies();
+        }
     }
 
     private void FixedUpdate()
@@ -109,7 +104,8 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(3);
 
             GameManager.instance.Difficulty = 1;
-            SceneManager.LoadScene(1);
+            GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
+            SceneManager.LoadScene(0);
         }
         else
         {

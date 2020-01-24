@@ -6,7 +6,7 @@ public class LevelCheck : MonoBehaviour
 {
     public List<GameObject> FindObjectsOnLayer(int layer)
     {
-        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
         List<GameObject> layerObjects = new List<GameObject>();
 
         foreach (GameObject t in allObjects)
@@ -24,7 +24,7 @@ public class LevelCheck : MonoBehaviour
 
     public List<GameObject> FindObjectsWithName(string name)
     {
-        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
         List<GameObject> nameObjects = new List<GameObject>();
 
         foreach (GameObject t in allObjects)

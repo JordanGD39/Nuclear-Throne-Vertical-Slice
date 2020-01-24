@@ -196,7 +196,7 @@ public class EnemyAi : MonoBehaviour
 
     private void PlayerDetect()
     {
-        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol"));
+        int tileLayer = ~(LayerMask.GetMask("Weapon") | LayerMask.GetMask("WallCheck") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("EnemyWallCol") | LayerMask.GetMask("PlayerPointEffect"));
 
         RaycastHit2D hit = Physics2D.Raycast(transform.GetChild(3).position, transform.GetChild(3).up, range, tileLayer);
 
@@ -278,7 +278,10 @@ public class EnemyAi : MonoBehaviour
                     transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.gray;
                 }
 
-                GetComponent<EnemyDrop>().Drop();
+                if (GetComponent<EnemyDrop>() != null)
+                {
+                    GetComponent<EnemyDrop>().Drop();
+                }
 
                 if (GetComponent<MaggotSpawn>() != null)
                 {

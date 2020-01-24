@@ -22,6 +22,8 @@ public class UiHandler : MonoBehaviour
 
         UpdateWeapon();
         UpdateAmmo();
+        UpdateHealth();
+        UpdateRads();
     }
 
     public void UpdateHealth()

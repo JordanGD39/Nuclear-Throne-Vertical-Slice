@@ -27,7 +27,10 @@ public class PauseFunctionality : MonoBehaviour
     {
         if (pauseUI == null)
         {
-            pauseUI = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(1).gameObject;
+            if (SceneManager.GetActiveScene().buildIndex > 0)
+            {
+                pauseUI = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(1).gameObject;
+            }
             return;
         }
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class AllEnemiesDefeated : MonoBehaviour
 {
     [SerializeField] private GameObject portal;
+    [SerializeField] private GameObject explosion;
 
     public List<GameObject> Enemies { get; set; }
     private LevelCheck level;
@@ -20,11 +21,6 @@ public class AllEnemiesDefeated : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex < 2)
-        {
-            level = GetComponent<LevelCheck>();
-            Enemies = level.FindObjectsOnLayerWithTag(10, "Enemy"); //Enemy Layer
-        }        
         enemyDeath = false;
     }
 
@@ -60,10 +56,21 @@ public class AllEnemiesDefeated : MonoBehaviour
         enemyDeath = false;
     }
 
-    IEnumerator WaitCoroutine(GameObject paste, Vector2 place)
+    private IEnumerator WaitCoroutine(GameObject paste, Vector2 place)
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(1.2f);
 
-        GameObject hole = Instantiate(paste, place, Quaternion.Euler(0.0f, 0.0f, 0.0f));        
+        GameObject explodeObject = Instantiate(explosion, place, Quaternion.identity);
+        explodeObject.transform.GetChild(0).GetComponent<ExplosionScript>().PlayerDamage = false;
+
+        yield return new WaitForSeconds(0.8f);
+
+        GameObject hole = Instantiate(paste, place, Quaternion.identity);        
+    }
+
+    public void CheckEnemies()
+    {
+        level = GetComponent<LevelCheck>();
+        Enemies = level.FindObjectsOnLayerWithTag(10, "Enemy"); //Enemy Layer
     }
 }

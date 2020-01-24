@@ -10,13 +10,14 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Enemy spawn
         for (int i = 0; i < Random.Range(20, 30); i++)
         {
             float rand = Random.Range(0, 100);
 
-            if (rand < 60)
+            if (rand <= 60)
             {
-                GameObject enemy = Instantiate(enemies[0], new Vector3(Random.Range(-8f, 19f), Random.Range(-32f, 2), 0), transform.rotation);
+                GameObject enemy = Instantiate(enemies[0], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
                 float health = enemy.GetComponent<StatsClass>().Health;
 
                 health *= 0.05f * GameManager.instance.Difficulty;
@@ -27,9 +28,9 @@ public class Spawner : MonoBehaviour
             {
                 rand = Random.Range(0, 100);
 
-                if (rand < 40)
+                if (rand < 30)
                 {
-                    GameObject enemy = Instantiate(enemies[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-32f, 2), 0), transform.rotation);
+                    GameObject enemy = Instantiate(enemies[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-26f, -5), 0), transform.rotation);
 
                     float health = enemy.GetComponent<StatsClass>().Health;
 
@@ -39,7 +40,7 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    GameObject enemy = Instantiate(enemies[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-32f, 2), 0), transform.rotation);
+                    GameObject enemy = Instantiate(enemies[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-26f, -5), 0), transform.rotation);
 
                     float health = enemy.GetComponent<StatsClass>().Health;
 
@@ -50,45 +51,39 @@ public class Spawner : MonoBehaviour
             }
         }
 
+        //Chests spawn
         for (int i = 0; i < Random.Range(3, 6); i++)
         {
             float rand = Random.Range(0, 100);
 
             if (rand < 60)
             {
-                GameObject chest = Instantiate(chests[0], new Vector3(Random.Range(-8f, 19f), Random.Range(-32f, 2), 0), transform.rotation);
+                GameObject chest = Instantiate(chests[0], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
             }
             else
             {
                 rand = Random.Range(0, 100);
 
-                if (rand < 40)
+                if (rand < 20)
                 {
-                    float y = Random.Range(-32f, 2);
+                    float y = Random.Range(-26, 2);
 
                     if (y > -4 && y < 4)
                     {
                         y = 5;
                     }
 
-                    GameObject chest = Instantiate(chests[2], new Vector3(Random.Range(-8f, 19f), y, 0), transform.rotation);
+                    GameObject chest = Instantiate(chests[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
                 }
                 else
                 {
-                    float y = Random.Range(-32f, 2);
+                    
 
-                    if (y > -4 && y < 4)
-                    {
-                        y = 5;
-                    }
-
-                    GameObject chest = Instantiate(chests[1], new Vector3(Random.Range(-8f, 19f), y, 0), transform.rotation);
+                    GameObject chest = Instantiate(chests[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
                 }
             }
         }
 
-        GameManager.instance.GetComponent<AllEnemiesDefeated>().Enemies = GameManager.instance.GetComponent<LevelCheck>().FindObjectsOnLayerWithTag(10, "Enemy");
-
+        GameManager.instance.GetComponent<AllEnemiesDefeated>().CheckEnemies();
     }
-
 }

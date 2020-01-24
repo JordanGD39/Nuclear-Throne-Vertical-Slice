@@ -331,7 +331,6 @@ GameObject:
   - component: {fileID: 4969714571706425757}
   - component: {fileID: 4969714571706425756}
   - component: {fileID: 4969714571706425754}
-  - component: {fileID: 1213675626346988921}
   m_Layer: 10
   m_Name: Maggot
   m_TagString: Enemy
@@ -435,20 +434,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1213675626346988921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4969714571706425750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58cbf0f4086ce624e97ea4faac201173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  miniAmmoPref: {fileID: 8050793065260167791, guid: 5d416559653b61844a4c298172440967,
-    type: 3}
 --- !u!1 &4969714572548139630
 GameObject:
   m_ObjectHideFlags: 0
