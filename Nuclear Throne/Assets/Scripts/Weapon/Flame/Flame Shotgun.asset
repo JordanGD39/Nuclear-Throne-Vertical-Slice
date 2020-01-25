@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55ccbbb66dd44a44aa1377bd412aaf3, type: 3}
   m_Name: Flame Shotgun
   m_EditorClassIdentifier: 
-  weaponName: Flame Shotgun
+  weaponName: FLAME SHOTGUN
   sprite: {fileID: 0}
+  uiSprite: {fileID: 0}
   weaponType: 1
   bullet: {fileID: 11400000, guid: 849a35e214eda9440b1e4699a409213e, type: 2}
   damage: 3
   reloadTime: 0.5
   shootCoords: 0
-  startAmmo: 49
   ammoWaste: 1
   shootBullets: 1
   spreadAngle: 15
