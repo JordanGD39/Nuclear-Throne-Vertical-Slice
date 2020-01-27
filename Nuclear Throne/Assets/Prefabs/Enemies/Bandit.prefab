@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
+  level: 1
   primary: {fileID: 11400000, guid: 759464231ed7fdd46b5a8cdbdb1b5a7c, type: 2}
   secondary: {fileID: 0}
 --- !u!114 &4641313066455244233
@@ -359,6 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniAmmoPref: {fileID: 8050793065260167791, guid: 5d416559653b61844a4c298172440967,
+    type: 3}
+  medkitPref: {fileID: 6727003326416742039, guid: 61f24456f8ff5a84191144d62d255c24,
     type: 3}
 --- !u!1 &4641313067199034608
 GameObject:

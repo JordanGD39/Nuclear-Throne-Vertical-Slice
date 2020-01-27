@@ -171,7 +171,7 @@ public class UiHandler : MonoBehaviour
 
     public void UpdateRads()
     {        
-        if (playerStats.Rads > 60 * playerStats.Level)
+        if (playerStats.Rads > 60 * playerStats.Level && playerStats.Level <= 9)
         {
             playerStats.Rads = 0;
             playerStats.Level++;
