@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private StatsClass stats;
     private UiHandler ui;
 
+    [SerializeField] private Animator transition;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex > 1)
         {
+            transition.Play("PortalTransitionSmall");
             GameManager.instance.LoadPlayer(stats);
         }
         else if (SceneManager.GetActiveScene().buildIndex == 1)

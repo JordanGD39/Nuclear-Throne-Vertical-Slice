@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    [SerializeField] private GameObject transition;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -15,6 +17,9 @@ public class Portal : MonoBehaviour
 
     private IEnumerator WaitBeforeNextLevel(Collider2D collision)
     {
+        yield return new WaitForSeconds(1);
+        GameObject portal = Instantiate(transition, transform.position, Quaternion.identity);
+        portal.GetComponent<Animator>().Play("PortalTransition");
         yield return new WaitForSeconds(1);
         GameManager.instance.SavePlayer(collision.GetComponent<StatsClass>());
         GameManager.instance.Difficulty++;
