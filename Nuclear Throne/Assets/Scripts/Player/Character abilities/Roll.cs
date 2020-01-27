@@ -5,6 +5,7 @@ using UnityEngine;
 public class Roll : MonoBehaviour
 {
     private PlayerMovement mov;
+    private Player player;
     private Rigidbody2D rb;
     private Vector3 mousePos;
     [SerializeField] private Vector2 movement;
@@ -19,11 +20,14 @@ public class Roll : MonoBehaviour
     {
         mov = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
+        player = GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player.Dead) return;
+
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (!mov.CantMove && !rolling && mov.Movement.x == 0 && mov.Movement.y == 0)

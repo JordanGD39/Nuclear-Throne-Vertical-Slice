@@ -16,10 +16,25 @@ public class ShootGun : MonoBehaviour
         camShake = Camera.main.GetComponent<CameraShake>();
     }
 
-    public void Shoot(GameObject bulletPrefab, Bullet bullet, Weapon weapon, bool playerControl)
+    public void Shoot(GameObject bulletPrefab, Bullet bullet, Weapon weapon, bool playerControl, int bulletCount)
     {
         GameObject bulletObj = Instantiate(bulletPrefab, transform.GetChild(0).position, transform.parent.rotation);
-        bulletObj.transform.Rotate(0, 0, Random.Range(-weapon.SpreadAngle, weapon.SpreadAngle + 1));
+
+        if (bulletCount > 0 && weapon.FixedAngle != 0)
+        {
+            if (bulletCount % 2 == 0)
+            {
+                bulletObj.transform.Rotate(0, 0, -weapon.FixedAngle);
+            }
+            else if (bulletCount % 2 == 1)
+            {
+                bulletObj.transform.Rotate(0, 0, weapon.FixedAngle);
+            }
+        }
+        else
+        {
+            bulletObj.transform.Rotate(0, 0, Random.Range(-weapon.SpreadAngle, weapon.SpreadAngle + 1));
+        }        
 
         if (weapon.Melee)
         {

@@ -105,6 +105,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f067bec76b836fc4d92de23c09b40dad, type: 2}
   - {fileID: 11400000, guid: 5543a798af95902478dd764774f9805c, type: 2}
   - {fileID: 11400000, guid: d3cdd116c418ead49aede3caf762dbd6, type: 2}
+  - {fileID: 11400000, guid: 5ad76f311f43edc4ab98514a5d8204db, type: 2}
+  - {fileID: 11400000, guid: 656a4702cd0b8c449be3d720e73e57ff, type: 2}
   weaponsNumber: 1
   weaponsChest: 1
   multiplier: 2

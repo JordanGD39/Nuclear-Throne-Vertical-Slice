@@ -25,7 +25,8 @@ public class BulletBehaviour : MonoBehaviour
     private float timer = 0;
 
     private void Start()
-    {
+    {   
+
         rb = GetComponent<Rigidbody2D>();
 
         float percentage = 0.4f;
@@ -137,7 +138,7 @@ public class BulletBehaviour : MonoBehaviour
             {
                 if (!bullet.Explode && !collision.CompareTag("Player") &&
                     !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet") &&
-                    bullet.fireType != Bullet.type.MELEE)
+                    bullet.fireType != Bullet.type.MELEE && !bullet.WallBounce)
                 {
                     Destroy(gameObject);
                 }
@@ -184,7 +185,7 @@ public class BulletBehaviour : MonoBehaviour
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
-                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE)
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && !bullet.WallBounce)
                 {
                     Destroy(gameObject);
                 }

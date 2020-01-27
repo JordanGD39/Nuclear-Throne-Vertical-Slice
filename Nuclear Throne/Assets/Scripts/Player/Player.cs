@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
             else
             {
                 getKnockback = true;
+                GetComponent<PlayerMovement>().enabled = false;
             }
 
             beingHit = true;
@@ -98,9 +99,7 @@ public class Player : MonoBehaviour
         if (GetComponent<StatsClass>().Health <= 0)
         {
             Dead = true;
-            Destroy(transform.parent.GetChild(1).gameObject);
-            GetComponent<PlayerMovement>().enabled = false;
-            GetComponent<Roll>().enabled = false;
+            Destroy(transform.parent.GetChild(1).gameObject);            
             transform.GetChild(0).GetComponent<Animator>().SetBool("Dead", true);
             yield return new WaitForSeconds(0.5f);
             rb.velocity *= 0;

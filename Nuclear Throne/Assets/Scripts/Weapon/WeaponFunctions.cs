@@ -64,7 +64,15 @@ public class WeaponFunctions : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
-                if (timer >= holder.Primary.ReloadTime && !shooting)
+                float reload = holder.Primary.ReloadTime - (holder.Level - 1) / 10;
+
+                if (reload < 0.1f)
+                {
+                    reload = 0.1f;
+                }
+                
+
+                if (timer >= reload && !shooting)
                 {
                     StartCoroutine(Shoot());
                 }                    
@@ -74,7 +82,16 @@ public class WeaponFunctions : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                if (timer >= holder.Primary.ReloadTime && !shooting)
+                float reload = holder.Primary.ReloadTime - (holder.Level - 1) / 10;
+
+                if (reload < 0.1f)
+                {
+                    reload = 0.1f;
+                }
+
+                Debug.Log(reload);
+
+                if (timer >= reload && !shooting)
                 {
                     StartCoroutine(Shoot());
                 }
@@ -264,13 +281,17 @@ public class WeaponFunctions : MonoBehaviour
             {
                 for (int i = 0; i < holder.Primary.ShootBullets; i++)
                 {
-                    gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
-                    yield return new WaitForSeconds(0.05f);
+                    gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl, i);
+
+                    if (holder.Primary.FixedAngle == 0)
+                    {
+                        yield return new WaitForSeconds(0.05f);
+                    }                    
                 }
             }
             else
             {
-                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl);
+                gun.Shoot(bulletPref, holder.Primary.WeaponBullet, holder.Primary, playerControl, 0);
             }
 
             if (!playerControl && holder.GetComponent<EnemyAi>().BadAimer)

@@ -20,4 +20,4 @@ MonoBehaviour:
   dissapear: 1
   explode: 0
   playerDamage: 0
-  wallBounce: 1
+  wallBounce: 0
