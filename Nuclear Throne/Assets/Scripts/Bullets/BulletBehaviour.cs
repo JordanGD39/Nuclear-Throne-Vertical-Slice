@@ -119,11 +119,14 @@ public class BulletBehaviour : MonoBehaviour
             {
                 BulletBehaviour enemBulBhv = collision.GetComponent<BulletBehaviour>();
 
-                if (WeaponThatShot.Name != "Screwdriver" && !enemBulBhv.PlayerControl)
+                if ((WeaponThatShot.Name != "SCREWDRIVER" && enemBulBhv.bullet.name != "ScorpionBullet") &&
+                    !enemBulBhv.PlayerControl)
                 {
                     enemBulBhv.rb.velocity *= -1;
+                    enemBulBhv.transform.rotation = Quaternion.Euler(enemBulBhv.transform.rotation.x, enemBulBhv.transform.rotation.y,
+                    (-90.0f + Mathf.Atan2(enemBulBhv.rb.velocity.y, enemBulBhv.rb.velocity.x) * (180 / Mathf.PI)));
                 }
-                else if (WeaponThatShot.Name == "Screwdriver" && !enemBulBhv.PlayerControl)
+                else if ((WeaponThatShot.Name == "SCREWDRIVER" || enemBulBhv.bullet.name == "ScorpionBullet") && !enemBulBhv.PlayerControl)
                 {
                     Destroy(collision.gameObject);
                 }
@@ -132,7 +135,9 @@ public class BulletBehaviour : MonoBehaviour
             }
             else
             {
-                if (!bullet.Explode && !collision.CompareTag("Player") && !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet"))
+                if (!bullet.Explode && !collision.CompareTag("Player") &&
+                    !collision.CompareTag("Enemy") && !collision.CompareTag("Bullet") &&
+                    bullet.fireType != Bullet.type.MELEE)
                 {
                     Destroy(gameObject);
                 }
@@ -179,7 +184,7 @@ public class BulletBehaviour : MonoBehaviour
             else
             {
                 if (!collision.CompareTag("Player") && !collision.CompareTag("Enemy") &&
-                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE && !bullet.Explode)
+                    !collision.CompareTag("Bullet") && bullet.fireType != Bullet.type.MELEE)
                 {
                     Destroy(gameObject);
                 }
