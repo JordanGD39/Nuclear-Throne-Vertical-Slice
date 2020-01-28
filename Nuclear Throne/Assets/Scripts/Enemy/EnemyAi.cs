@@ -290,6 +290,7 @@ public class EnemyAi : MonoBehaviour
 
                 knockbackForce = deathKnockback;
                 Dead = true;
+                GameManager.instance.Kills++;
                 gameObject.layer = 14;
                 Destroy(transform.GetChild(1).gameObject);
                 Destroy(transform.GetChild(2).gameObject);

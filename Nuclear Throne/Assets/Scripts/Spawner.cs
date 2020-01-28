@@ -52,7 +52,7 @@ public class Spawner : MonoBehaviour
         }
 
         //Chests spawn
-        for (int i = 0; i < Random.Range(3, 6); i++)
+        for (int i = 0; i < Random.Range(5, 8); i++)
         {
             float rand = Random.Range(0, 100);
 
@@ -66,20 +66,38 @@ public class Spawner : MonoBehaviour
 
                 if (rand < 20)
                 {
-                    float y = Random.Range(-26, 2);
-
-                    if (y > -4 && y < 4)
-                    {
-                        y = 5;
-                    }
-
-                    GameObject chest = Instantiate(chests[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
+                    GameObject presentChest = Instantiate(chests[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
                 }
                 else
                 {
-                    
+                    rand = Random.Range(0, 100);
 
-                    GameObject chest = Instantiate(chests[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
+                    if (rand < 20)
+                    {
+                        rand = Random.Range(0, 100);
+
+                        if (rand < 40)
+                        {
+                            GameObject largeChest = Instantiate(chests[3], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
+                        }
+                        else
+                        {
+                            if (GameManager.instance.GetComponent<StatsClass>().Health <= 4)
+                            {
+                                GameObject medKit = Instantiate(chests[5], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
+                            }
+                            else
+                            {
+                                GameObject radCanister = Instantiate(chests[4], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
+                            }
+                            
+                        }
+                        
+                    }
+                    else
+                    {
+                        GameObject weaponChest = Instantiate(chests[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
+                    }                    
                 }
             }
         }

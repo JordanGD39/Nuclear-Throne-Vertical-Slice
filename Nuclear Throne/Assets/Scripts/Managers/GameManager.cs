@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject textPref;
     public int Difficulty { get; set; }
+    public int Kills { get; set; }
 
     private Transform canvas;
 
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
         canvas = GameObject.FindGameObjectWithTag("WorldCanvas").transform;    
     }
 
-    public void TextSpawn(string weaponName, Transform objTransform)
+    public void TextSpawn(string textToSpawn, Transform objTransform)
     {
         if (canvas == null)
         {
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
         GameObject text = Instantiate(textPref, canvas, true);
         text.transform.position = new Vector3(objTransform.position.x, objTransform.position.y, 0);
         text.transform.localScale = new Vector3(1, 1, 1);
-        text.transform.GetChild(0).GetComponent<Text>().text = weaponName;
+        text.transform.GetChild(0).GetComponent<Text>().text = textToSpawn;
         Destroy(text, 2.5f);
     }
 

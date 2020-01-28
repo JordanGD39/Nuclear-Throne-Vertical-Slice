@@ -6,6 +6,8 @@ public class Medkit : MonoBehaviour
 {
     private UiHandler ui;
 
+    [SerializeField] private int health = 2;
+
     private void Start()
     {
         ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
@@ -15,14 +17,25 @@ public class Medkit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<StatsClass>().Health += 2;
+            
+
+            collision.GetComponent<StatsClass>().Health += health;
 
             if (collision.GetComponent<StatsClass>().Health > 8)
             {
                 collision.GetComponent<StatsClass>().Health = 8;
             }
             ui.UpdateHealth();
-            Destroy(gameObject);
+            if (GetComponent<Animator>() != null)
+            {
+                GetComponent<Animator>().Play("MedkitOpen");                
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            GameManager.instance.TextSpawn("+" + health + " health!", transform);
         }
     }
 }

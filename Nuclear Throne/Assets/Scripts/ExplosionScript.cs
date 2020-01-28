@@ -13,6 +13,7 @@ public class ExplosionScript : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.Play("Explosion");
         StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.15f, 0.4f));
         Destroy(transform.parent.gameObject, 0.8f);
     }

@@ -53,6 +53,8 @@ public class PauseFunctionality : MonoBehaviour
             {
                 pauseUI.transform.GetChild(1).GetChild(0).GetComponent<Button>().Select();
                 pauseUI.transform.GetChild(1).GetChild(0).GetComponent<Button>().OnSelect(null);
+                pauseUI.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = "1-" + (GameManager.instance.Difficulty + 1);
+                pauseUI.transform.GetChild(2).GetChild(1).GetComponent<Text>().text = GameManager.instance.Kills.ToString();
                 return true;
             }
         }
@@ -85,13 +87,17 @@ public class PauseFunctionality : MonoBehaviour
     {
         continueTroughMenu = true;
         pause = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.instance.Difficulty = 0;
+        GameManager.instance.Kills = 0;
+        SceneManager.LoadScene(1);
     }
 
     public void Menu()
     {
         continueTroughMenu = true;
         pause = false;
+        GameManager.instance.Difficulty = 0;
+        GameManager.instance.Kills = 0;
         SceneManager.LoadScene(0);
     }
 
