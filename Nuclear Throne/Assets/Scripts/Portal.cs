@@ -13,6 +13,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            collision.GetComponent<Roll>().CantRoll = true;
             if (!makingPortal)
             {
                 StartCoroutine(WaitBeforeNextLevel(collision));
@@ -30,6 +31,13 @@ public class Portal : MonoBehaviour
         GameManager.instance.SavePlayer(collision.GetComponent<StatsClass>());
         GameManager.instance.Difficulty++;
         GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
-        SceneManager.LoadScene(2);
+        if (GameManager.instance.LevelUps > 0)
+        {
+            SceneManager.LoadScene(3);
+        }
+        else
+        {
+            SceneManager.LoadScene(2);
+        }        
     }
 }

@@ -13,7 +13,7 @@ public class CactusHealth : ObjectHealth
     protected override void Start()
     {
         rendr = GetComponent<SpriteRenderer>();
-        rndmInt = (int)Random.Range(0, 6);
+        rndmInt = Random.Range(0, 6);
         rendr.sprite = normalSprites[rndmInt];
 
         base.Start();

@@ -18,11 +18,7 @@ public class Spawner : MonoBehaviour
             if (rand <= 60)
             {
                 GameObject enemy = Instantiate(enemies[0], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
-                float health = enemy.GetComponent<StatsClass>().Health;
-
-                health *= 0.05f * GameManager.instance.Difficulty;
-
-                enemy.GetComponent<StatsClass>().Health += Mathf.RoundToInt(health);
+                EnemyHPreduce(enemy);
             }
             else
             {
@@ -31,22 +27,12 @@ public class Spawner : MonoBehaviour
                 if (rand < 30)
                 {
                     GameObject enemy = Instantiate(enemies[2], new Vector3(Random.Range(-8f, 19f), Random.Range(-26f, -5), 0), transform.rotation);
-
-                    float health = enemy.GetComponent<StatsClass>().Health;
-
-                    health *= 0.05f * GameManager.instance.Difficulty;
-
-                    enemy.GetComponent<StatsClass>().Health += Mathf.RoundToInt(health);
+                    EnemyHPreduce(enemy);
                 }
                 else
                 {
                     GameObject enemy = Instantiate(enemies[1], new Vector3(Random.Range(-8f, 19f), Random.Range(-26f, -5), 0), transform.rotation);
-
-                    float health = enemy.GetComponent<StatsClass>().Health;
-
-                    health *= 0.05f * GameManager.instance.Difficulty;
-
-                    enemy.GetComponent<StatsClass>().Health += Mathf.RoundToInt(health);
+                    EnemyHPreduce(enemy);
                 }
             }
         }
@@ -82,7 +68,7 @@ public class Spawner : MonoBehaviour
                         }
                         else
                         {
-                            if (GameManager.instance.GetComponent<StatsClass>().Health <= 4)
+                            if (GameManager.instance.GetComponent<StatsClass>().Health <= GameManager.instance.GetComponent<StatsClass>().MaxHealth / 2)
                             {
                                 GameObject medKit = Instantiate(chests[5], new Vector3(Random.Range(-8f, 19f), Random.Range(-26, 2), 0), transform.rotation);
                             }
@@ -103,5 +89,14 @@ public class Spawner : MonoBehaviour
         }
 
         GameManager.instance.GetComponent<AllEnemiesDefeated>().CheckEnemies();
+    }
+
+    private void EnemyHPreduce(GameObject enemy)
+    {
+        float health = enemy.GetComponent<StatsClass>().Health;
+
+        health *= 0.05f * GameManager.instance.Difficulty;
+        health *= GameManager.instance.ScaryLevel;
+        enemy.GetComponent<StatsClass>().Health += Mathf.RoundToInt(health);
     }
 }

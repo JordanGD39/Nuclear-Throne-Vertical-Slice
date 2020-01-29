@@ -15,6 +15,8 @@ public class Roll : MonoBehaviour
     private bool rollTrigger = false;
     private bool addForce = false;
 
+    public bool CantRoll { get; set; } = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class Roll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.Dead) return;
+        if (player.Dead || CantRoll) return;
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

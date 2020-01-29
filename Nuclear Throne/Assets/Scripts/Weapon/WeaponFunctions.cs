@@ -64,15 +64,7 @@ public class WeaponFunctions : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
-                float reload = holder.Primary.ReloadTime - (holder.Level - 1) / 10;
-
-                if (reload < 0.1f)
-                {
-                    reload = 0.1f;
-                }
-                
-
-                if (timer >= reload && !shooting)
+                if (timer >= holder.Primary.ReloadTime && !shooting)
                 {
                     StartCoroutine(Shoot());
                 }                    
@@ -82,16 +74,7 @@ public class WeaponFunctions : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                float reload = holder.Primary.ReloadTime - (holder.Level - 1) / 10;
-
-                if (reload < 0.1f)
-                {
-                    reload = 0.1f;
-                }
-
-                Debug.Log(reload);
-
-                if (timer >= reload && !shooting)
+                if (timer >= holder.Primary.ReloadTime && !shooting)
                 {
                     StartCoroutine(Shoot());
                 }

@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         spr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         ui = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>();
 
-        if (SceneManager.GetActiveScene().buildIndex > 1)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             transition.Play("PortalTransitionSmall");
             GameManager.instance.LoadPlayer(stats);
@@ -107,6 +107,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(3);
 
             GameManager.instance.Difficulty = 1;
+            GameManager.instance.Kills = 0;
             GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
             SceneManager.LoadScene(0);
         }

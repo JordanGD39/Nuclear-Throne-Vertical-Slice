@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Transform cursor;
 
     [SerializeField] private float speed;
+    public float Speed { get{ return speed; } set { speed = value; } }
     public bool CantMove { get; set; } = false;
 
     private Vector2 movement;

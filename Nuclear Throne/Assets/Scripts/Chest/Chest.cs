@@ -176,9 +176,9 @@ public class Chest : MonoBehaviour
                     player.Ammo += 40 * multiplier;
                     GameManager.instance.TextSpawn("+" + 40 * multiplier + " BULLETS", transform);
 
-                    if (player.Ammo > 120)
+                    if (player.Ammo > GameManager.instance.BulletAmmoCap)
                     {
-                        player.Ammo = 120;
+                        player.Ammo = GameManager.instance.BulletAmmoCap;
                     }
                     break;
                 case Bullet.ammoType.SHELL:
@@ -193,31 +193,32 @@ public class Chest : MonoBehaviour
                     player.EnergyAmmo += 10 * multiplier;
                     GameManager.instance.TextSpawn("+" + 10 * multiplier + " BULLETS", transform);
 
-                    if (player.EnergyAmmo > 120)
+                    if (player.EnergyAmmo > GameManager.instance.OtherAmmoCap)
                     {
-                        player.EnergyAmmo = 120;
+                        player.EnergyAmmo = GameManager.instance.OtherAmmoCap;
                     }
                     break;
                 case Bullet.ammoType.EXPLOSION:
                     player.ExplosiveAmmo += 8 * multiplier;
                     GameManager.instance.TextSpawn("+" + 8 * multiplier + " BULLETS", transform);
 
-                    if (player.ExplosiveAmmo > 120)
+                    if (player.ExplosiveAmmo > GameManager.instance.OtherAmmoCap)
                     {
-                        player.ExplosiveAmmo = 120;
+                        player.ExplosiveAmmo = GameManager.instance.OtherAmmoCap;
                     }
                     break;
                 case Bullet.ammoType.BOLT:
                     player.BoltAmmo += 7 * multiplier;
                     GameManager.instance.TextSpawn("+" + 7 * multiplier + " BULLETS", transform);
 
-                    if (player.BoltAmmo > 120)
+                    if (player.BoltAmmo > GameManager.instance.OtherAmmoCap)
                     {
-                        player.BoltAmmo = 120;
+                        player.BoltAmmo = GameManager.instance.OtherAmmoCap;
                     }
                     break;
             }
         }
+        //Other characters ammo
         else
         {
             switch (weapon.WeaponBullet.bulletType)

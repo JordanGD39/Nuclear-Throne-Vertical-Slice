@@ -12,8 +12,15 @@ public class UiHandler : MonoBehaviour
     private StatsClass playerStats;
 
     private void Start()
-    {
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsClass>();
+    {        
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsClass>();
+        }
+        else
+        {
+            playerStats = GameManager.instance.GetComponent<StatsClass>();
+        }
         Transform main = transform.GetChild(0);
         weaponUI = main.GetChild(2);
         radUI = main.GetChild(0);
@@ -29,9 +36,10 @@ public class UiHandler : MonoBehaviour
     public void UpdateHealth()
     {
         float health = playerStats.Health;
+        float maxHealth = playerStats.MaxHealth;
 
-        healthUI.GetChild(1).GetComponent<Image>().fillAmount = health / 8;
-        healthUI.GetChild(2).GetComponent<Text>().text = playerStats.Health + "/8";
+        healthUI.GetChild(1).GetComponent<Image>().fillAmount = health / maxHealth;
+        healthUI.GetChild(2).GetComponent<Text>().text = health + "/" + maxHealth;
     }
 
     public void UpdateWeapon()
@@ -93,6 +101,15 @@ public class UiHandler : MonoBehaviour
                 break;
         }
 
+        if (playerStats.Primary.Melee)
+        {
+            weaponUI.GetChild(1).gameObject.SetActive(false);
+        }
+        else
+        {
+            weaponUI.GetChild(1).gameObject.SetActive(true);
+        }
+
         weaponUI.GetChild(1).GetComponent<Text>().text = ammo.ToString();
 
         if (playerStats.Secondary != null)
@@ -114,6 +131,15 @@ public class UiHandler : MonoBehaviour
                 case Bullet.ammoType.BOLT:
                     ammo = playerStats.BoltAmmo;
                     break;
+            }
+
+            if (playerStats.Secondary.Melee)
+            {
+                weaponUI.GetChild(3).gameObject.SetActive(false);
+            }
+            else
+            {
+                weaponUI.GetChild(3).gameObject.SetActive(true);
             }
         }
 
@@ -175,6 +201,7 @@ public class UiHandler : MonoBehaviour
         {
             playerStats.Rads = 0;
             playerStats.Level++;
+            GameManager.instance.LevelUps++;
         }
 
         float rads = playerStats.Rads;

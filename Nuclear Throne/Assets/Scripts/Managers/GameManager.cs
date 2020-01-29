@@ -2,14 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     [SerializeField] private GameObject textPref;
-    public int Difficulty { get; set; }
+    public int Difficulty { get; set; } = 1;
     public int Kills { get; set; }
+
+    public int MovementLevel { get; set; } = 5;
+    public float ScaryLevel { get; set; } = 1;
+    public int BulletAmmoCap { get; set; } = 255;
+    public int OtherAmmoCap { get; set; } = 55;
+
+    //Count of level-ups this got
+    public int MovementLevels { get; set; } = 0;
+    public int ScaryLevels { get; set; } = 0;
+    public int AmmoLevels { get; set; } = 0;
+    public int HealthLevels { get; set; } = 0;
+
+    public int LevelUps { get; set; } = 0;
 
     private Transform canvas;
 
@@ -29,14 +43,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        canvas = GameObject.FindGameObjectWithTag("WorldCanvas").transform;    
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            canvas = GameObject.FindGameObjectWithTag("WorldCanvas").transform;
+        }            
     }
 
     public void TextSpawn(string textToSpawn, Transform objTransform)
     {
         if (canvas == null)
         {
-            canvas = GameObject.FindGameObjectWithTag("WorldCanvas").transform;
+            if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                canvas = GameObject.FindGameObjectWithTag("WorldCanvas").transform;
+            }
         }
 
         GameObject text = Instantiate(textPref, canvas, true);
@@ -59,6 +79,7 @@ public class GameManager : MonoBehaviour
         stats.Level = player.Level;
         stats.Rads = player.Rads;
         stats.Health = player.Health;
+        stats.MaxHealth = player.MaxHealth;
     }
 
     public void LoadPlayer(StatsClass player)
@@ -74,5 +95,7 @@ public class GameManager : MonoBehaviour
         player.Level = stats.Level;
         player.Rads = stats.Rads;
         player.Health = stats.Health;
+        player.MaxHealth = stats.MaxHealth;
+        player.GetComponent<PlayerMovement>().Speed = MovementLevel;
     }
 }
