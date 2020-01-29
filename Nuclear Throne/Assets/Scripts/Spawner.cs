@@ -95,8 +95,9 @@ public class Spawner : MonoBehaviour
     {
         float health = enemy.GetComponent<StatsClass>().Health;
 
-        health *= 0.05f * GameManager.instance.Difficulty;
         health *= GameManager.instance.ScaryLevel;
+        health *= 0.05f * GameManager.instance.Difficulty;
+        
         enemy.GetComponent<StatsClass>().Health += Mathf.RoundToInt(health);
     }
 }
