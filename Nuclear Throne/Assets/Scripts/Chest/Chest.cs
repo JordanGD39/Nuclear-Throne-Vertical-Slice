@@ -184,9 +184,9 @@ public class Chest : MonoBehaviour
                 case Bullet.ammoType.SHELL:
                     player.ShellAmmo += 10 * multiplier;
                     GameManager.instance.TextSpawn("+" + 10 * multiplier + " BULLETS", transform);
-                    if (player.ShellAmmo > 120)
+                    if (player.ShellAmmo > GameManager.instance.OtherAmmoCap)
                     {
-                        player.ShellAmmo = 120;
+                        player.ShellAmmo = GameManager.instance.OtherAmmoCap;
                     }
                     break;
                 case Bullet.ammoType.ENERGY:

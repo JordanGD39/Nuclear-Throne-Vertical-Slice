@@ -61,6 +61,8 @@ public class UiHandler : MonoBehaviour
             weaponUI.GetChild(2).gameObject.SetActive(false);
             weaponUI.GetChild(3).gameObject.SetActive(false);
         }
+
+        UpdateAmmo();
     }
 
     public void UpdateAmmo()
@@ -199,6 +201,7 @@ public class UiHandler : MonoBehaviour
     {        
         if (playerStats.Rads > 60 * playerStats.Level && playerStats.Level <= 9)
         {
+            radUI.GetChild(1).gameObject.SetActive(true);
             playerStats.Rads = 0;
             playerStats.Level++;
             GameManager.instance.LevelUps++;

@@ -106,8 +106,7 @@ public class Player : MonoBehaviour
 
             yield return new WaitForSeconds(3);
 
-            GameManager.instance.Difficulty = 1;
-            GameManager.instance.Kills = 0;
+            GameManager.instance.Reset();
             GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
             SceneManager.LoadScene(0);
         }

@@ -87,8 +87,7 @@ public class PauseFunctionality : MonoBehaviour
     {
         continueTroughMenu = true;
         pause = false;
-        GameManager.instance.Difficulty = 1;
-        GameManager.instance.Kills = 0;
+        GameManager.instance.Reset();
         SceneManager.LoadScene(1);
     }
 
@@ -96,8 +95,7 @@ public class PauseFunctionality : MonoBehaviour
     {
         continueTroughMenu = true;
         pause = false;
-        GameManager.instance.Difficulty = 1;
-        GameManager.instance.Kills = 0;
+        GameManager.instance.Reset();
         SceneManager.LoadScene(0);
     }
 

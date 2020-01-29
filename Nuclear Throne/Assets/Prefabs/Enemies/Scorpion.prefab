@@ -176,7 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0e19e8d702e0146b18f9243a1676ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 12
+  health: 15
+  maxHealth: 8
   level: 1
   primary: {fileID: 11400000, guid: efd7e3ca88c0d8b4ea1e305cd1677929, type: 2}
   secondary: {fileID: 0}

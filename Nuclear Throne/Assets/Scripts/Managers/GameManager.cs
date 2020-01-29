@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int Difficulty { get; set; } = 1;
     public int Kills { get; set; }
 
-    public int MovementLevel { get; set; } = 5;
+    public float MovementLevel { get; set; } = 5;
     public float ScaryLevel { get; set; } = 1;
     public int BulletAmmoCap { get; set; } = 255;
     public int OtherAmmoCap { get; set; } = 55;
@@ -97,5 +97,21 @@ public class GameManager : MonoBehaviour
         player.Health = stats.Health;
         player.MaxHealth = stats.MaxHealth;
         player.GetComponent<PlayerMovement>().Speed = MovementLevel;
+    }
+
+    public void Reset()
+    {
+        MovementLevels = 0;
+        ScaryLevels = 0;
+        AmmoLevels = 0;
+        GetComponent<StatsClass>().MaxHealth = 8;
+        BulletAmmoCap = 255;
+        OtherAmmoCap = 55;
+        ScaryLevel = 1;
+        MovementLevel = 5;
+        HealthLevels = 0;
+        LevelUps = 0;
+        Difficulty = 1;
+        Kills = 0;
     }
 }

@@ -17,13 +17,11 @@ public class Medkit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            
-
             collision.GetComponent<StatsClass>().Health += health;
 
-            if (collision.GetComponent<StatsClass>().Health > 8)
+            if (collision.GetComponent<StatsClass>().Health > collision.GetComponent<StatsClass>().MaxHealth)
             {
-                collision.GetComponent<StatsClass>().Health = 8;
+                collision.GetComponent<StatsClass>().Health = collision.GetComponent<StatsClass>().MaxHealth;
             }
             ui.UpdateHealth();
             if (GetComponent<Animator>() != null)

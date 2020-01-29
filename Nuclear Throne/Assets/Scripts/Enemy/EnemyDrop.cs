@@ -23,10 +23,11 @@ public class EnemyDrop : MonoBehaviour
             rand = Random.Range(-100, 0);
 
             float health = playerStats.Health;
+            float maxHealth = playerStats.MaxHealth;
 
-            Debug.Log(Mathf.Abs(rand) + " health chance " + Mathf.Abs((health / 8 - 1) * 100));
+            Debug.Log(Mathf.Abs(rand) + " health chance " + Mathf.Abs((health / maxHealth - 1) * 100));
 
-            if (Mathf.Abs(rand) < Mathf.Abs((health / 8 - 1) * 100))
+            if (Mathf.Abs(rand) < Mathf.Abs((health / maxHealth - 1) * 100))
             {
                 GameObject miniAmmo = Instantiate(medkitPref, transform.position, Quaternion.identity);
             }
