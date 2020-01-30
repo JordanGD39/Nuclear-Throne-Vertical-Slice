@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public int Difficulty { get; set; } = 1;
     public int Kills { get; set; }
 
+    public bool ShowedCredits { get; set; } = false;
+
     public float MovementLevel { get; set; } = 5;
     public float ScaryLevel { get; set; } = 1;
     public int BulletAmmoCap { get; set; } = 255;

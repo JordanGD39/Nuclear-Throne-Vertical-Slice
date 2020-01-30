@@ -29,7 +29,7 @@ public class PowerUpButtons : MonoBehaviour
             float progress = Mathf.Clamp01(ao.progress / 0.9f);
             mutationText.text = "GENERATING... " + (progress * 100).ToString("F0") + "%";
             yield return null;
-        }
+        }        
     }
 
     public void GetIndex(int i)

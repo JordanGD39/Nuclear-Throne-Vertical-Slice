@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
         {
             transition.Play("PortalTransitionSmall");
             GameManager.instance.LoadPlayer(stats);
+            AudioManager.instance.Volume("Drylands", 0.6f);
         }
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
@@ -108,7 +109,15 @@ public class Player : MonoBehaviour
 
             GameManager.instance.Reset();
             GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
-            SceneManager.LoadScene(0);
+            if (GameManager.instance.ShowedCredits)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                GameManager.instance.ShowedCredits = true;
+                SceneManager.LoadScene(4);
+            }            
         }
         else
         {

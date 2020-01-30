@@ -72,6 +72,13 @@ public class AudioManager : MonoBehaviour
         currS.source.UnPause();
     }
 
+    public void Volume(string sound, float volume)
+    {
+        FindSound(sound);
+
+        currS.source.volume = volume;
+    }
+
     private void FindSound(string sound)
     {
         currS = Array.Find(sounds, item => item.name == sound);

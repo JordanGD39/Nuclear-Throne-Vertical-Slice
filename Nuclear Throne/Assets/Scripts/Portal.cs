@@ -33,6 +33,7 @@ public class Portal : MonoBehaviour
         GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
         if (GameManager.instance.LevelUps > 0)
         {
+            AudioManager.instance.Volume("Drylands", 0.2f);
             SceneManager.LoadScene(3);
         }
         else

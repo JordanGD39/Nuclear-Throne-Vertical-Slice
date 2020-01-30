@@ -9,6 +9,8 @@ public class PauseFunctionality : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUI;
 
+    private GameObject settingsUI;
+
     private List<GameObject> players = new List<GameObject>();
     private List<GameObject> weaponFunctions = new List<GameObject>();
     private LevelCheck level;
@@ -18,6 +20,7 @@ public class PauseFunctionality : MonoBehaviour
 
     private void Start()
     {
+        settingsUI = pauseUI.transform.GetChild(3).gameObject;
         level = GameManager.instance.GetComponent<LevelCheck>();
         players = level.FindObjectsOnLayer(13); //Player Layer
         weaponFunctions = level.FindObjectsWithNameWithoutLayer("WeaponRotation", 10);
@@ -30,6 +33,7 @@ public class PauseFunctionality : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 0)
             {
                 pauseUI = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(1).gameObject;
+                settingsUI = pauseUI.transform.GetChild(3).gameObject;
             }
             return;
         }
@@ -39,11 +43,18 @@ public class PauseFunctionality : MonoBehaviour
             pause = GetPauseButton(pause);
         }
         PauseGame(pause);
+
+        if (settingsUI.activeSelf && Input.GetButtonDown("Pause"))
+        {
+            settingsUI.SetActive(false);
+            pauseUI.transform.GetChild(1).GetChild(3).GetComponent<Button>().Select();
+            pauseUI.transform.GetChild(1).GetChild(3).GetComponent<Button>().OnSelect(null);
+        }
     }
 
     private bool GetPauseButton(bool pauseState)
     {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("Pause") && !settingsUI.activeSelf)
         {
             if (pauseState)
             {                
@@ -64,16 +75,19 @@ public class PauseFunctionality : MonoBehaviour
 
     private void PauseGame(bool pauseState)
     {
-        if (pauseState)
+        if (!settingsUI.activeSelf)
         {
-            Time.timeScale = 0;
-            ChangeComponentAvailability(false);
-        }
-        else
-        {
-            Time.timeScale = 1;
-            ChangeComponentAvailability(true);
-            continueTroughMenu = false;
+            if (pauseState)
+            {
+                Time.timeScale = 0;
+                ChangeComponentAvailability(false);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                ChangeComponentAvailability(true);
+                continueTroughMenu = false;
+            }
         }
     }
 
@@ -97,6 +111,18 @@ public class PauseFunctionality : MonoBehaviour
         pause = false;
         GameManager.instance.Reset();
         SceneManager.LoadScene(0);
+    }
+
+    public void Settings(Slider slider)
+    {
+        slider.value = PlayerPrefs.GetFloat("volume", 1);
+        settingsUI.SetActive(true);
+    }
+
+    public void VolumeChange(Slider slider)
+    {
+        PlayerPrefs.SetFloat("volume", slider.value);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 
     private void ChangeComponentAvailability(bool set)
