@@ -22,15 +22,18 @@ public class StartScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Submit"))
-        {            
-            SceneManager.LoadScene(1);
-            AudioManager.instance.StopPlaying("Main");
-            AudioManager.instance.Play("Drylands");
-        }
-        else if (Input.GetButtonDown("Pause"))
+        if (Input.anyKeyDown)
         {
-            Application.Quit();
-        }
+            if (Input.GetButtonDown("Pause"))
+            {
+                Application.Quit();
+            }
+            else
+            {
+                SceneManager.LoadScene(1);
+                AudioManager.instance.StopPlaying("Main");
+                AudioManager.instance.Play("Drylands");
+            }            
+        }        
     }
 }
