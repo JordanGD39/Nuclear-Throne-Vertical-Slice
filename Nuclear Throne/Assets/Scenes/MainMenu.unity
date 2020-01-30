@@ -593,7 +593,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: PRESS PAUSE TO QUIT
+  m_Text: PRESS ESCAPE TO QUIT
 --- !u!222 &988617000
 CanvasRenderer:
   m_ObjectHideFlags: 0
