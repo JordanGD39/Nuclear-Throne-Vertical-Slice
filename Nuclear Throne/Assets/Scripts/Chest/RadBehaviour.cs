@@ -89,7 +89,9 @@ public class RadBehaviour : MonoBehaviour
         }
         else if (collision.gameObject.layer == 21) //Portal Layer
         {
-            Destroy(gameObject, 1.0f);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<StatsClass>().Rads++;
+            GameObject.FindGameObjectWithTag("Canvas").GetComponent<UiHandler>().UpdateRads();
+            Destroy(gameObject);
         }
     }
 

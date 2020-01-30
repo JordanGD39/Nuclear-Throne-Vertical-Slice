@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private GameObject transition;
+    private StatsClass player;
 
     private bool makingPortal = false;
 
