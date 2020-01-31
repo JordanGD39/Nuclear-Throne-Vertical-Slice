@@ -124,19 +124,4 @@ public class Player : MonoBehaviour
             GetComponent<PlayerMovement>().CantMove = false;
         }
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 21) //Portal Layer
-        {
-            StartCoroutine(WaitTillAppQuit());
-        }
-    }
-
-    IEnumerator WaitTillAppQuit()
-    {
-        yield return new WaitForSeconds(5.0f);
-
-        Application.Quit();
-    }
 }

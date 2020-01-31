@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
             float progress = Mathf.Clamp01(ao.progress / 0.9f);
             text.text = textToShow + (progress * 100).ToString("F0") + "%";
             yield return null;
-            textGameObject.transform.position = Vector3.zero;
+            textGameObject.transform.localPosition = Vector3.zero;
         }
     }
 }

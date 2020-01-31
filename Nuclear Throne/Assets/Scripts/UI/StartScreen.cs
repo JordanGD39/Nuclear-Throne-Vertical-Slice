@@ -8,6 +8,8 @@ public class StartScreen : MonoBehaviour
 
     private bool loading = false;
 
+    private bool receiveInput = false;
+
     private void Start()
     {
         Cursor.visible = false;
@@ -22,12 +24,14 @@ public class StartScreen : MonoBehaviour
             AudioManager.instance.StopPlaying(AudioManager.instance.CurrSound.name);
         }
         AudioManager.instance.Play("Main");
+
+        StartCoroutine(DelayInput());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && receiveInput)
         {
             if (Input.GetButtonDown("Pause") && !controlsPanel.activeSelf)
             {
@@ -48,5 +52,11 @@ public class StartScreen : MonoBehaviour
                 }
             }            
         }        
+    }
+
+    private IEnumerator DelayInput()
+    {
+        yield return new WaitForSeconds(0.5f);
+        receiveInput = true;
     }
 }

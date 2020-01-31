@@ -454,7 +454,7 @@ MonoBehaviour:
     RIGHT MOUSE: ROLL
 
 
-    SPACEBAR: SWITH WEAPON
+    SPACEBAR: SWITCH WEAPON
 
 
     E: PICK UP A WEAPON'
@@ -600,6 +600,12 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Credits
+    clip: {fileID: 8300000, guid: 4a6c1e78c8973904aade89cb8bb39cff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &721971557
 Transform:
