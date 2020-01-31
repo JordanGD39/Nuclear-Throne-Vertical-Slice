@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
             else
             {
                 getKnockback = true;
-                GetComponent<PlayerMovement>().enabled = false;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
             beingHit = true;

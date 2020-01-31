@@ -11,6 +11,7 @@ TagManager:
   - WorldCanvas
   - Canvas
   - BarCanvas
+  - PortalTransition
   layers:
   - Default
   - TransparentFX

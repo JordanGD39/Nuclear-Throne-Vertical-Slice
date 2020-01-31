@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Transform cursor;
+    private Player player;
 
     [SerializeField] private float speed;
     public float Speed { get{ return speed; } set { speed = value; } }
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GetComponent<Player>();
         anim = transform.GetChild(0).GetComponent<Animator>();
         cursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Transform>();
     }
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.Dead) return;
+
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movement = movement.normalized;
         if (!CantMove)
@@ -45,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!CantMove)
+        if (!CantMove && !player.Dead)
         {
             rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         }        

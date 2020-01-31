@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PauseFunctionality : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUI;
+    private SpriteRenderer portalTransition;
 
     private GameObject settingsUI;
 
@@ -24,9 +25,14 @@ public class PauseFunctionality : MonoBehaviour
         {
             settingsUI = pauseUI.transform.GetChild(3).gameObject;
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            portalTransition = GameObject.FindGameObjectWithTag("PortalTransition").GetComponent<SpriteRenderer>();
+        }        
         level = GameManager.instance.GetComponent<LevelCheck>();
         players = level.FindObjectsOnLayer(13); //Player Layer
-        weaponFunctions = level.FindObjectsWithNameWithoutLayer("WeaponRotation", 10);
+        weaponFunctions = level.FindObjectsWithNameWithoutLayer("WeaponRotation", 10);        
     }
 
     private void Update()
@@ -43,7 +49,10 @@ public class PauseFunctionality : MonoBehaviour
 
         if (!continueTroughMenu)
         {
-            pause = GetPauseButton(pause);
+            if (portalTransition != null && !portalTransition.enabled || portalTransition == null)
+            {
+                pause = GetPauseButton(pause);
+            }            
         }
         PauseGame(pause);
 

@@ -184,9 +184,18 @@ public class UiHandler : MonoBehaviour
                 }
             }
 
-            currAmmo.GetChild(1).GetComponent<Image>().fillAmount = ammoFloat / 120;
+            float ammoCap = GameManager.instance.BulletAmmoCap;
 
-            if (ammoFloat < 60)
+            if (i != 0)
+            {
+                ammoCap = GameManager.instance.OtherAmmoCap;
+            }
+
+            currAmmo.GetChild(1).GetComponent<Image>().fillAmount = ammoFloat / ammoCap;            
+
+            ammoCap /= 2;
+
+            if (ammoFloat < ammoCap)
             {
                 currAmmo.GetChild(1).GetComponent<Image>().color = Color.red;
             }

@@ -23,10 +23,11 @@ public class Portal : MonoBehaviour
     }
 
     private IEnumerator WaitBeforeNextLevel(Collider2D collision)
-    {
+    {        
         makingPortal = true;
         yield return new WaitForSeconds(1);
         GameObject portal = Instantiate(transition, transform.position, Quaternion.identity);
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<PauseFunctionality>().enabled = false;
         portal.GetComponent<Animator>().Play("PortalTransition");
         yield return new WaitForSeconds(1);
         GameManager.instance.SavePlayer(collision.GetComponent<StatsClass>());
