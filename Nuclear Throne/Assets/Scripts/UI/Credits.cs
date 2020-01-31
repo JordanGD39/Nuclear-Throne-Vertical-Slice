@@ -12,10 +12,7 @@ public class Credits : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        if (AudioManager.instance.CurrSound != null)
-        {
-            AudioManager.instance.StopPlaying(AudioManager.instance.CurrSound.name);
-        }        
+        AudioManager.instance.StopPlaying("Drylands");
         AudioManager.instance.Play("Credits");
     }
 

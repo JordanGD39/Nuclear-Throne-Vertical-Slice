@@ -35,11 +35,11 @@ public class Portal : MonoBehaviour
         if (GameManager.instance.LevelUps > 0)
         {
             AudioManager.instance.Volume("Drylands", 0.2f);
-            SceneManager.LoadScene(3);
+            StartCoroutine(GameManager.instance.LoadAsync(3, "LOADING..."));
         }
         else
         {
-            SceneManager.LoadScene(2);
+            StartCoroutine(GameManager.instance.LoadAsync(2, "GENERATING..."));
         }        
     }
 }

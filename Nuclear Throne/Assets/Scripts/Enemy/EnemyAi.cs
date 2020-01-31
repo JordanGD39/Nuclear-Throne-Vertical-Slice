@@ -8,8 +8,6 @@ public class EnemyAi : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
-    private AllEnemiesDefeated gManager;
-
     [SerializeField] private bool playerInSight = false;
     public bool PlayerInSight { get { return playerInSight; } set { playerInSight = value; } }
 
@@ -51,7 +49,6 @@ public class EnemyAi : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator>();
-        gManager = FindObjectOfType<AllEnemiesDefeated>().GetComponent<AllEnemiesDefeated>();
 
         physMat = new PhysicsMaterial2D();
         physMat.bounciness = 0;
@@ -263,8 +260,8 @@ public class EnemyAi : MonoBehaviour
             if (stats.Health <= 0)
             {
                 DropItems(pickUpItem[0], radDropAmount);
-                gManager.EnemyDeath = true;
-                gManager.Place = transform.position;
+                GameManager.instance.GetComponent<AllEnemiesDefeated>().EnemyDeath = true;
+                GameManager.instance.GetComponent<AllEnemiesDefeated>().Place = transform.position;
 
                 CapsuleCollider2D col = transform.GetChild(0).GetComponent<CapsuleCollider2D>();
                 col.sharedMaterial.bounciness = 1;

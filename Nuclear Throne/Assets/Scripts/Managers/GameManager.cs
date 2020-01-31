@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private GameObject textPref;
+    [SerializeField] private GameObject loadTextPref;
     public int Difficulty { get; set; } = 1;
     public int Kills { get; set; }
 
@@ -101,7 +102,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().Speed = MovementLevel;
     }
 
-    public void Reset()
+    public void ResetStats()
     {
         MovementLevels = 0;
         ScaryLevels = 0;
@@ -115,5 +116,38 @@ public class GameManager : MonoBehaviour
         LevelUps = 0;
         Difficulty = 1;
         Kills = 0;
+    }
+
+    public IEnumerator LoadAsync(int scene, string textToShow)
+    {
+        AsyncOperation ao = SceneManager.LoadSceneAsync(scene);
+
+        Transform canvasTransform;
+
+        if (GameObject.FindGameObjectWithTag("BarCanvas") != null)
+        {
+            canvasTransform = GameObject.FindGameObjectWithTag("BarCanvas").transform;
+        }
+        else
+        {
+            canvasTransform = GameObject.FindGameObjectWithTag("Canvas").transform;
+        }
+         
+
+        GameObject textGameObject = Instantiate(loadTextPref, canvasTransform, false);
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            textGameObject.GetComponent<Image>().enabled = false;
+        }
+        textGameObject.transform.position = Vector3.zero;
+        Text text = textGameObject.transform.GetChild(0).GetComponent<Text>();
+
+        while (!ao.isDone)
+        {
+            float progress = Mathf.Clamp01(ao.progress / 0.9f);
+            text.text = textToShow + (progress * 100).ToString("F0") + "%";
+            yield return null;
+            textGameObject.transform.position = Vector3.zero;
+        }
     }
 }

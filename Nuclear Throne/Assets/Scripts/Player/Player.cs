@@ -107,16 +107,16 @@ public class Player : MonoBehaviour
 
             yield return new WaitForSeconds(3);
 
-            GameManager.instance.Reset();
+            GameManager.instance.ResetStats();
             GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
             if (GameManager.instance.ShowedCredits)
             {
-                SceneManager.LoadScene(0);
+                StartCoroutine(GameManager.instance.LoadAsync(0, "LOADING..."));
             }
             else
             {
                 GameManager.instance.ShowedCredits = true;
-                SceneManager.LoadScene(4);
+                StartCoroutine(GameManager.instance.LoadAsync(4, "LOADING..."));
             }            
         }
         else

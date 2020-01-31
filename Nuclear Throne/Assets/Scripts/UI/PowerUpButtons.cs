@@ -15,22 +15,10 @@ public class PowerUpButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mutationText = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(2).GetComponent<Text>();
+        mutationText = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(3).GetComponent<Text>();
         UpdateMutation();
         descriptionUI = transform.GetChild(2);
-    }
-
-    private IEnumerator LoadAsync(int scene)
-    {
-        AsyncOperation ao = SceneManager.LoadSceneAsync(scene);
-
-        while (!ao.isDone)
-        {
-            float progress = Mathf.Clamp01(ao.progress / 0.9f);
-            mutationText.text = "GENERATING... " + (progress * 100).ToString("F0") + "%";
-            yield return null;
-        }        
-    }
+    }    
 
     public void GetIndex(int i)
     {
@@ -95,11 +83,11 @@ public class PowerUpButtons : MonoBehaviour
 
             if (GameManager.instance.LevelUps == 0)
             {
-                mutationText.transform.position = Vector3.zero;
+                mutationText.gameObject.SetActive(false);
                 descriptionUI.parent.GetChild(1).gameObject.SetActive(false);
                 descriptionUI.gameObject.SetActive(false);
                 loading = true;
-                StartCoroutine(LoadAsync(2));
+                StartCoroutine(GameManager.instance.LoadAsync(2, "GENERATING..."));
             }
         }
     }

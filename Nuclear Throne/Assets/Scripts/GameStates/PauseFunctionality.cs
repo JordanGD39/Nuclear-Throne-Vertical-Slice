@@ -20,7 +20,10 @@ public class PauseFunctionality : MonoBehaviour
 
     private void Start()
     {
-        settingsUI = pauseUI.transform.GetChild(3).gameObject;
+        if (pauseUI != null)
+        {
+            settingsUI = pauseUI.transform.GetChild(3).gameObject;
+        }
         level = GameManager.instance.GetComponent<LevelCheck>();
         players = level.FindObjectsOnLayer(13); //Player Layer
         weaponFunctions = level.FindObjectsWithNameWithoutLayer("WeaponRotation", 10);
@@ -101,7 +104,7 @@ public class PauseFunctionality : MonoBehaviour
     {
         continueTroughMenu = true;
         pause = false;
-        GameManager.instance.Reset();
+        GameManager.instance.ResetStats();
         SceneManager.LoadScene(1);
     }
 
@@ -109,7 +112,7 @@ public class PauseFunctionality : MonoBehaviour
     {
         continueTroughMenu = true;
         pause = false;
-        GameManager.instance.Reset();
+        GameManager.instance.ResetStats();
         SceneManager.LoadScene(0);
     }
 

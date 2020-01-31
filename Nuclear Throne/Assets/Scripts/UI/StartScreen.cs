@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
+    private GameObject controlsPanel;
+
+    private bool loading = false;
+
     private void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
 
         AudioListener.volume = PlayerPrefs.GetFloat("volume", 1);
+
+        controlsPanel = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(2).gameObject;
 
         if (AudioManager.instance.CurrSound != null)
         {
@@ -24,15 +29,23 @@ public class StartScreen : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            if (Input.GetButtonDown("Pause"))
+            if (Input.GetButtonDown("Pause") && !controlsPanel.activeSelf)
             {
                 Application.Quit();
             }
             else
             {
-                SceneManager.LoadScene(1);
-                AudioManager.instance.StopPlaying("Main");
-                AudioManager.instance.Play("Drylands");
+                if (controlsPanel.activeSelf && !loading)
+                {
+                    loading = true;
+                    StartCoroutine(GameManager.instance.LoadAsync(1, "LOADING..."));
+                    AudioManager.instance.StopPlaying("Main");
+                    AudioManager.instance.Play("Drylands");
+                }
+                else
+                {
+                    controlsPanel.SetActive(true);
+                }
             }            
         }        
     }
