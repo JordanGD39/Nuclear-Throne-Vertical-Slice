@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
             if (stats.Health < 0)
             {
                 stats.Health = 0;
-                StartCoroutine(WaitTillAppQuit());
             }
 
             ui.UpdateHealth();
