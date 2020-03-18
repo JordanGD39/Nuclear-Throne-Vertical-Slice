@@ -114,7 +114,7 @@ public class PauseFunctionality : MonoBehaviour
         continueTroughMenu = true;
         pause = false;
         GameManager.instance.ResetStats();
-        SceneManager.LoadScene(1);
+        StartCoroutine(GameManager.instance.LoadAsync(1, "LOADING..."));
     }
 
     public void Menu()
@@ -122,7 +122,7 @@ public class PauseFunctionality : MonoBehaviour
         continueTroughMenu = true;
         pause = false;
         GameManager.instance.ResetStats();
-        SceneManager.LoadScene(0);
+        StartCoroutine(GameManager.instance.LoadAsync(0, "LOADING..."));
     }
 
     public void Settings(Slider slider)

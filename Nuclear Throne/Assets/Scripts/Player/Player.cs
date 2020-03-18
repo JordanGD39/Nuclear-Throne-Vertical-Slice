@@ -104,19 +104,10 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             rb.velocity *= 0;
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
 
-            GameManager.instance.ResetStats();
             GameManager.instance.GetComponent<AllEnemiesDefeated>().Done = false;
-            if (GameManager.instance.ShowedCredits)
-            {
-                StartCoroutine(GameManager.instance.LoadAsync(0, "LOADING..."));
-            }
-            else
-            {
-                GameManager.instance.ShowedCredits = true;
-                StartCoroutine(GameManager.instance.LoadAsync(4, "LOADING..."));
-            }            
+            ui.GetComponent<DeathScreen>().ShowDeathPanel();          
         }
         else
         {
